@@ -7,7 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeToggleBtn = document.getElementById('themeToggleBtn');
   const themeIcon = document.getElementById('themeIcon');
   
-  const savedTheme = localStorage.getItem('codethrive_theme') || 'light';
+  let savedTheme = localStorage.getItem('codethrive_theme_v2');
+  if (!savedTheme) {
+    savedTheme = 'light';
+    localStorage.setItem('codethrive_theme_v2', 'light');
+    localStorage.setItem('codethrive_theme', 'light');
+  }
   document.documentElement.setAttribute('data-theme', savedTheme);
   updateThemeIcon(savedTheme);
 
@@ -16,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const currentTheme = document.documentElement.getAttribute('data-theme');
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('codethrive_theme_v2', newTheme);
       localStorage.setItem('codethrive_theme', newTheme);
       updateThemeIcon(newTheme);
     });

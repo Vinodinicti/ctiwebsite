@@ -118,23 +118,6 @@ p, .solution-desc, .who-desc, .client-card-desc, .editorial-excerpt, .floating-i
   line-height: 1.65;
 }
 
-.section-subtitle {
-  color: #045D5D !important;
-  font-weight: 700 !important;
-}
-
-[data-theme="dark"] .section-subtitle {
-  color: #2dd4bf !important;
-}
-
-.project-card-desc {
-  color: #045D5D !important;
-}
-
-[data-theme="dark"] .project-card-desc {
-  color: #2dd4bf !important;
-}
-
 [data-theme="dark"] body,
 [data-theme="dark"] p,
 [data-theme="dark"] li,
@@ -147,6 +130,20 @@ p, .solution-desc, .who-desc, .client-card-desc, .editorial-excerpt, .floating-i
 [data-theme="dark"] .floating-insight-excerpt {
   color: #f1f5f9;
   font-weight: 600 !important;
+}
+
+/* Explicitly override dark mode white text for section-subtitles and card descriptions */
+.section-subtitle,
+[data-theme="light"] .section-subtitle,
+[data-theme="dark"] .section-subtitle {
+  color: #045D5D !important;
+  font-weight: 700 !important;
+}
+
+.project-card-desc,
+[data-theme="light"] .project-card-desc,
+[data-theme="dark"] .project-card-desc {
+  color: #045D5D !important;
 }
 
 a {
