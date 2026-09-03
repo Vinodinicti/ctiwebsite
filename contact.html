@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us • CodeThrive Infotech</title>
+  <meta name="description" content="Get in touch with CodeThrive Infotech in Coimbatore, Tamil Nadu. Email: info@codethriveinfotech.in, Phone: +91 9150781685, Address: 15/5, 1st Floor, Saravana Complex, Trichy Road, Coimbatore." />
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- React 18 & Babel CDN Scripts -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Master Stylesheet (Dark Navy & Metallic Silver Theme) -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Low-Opacity Background Watermark Logos -->
+  <div class="bg-watermark"></div>
+  <div class="bg-watermark-left"></div>
+
+  <!-- ==========================================
+       Header / Navigation Bar
+       ========================================== -->
+  <header class="header">
+    <div class="container navbar">
+      <div class="brand-group">
+        <a href="index.html" class="brand-logo">
+          <img src="images/company-logo.png" alt="CodeThrive Infotech Logo" class="brand-logo-img" />
+          <span>CodeThrive <span class="text-gradient">Infotech</span></span>
+        </a>
+        <div class="brand-tagline-micro">Progress. Cultivate. Innovate.</div>
+      </div>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="industries.html" class="nav-link">Industries</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="insights.html" class="nav-link">Insights</a>
+        <a href="contact.html" class="nav-link active">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tel:+919150781685" class="btn btn-primary">Call Us Directly</a>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open Menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       Contact Page Hero Banner (Rich Dark Intro with High Opacity BG & Gradient Teal Text)
+       ========================================== -->
+  <section class="section contact-hero-banner" style="background: linear-gradient(135deg, #041215 0%, #002322 40%, #02171B 75%, #070D16 100%) !important; position: relative; overflow: hidden; min-height: 720px !important; padding: 140px 0 110px 0 !important; display: flex; align-items: center; justify-content: center; box-sizing: border-box;">
+    
+    <!-- Background Image Layer featuring 2 New Uploaded Images with 100% Full Opacity (No Dimming) -->
+    <div class="contact-hero-bg-image-layer" style="position: absolute; inset: 0; pointer-events: none; z-index: 0; overflow: hidden;">
+      <div style="position: absolute; inset: 0; background: url('images/contact-bg-1.jpg') center/cover no-repeat; opacity: 1; animation: contactHeroCrossFade100_1 10s ease-in-out infinite;"></div>
+      <div style="position: absolute; inset: 0; background: url('images/contact-bg-2.jpg') center/cover no-repeat; opacity: 0; animation: contactHeroCrossFade100_2 10s ease-in-out infinite;"></div>
+      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(16, 29, 38, 0.30) 0%, rgba(4, 75, 73, 0.15) 50%, rgba(16, 29, 38, 0.45) 100%); z-index: 1;"></div>
+    </div>
+
+    <div class="container" style="position: relative; z-index: 3; text-align: center;">
+      <!-- Hero Text Content (Expanded & Large Prominent Typography) -->
+      <div class="hero-content" style="max-width: 980px; margin: 0 auto; text-align: center; padding: 24px 0;">
+        <div class="badge hero-white-glow-tagline" style="margin: 0 auto 20px auto; font-size: 0.95rem; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; padding: 8px 24px; border-radius: 24px; color: #34D399 !important; background: rgba(4, 35, 34, 0.75) !important; border: 1.8px solid rgba(52, 211, 153, 0.6) !important; text-shadow: 0 0 16px rgba(52, 211, 153, 0.7) !important; box-shadow: 0 6px 25px rgba(0, 0, 0, 0.45), 0 0 20px rgba(52, 211, 153, 0.3) !important; display: inline-block;">GET IN TOUCH</div>
+        
+        <h1 class="hero-title hero-white-teal-silver-gradient" style="font-size: clamp(2.8rem, 5.2vw, 4.4rem); line-height: 1.15; font-weight: 900; margin-bottom: 22px; max-width: 980px; margin-left: auto; margin-right: auto; background: linear-gradient(110deg, #FFFFFF 0%, #E2E8F0 25%, #34D399 65%, #2DD4BF 100%) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; filter: drop-shadow(0 6px 25px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 30px rgba(52, 211, 153, 0.5)) !important;">
+          Start Your <span style="background: inherit; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Evolution Today.</span>
+        </h1>
+        
+        <p class="hero-desc hero-white-glow-desc" style="font-size: 1.25rem; color: #FFFFFF !important; line-height: 1.75; max-width: 860px; margin: 0 auto 32px auto; font-weight: 600 !important; text-align: center !important; text-shadow: 0 3px 16px rgba(0, 0, 0, 0.95), 0 0 24px rgba(0, 0, 0, 0.8) !important;">
+          Ready to accelerate your enterprise with modern digital technology? Our software architects and digital strategists are here to turn your vision into reality.
+        </p>
+
+        <div class="hero-ctas" style="display: flex; gap: 18px; flex-wrap: wrap; justify-content: center;">
+          <a href="#contact-form" class="btn btn-primary" style="padding: 14px 32px; font-size: 1.05rem;">
+            <span>Send Us a Message →</span>
+          </a>
+          <a href="tel:+919150781685" class="btn btn-secondary" style="padding: 14px 32px; font-size: 1.05rem;">Call Technical Team</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Infinite Moving Text Marquee Ticker
+       ========================================== -->
+  <div class="marquee-container">
+    <div class="marquee-content">
+      <div class="marquee-item"><span class="highlight">GET IN TOUCH</span></div>
+      <div class="marquee-item"><span class="highlight">+91 9150781685</span></div>
+      <div class="marquee-item"><span class="highlight">INFO@CODETHRIVEINFOTECH.IN</span></div>
+      <div class="marquee-item"><span class="highlight">COIMBATORE, TAMIL NADU</span></div>
+      <div class="marquee-item"><span class="highlight">MON-SAT: 9:00 AM - 6:00 PM</span></div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       Creative Contact Details & Form Section with Animated Vector Diagram Background
+       ========================================== -->
+  <section class="section" id="contact-form" style="background: #FFFFFF; position: relative; overflow: hidden;">
+    
+    <!-- Animated Vector Diagram Background behind Contact Layout -->
+    <div class="contact-bg-vector-container">
+      <svg class="contact-bg-svg" viewBox="0 0 1400 800" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <!-- Background Grid Gridlines -->
+        <pattern id="contactGridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(17, 69, 56, 0.05)" stroke-width="1"/>
+        </pattern>
+        <rect width="100%" height="100%" fill="url(#contactGridPattern)"/>
+
+        <!-- Left Node Orbit (Behind Contact Info Card) -->
+        <g transform="translate(320, 400)">
+          <circle r="220" stroke="rgba(17, 69, 56, 0.12)" stroke-width="1.5" stroke-dasharray="6 6" class="contact-spin-ring"/>
+          <circle r="160" stroke="rgba(94, 141, 131, 0.18)" stroke-width="2" class="contact-spin-ring-reverse"/>
+          <circle r="90" stroke="rgba(17, 69, 56, 0.15)" stroke-width="1.5"/>
+          <circle cx="0" cy="0" r="16" fill="rgba(17, 69, 56, 0.08)" stroke="#045D5D" stroke-width="2" class="contact-pulse-node"/>
+          <!-- Orbit Satellites -->
+          <circle cx="160" cy="0" r="7" fill="#045D5D" class="contact-spin-ring-reverse"/>
+          <circle cx="-220" cy="0" r="9" fill="#5e8d83" class="contact-spin-ring"/>
+        </g>
+
+        <!-- Right Node Orbit (Behind Send Us a Message Card) -->
+        <g transform="translate(1080, 400)">
+          <circle r="240" stroke="rgba(17, 69, 56, 0.12)" stroke-width="1.5" stroke-dasharray="8 6" class="contact-spin-ring"/>
+          <circle r="180" stroke="rgba(94, 141, 131, 0.18)" stroke-width="2" class="contact-spin-ring-reverse"/>
+          <circle r="100" stroke="rgba(17, 69, 56, 0.15)" stroke-width="1.5"/>
+          <circle cx="0" cy="0" r="18" fill="rgba(17, 69, 56, 0.08)" stroke="#045D5D" stroke-width="2" class="contact-pulse-node"/>
+          <!-- Orbit Satellites -->
+          <circle cx="0" cy="-180" r="8" fill="#045D5D" class="contact-spin-ring-reverse"/>
+          <circle cx="240" cy="0" r="9" fill="#5e8d83" class="contact-spin-ring"/>
+        </g>
+
+        <!-- Connecting Inter-Node Digital Pathways -->
+        <path d="M 100 200 C 400 100, 700 300, 1300 150" stroke="#045D5D" stroke-width="2" opacity="0.25" class="contact-flow-line"/>
+        <path d="M 100 600 C 500 750, 900 500, 1300 650" stroke="#5e8d83" stroke-width="2.5" opacity="0.3" class="contact-flow-line"/>
+        <path d="M 320 400 L 1080 400" stroke="#045D5D" stroke-width="2" stroke-dasharray="8 6" opacity="0.2" class="contact-spin-ring"/>
+
+        <!-- Ambient Signal Waves -->
+        <circle cx="700" cy="400" r="320" stroke="rgba(17, 69, 56, 0.08)" stroke-width="1.5" class="contact-spin-ring"/>
+      </svg>
+    </div>
+
+    <div class="container" style="position: relative; z-index: 3;">
+      <div class="contact-grid">
+        
+        <!-- Left Column: Contact Info Cards & Working Hours -->
+        <div class="glass-card contact-info-card" style="background: #FFFFFF !important; border-color: var(--border-color-hover); position: relative; z-index: 2;">
+
+          <div class="badge" style="margin-bottom: 12px;">Contact Information</div>
+          <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-heading); margin-bottom: 24px;">
+            Headquarters & Support
+          </h2>
+
+          <!-- Email -->
+          <div class="contact-detail-row">
+            <div style="background: #045D5D; width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #FFFFFF; flex-shrink: 0; border: 1px solid rgba(17, 69, 56, 0.3);">
+              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <div style="font-weight: 700; color: var(--text-heading); font-size: 0.95rem;">Email Address</div>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@codethriveinfotech.in" target="_blank" rel="noopener noreferrer" style="color: #045D5D; font-weight: 700; font-size: 1.05rem; text-decoration: underline;">info@codethriveinfotech.in</a>
+            </div>
+          </div>
+
+          <!-- Phone & WhatsApp -->
+          <div class="contact-detail-row">
+            <div style="background: #045D5D; width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #FFFFFF; flex-shrink: 0; border: 1px solid rgba(17, 69, 56, 0.3);">
+              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            </div>
+            <div>
+              <div style="font-weight: 700; color: var(--text-heading); font-size: 0.95rem;">Phone Number & WhatsApp</div>
+              <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 4px;">
+                <a href="tel:+919150781685" style="color: #045D5D; font-weight: 700; font-size: 1.05rem; text-decoration: underline;">+91 91507 81685</a>
+                <a href="https://wa.me/919150781685" target="_blank" rel="noopener noreferrer" style="padding: 5px 14px; font-size: 0.82rem; font-weight: 800; border-radius: 20px; background: #DCFCE7; color: #166534; border: 1px solid #86EFAC; display: inline-flex; align-items: center; gap: 6px; text-decoration: none; box-shadow: 0 2px 6px rgba(22, 101, 52, 0.12);">
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.762.459 3.48 1.332 4.992l-1.417 5.176 5.297-1.389c1.458.796 3.097 1.215 4.773 1.216h.004c5.505 0 9.988-4.478 9.989-9.985 0-2.668-1.037-5.176-2.925-7.065-1.888-1.888-4.396-2.927-7.063-2.929zm5.952 14.286c-.25.702-1.238 1.34-1.72 1.386-.48.046-1.107.215-3.666-.826-3.197-1.303-5.249-4.549-5.408-4.761-.158-.212-1.294-1.722-1.294-3.287 0-1.564.818-2.335 1.108-2.652.29-.317.633-.396.844-.396.21 0 .422.002.607.01.196.008.461-.074.72.548.267.643.909 2.217.988 2.378.079.16.132.348.026.56-.105.212-.158.344-.316.533-.158.188-.333.421-.476.564-.158.158-.323.33-.138.647.185.317.822 1.357 1.767 2.199 1.217 1.084 2.24 1.42 2.557 1.578.317.158.502.132.687-.079.185-.212.793-.923 1.004-1.24.212-.317.423-.264.713-.158.29.106 1.848.871 2.164 1.029.317.158.528.238.607.37.079.132.079.767-.171 1.469z"/></svg>
+                  <span>Chat on WhatsApp</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Full Address -->
+          <div class="contact-detail-row">
+            <div style="background: #045D5D; width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #FFFFFF; flex-shrink: 0; border: 1px solid rgba(17, 69, 56, 0.3);">
+              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div>
+              <div style="font-weight: 700; color: var(--text-heading); font-size: 0.95rem;">Office Location</div>
+              <div style="color: var(--text-main); line-height: 1.6; font-size: 0.95rem; margin-top: 4px; font-weight: 600;">
+                No 1 , Srihari Nivas , Indira Nagar, Sugam,<br/>
+                Coimbatore - 641045
+              </div>
+              <div style="margin-top: 12px;">
+                <a href="https://maps.app.goo.gl/AgyaE6mujDEaVjZr8?g_st=aw" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.85rem;">
+                  <span>View on Google Maps</span>
+                  <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Working Hours Widget -->
+          <div style="margin-top: 28px; background: #F6F9F5; border: 1px solid var(--border-color); padding: 20px; border-radius: var(--radius-md);">
+            <div style="font-weight: 800; color: var(--text-heading); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+              <svg width="18" height="18" fill="none" stroke="#045D5D" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Office Schedule</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-main); margin-bottom: 6px; font-weight: 600;">
+              <span>Monday - Saturday:</span>
+              <span style="font-weight: 700; color: #045D5D;">9:00 AM - 6:00 PM</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-muted); font-weight: 600;">
+              <span>Sunday:</span>
+              <span style="font-weight: 700; color: #ef4444;">Office Leave</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Contact Form -->
+        <div class="glass-card contact-form-card" style="background: #FFFFFF !important; border-color: var(--border-color-hover); position: relative; z-index: 2;">
+          
+          <div class="badge" style="margin-bottom: 12px;">Send Us a Message</div>
+          <h2 style="font-size: 1.875rem; font-weight: 800; color: var(--text-heading); margin-bottom: 24px;">
+            Send Us a Message
+          </h2>
+
+          <form id="contactForm">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group">
+                <label class="form-label">Name *</label>
+                <input type="text" id="formName" class="form-control" placeholder="e.g. Ramesh Kumar" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email *</label>
+                <input type="email" id="formEmail" class="form-control" placeholder="ramesh@company.com" required />
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group">
+                <label class="form-label">Phone</label>
+                <input type="tel" id="formPhone" class="form-control" placeholder="+91 98765 43210" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Company</label>
+                <input type="text" id="formCompany" class="form-control" placeholder="Your Business / Org" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Subject *</label>
+              <input type="text" id="formSubject" class="form-control" placeholder="e.g. New Project Inquiry / Website Build" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Message *</label>
+              <textarea id="formMessage" class="form-control" placeholder="Describe your software requirements, timeline, and goals..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.05rem;">
+              <span>Send Message</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ==========================================
+       Infinite Moving Text Marquee Ticker
+       ========================================== -->
+  <div class="marquee-container">
+    <div class="marquee-content">
+      <div class="marquee-item"><span class="highlight">GET IN TOUCH</span></div>
+      <div class="marquee-item"><span class="highlight">+91 9150781685</span></div>
+      <div class="marquee-item"><span class="highlight">INFO@CODETHRIVEINFOTECH.IN</span></div>
+      <div class="marquee-item"><span class="highlight">COIMBATORE, TAMIL NADU</span></div>
+      <div class="marquee-item"><span class="highlight">MON-SAT: 9:00 AM - 6:00 PM</span></div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       Footer Section
+       ========================================== -->
+  <footer class="footer new-watermark-footer">
+    <div class="container" style="position: relative; z-index: 2;">
+      <div class="footer-grid-3col">
+        <!-- Column 1: Brand Profile & Small Social Icons -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 14px;">
+            <img src="images/company-logo.png" alt="CodeThrive Infotech Logo" class="brand-logo-img" />
+            <span class="footer-brand-text">CODETHRIVE INFOTECH</span>
+          </a>
+          <p class="footer-brand-desc">
+            Empowering enterprises with smart, scalable, and secure digital solutions. Transform your vision into reality with CodeThrive Infotech.
+          </p>
+          <div class="footer-social-icons">
+            <a href="tel:+919150781685" class="footer-social-btn" title="Call Us" aria-label="Call Us">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            </a>
+            <a href="https://wa.me/919150781685" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="WhatsApp" aria-label="WhatsApp">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.762.459 3.48 1.332 4.992l-1.417 5.176 5.297-1.389c1.458.796 3.097 1.215 4.773 1.216h.004c5.505 0 9.988-4.478 9.989-9.985 0-2.668-1.037-5.176-2.925-7.065-1.888-1.888-4.396-2.927-7.063-2.929zm5.952 14.286c-.25.702-1.238 1.34-1.72 1.386-.48.046-1.107.215-3.666-.826-3.197-1.303-5.249-4.549-5.408-4.761-.158-.212-1.294-1.722-1.294-3.287 0-1.564.818-2.335 1.108-2.652.29-.317.633-.396.844-.396.21 0 .422.002.607.01.196.008.461-.074.72.548.267.643.909 2.217.988 2.378.079.16.132.348.026.56-.105.212-.158.344-.316.533-.158.188-.333.421-.476.564-.158.158-.323.33-.138.647.185.317.822 1.357 1.767 2.199 1.217 1.084 2.24 1.42 2.557 1.578.317.158.502.132.687-.079.185-.212.793-.923 1.004-1.24.212-.317.423-.264.713-.158.29.106 1.848.871 2.164 1.029.317.158.528.238.607.37.079.132.079.767-.171 1.469z"/></svg>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Instagram" aria-label="Instagram">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="LinkedIn" aria-label="LinkedIn">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Facebook" aria-label="Facebook">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+          <div class="footer-copyright-text">
+            &copy; 2026 CodeThrive Infotech. All rights reserved.
+          </div>
+        </div>
+
+        <!-- Column 2: QUICK LINKS -->
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">QUICK LINKS</h4>
+          <ul class="footer-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: CONTACT US -->
+        <div class="footer-contact-col">
+          <h4 class="footer-col-title">CONTACT US</h4>
+          <div class="footer-contact-list">
+            <p><strong>Phone:</strong> <a href="tel:+919150781685">+91 91507 81685</a></p>
+            <p><strong>Email:</strong> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@codethriveinfotech.in" target="_blank" rel="noopener noreferrer">info@codethriveinfotech.in</a></p>
+            <p><strong>Location:</strong> <a href="https://maps.app.goo.gl/AgyaE6mujDEaVjZr8?g_st=aw" target="_blank" rel="noopener" style="text-decoration: underline;">No 1, Srihari Nivas, Indira Nagar, Sugam, Coimbatore - 641045</a></p>
+          </div>
+          <div class="footer-privacy-wrap">
+            <a href="contact.html" class="footer-privacy-link">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GIANT TRANSPARENT WATERMARK BRAND TEXT AT THE BOTTOM -->
+    <div class="footer-watermark-text" aria-hidden="true">
+      CODETHRIVE INFOTECH
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="btn btn-primary back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7"/></svg>
+  </button>
+  <!-- Floating Call Button (Bottom Right Corner) -->
+  <a href="tel:+919150781685" 
+     class="call-float-btn" 
+     aria-label="Call CodeThrive Infotech">
+    <span class="float-tooltip-pop">📞 Call Us: +91 91507 81685</span>
+    <svg class="call-icon-svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+      <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+    </svg>
+  </a>
+
+  <!-- Floating WhatsApp Icon (Bottom Right Corner) -->
+  <a href="https://wa.me/919150781685?text=Hello%20CodeThrive%20Infotech%2C%20I%20would%20like%20to%20discuss%20a%20project." 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="whatsapp-float-btn" 
+     aria-label="Chat on WhatsApp">
+    <span class="float-tooltip-pop">💬 Chat on WhatsApp</span>
+    <svg class="whatsapp-icon-svg" viewBox="0 0 24 24" width="30" height="30">
+      <path fill="#FFFFFF" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/>
+      <path fill="#FFFFFF" d="M12.01 2C6.48 2 2 6.48 2 12.01c0 1.94.55 3.75 1.5 5.28L2 22l4.82-1.47c1.48.88 3.21 1.48 5.19 1.48 5.53 0 10.01-4.48 10.01-10.01S17.54 2 12.01 2zm0 18.02c-1.76 0-3.41-.48-4.83-1.32l-.35-.21-2.86.87.88-2.79-.23-.37C3.71 14.77 3.2 13.06 3.2 12.01c0-4.86 3.95-8.81 8.81-8.81s8.81 3.95 8.81 8.81-3.95 8.81-8.81 8.81z"/>
+    </svg>
+  </a>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

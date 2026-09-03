@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeThrive Infotech • Progress. Cultivate. Innovate.</title>
+  <meta name="description" content="CodeThrive Infotech - Supercharging businesses with cutting-edge software ecosystems. We scale ideas into infinite digital impact." />
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- React 18 & Babel CDN Scripts -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Master Stylesheet (Dark Navy & Metallic Silver Theme) -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Low-Opacity Background Watermark Logos -->
+  <div class="bg-watermark"></div>
+  <div class="bg-watermark-left"></div>
+
+  <!-- ==========================================
+       Header / Navigation Bar
+       ========================================== -->
+  <header class="header">
+    <div class="container navbar">
+      <div class="brand-group">
+        <a href="index.html" class="brand-logo">
+          <img src="images/company-logo.png" alt="CodeThrive Infotech Logo" class="brand-logo-img" />
+          <span>CodeThrive <span class="text-gradient">Infotech</span></span>
+        </a>
+        <div class="brand-tagline-micro">Progress. Cultivate. Innovate.</div>
+      </div>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="industries.html" class="nav-link">Industries</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="insights.html" class="nav-link">Insights</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="contact.html#contact-form" class="btn btn-primary">Connect With Our Team</a>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open Menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       Hero Section
+       ========================================== -->
+  <section class="section hero hero-dark-animated" id="home">
+    <!-- Ambient Glowing Dark Color Pulse Orbs -->
+    <div class="hero-dark-orb dark-orb-left" aria-hidden="true"></div>
+    <div class="hero-dark-orb dark-orb-right" aria-hidden="true"></div>
+
+    <!-- Fading to Glow Moving Light Ambient Effects -->
+    <div class="fading-glow-light glow-light-1" aria-hidden="true"></div>
+    <div class="fading-glow-light glow-light-2" aria-hidden="true"></div>
+    <div class="fading-glow-light glow-light-3" aria-hidden="true"></div>
+
+    <!-- Animated Cyber Tech Grid Bus Background -->
+    <div class="hero-dark-cyber-grid" aria-hidden="true">
+      <svg class="dark-cyber-svg" viewBox="0 0 1400 800" fill="none" preserveAspectRatio="none">
+        <path d="M 0 200 H 1400 M 0 400 H 1400 M 0 600 H 1400 M 350 0 V 800 M 700 0 V 800 M 1050 0 V 800" stroke="rgba(52, 211, 153, 0.15)" stroke-width="1.2" stroke-dasharray="8 6" class="anim-dark-grid-line"/>
+        <path d="M 100 150 L 700 450 L 1300 150 M 200 650 L 700 350 L 1200 650" stroke="rgba(2, 132, 199, 0.18)" stroke-width="1.5" stroke-dasharray="6 6" class="anim-dark-diagonal-line"/>
+        <circle cx="350" cy="200" r="4" fill="#34D399" class="anim-dark-pulse-node1"/>
+        <circle cx="700" cy="400" r="6" fill="#38BDF8" class="anim-dark-pulse-node2"/>
+        <circle cx="1050" cy="600" r="5" fill="#2DD4BF" class="anim-dark-pulse-node3"/>
+      </svg>
+    </div>
+
+    <!-- Top Background Continuously Changing Hero Slideshow Layer (Using 2 Uploaded HD Images) -->
+    <div class="hero-bg-slideshow hero-bg-slideshow-hd2slides" aria-hidden="true">
+      <div class="hero-slide slide-hd-hero-1 hd-slide-delay-1"></div>
+      <div class="hero-slide slide-hd-hero-2 hd-slide-delay-2"></div>
+      <div class="hero-slideshow-overlay hero-dark-overlay"></div>
+    </div>
+
+    <div class="container hero-grid">
+      <!-- Left Side: Hero Headline, Subtitle & Action CTAs -->
+      <div class="hero-content">
+        <div class="tagline-sub hero-white-glow-tagline">Enterprise Digital Engineering</div>
+        
+        <h1 class="hero-title hero-white-teal-silver-gradient">
+          Crafting Digital Infrastructure.
+        </h1>
+        
+        <p class="hero-desc hero-white-glow-desc">
+          Empowering organizations with resilient software ecosystems and high-impact digital solutions built for scale.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="contact.html#contact-form" class="btn btn-primary">
+            <span>Start Your Evolution Today →</span>
+          </a>
+          <a href="projects.html" class="btn btn-secondary">Explore Interactive Demos</a>
+        </div>
+      </div>
+
+      <!-- Right Column: Video Container with animated brand text and tagline below -->
+      <div class="hero-watermark-card hero-moon-attached-right">
+        <div class="hero-watermark-video-container">
+          <video class="hero-watermark-video" autoplay muted loop playsinline>
+            <source src="images/hero-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="hero-brand-text-box">
+          <div class="hero-watermark-brand-text">
+            <span class="glow-char" style="--char-index: 1;">C</span><span class="glow-char" style="--char-index: 2;">O</span><span class="glow-char" style="--char-index: 3;">D</span><span class="glow-char" style="--char-index: 4;">E</span><span class="glow-char" style="--char-index: 5;">T</span><span class="glow-char" style="--char-index: 6;">H</span><span class="glow-char" style="--char-index: 7;">R</span><span class="glow-char" style="--char-index: 8;">I</span><span class="glow-char" style="--char-index: 9;">V</span><span class="glow-char" style="--char-index: 10;">E</span><span class="glow-space">&nbsp;</span><span class="glow-char" style="--char-index: 11;">I</span><span class="glow-char" style="--char-index: 12;">N</span><span class="glow-char" style="--char-index: 13;">F</span><span class="glow-char" style="--char-index: 14;">O</span><span class="glow-char" style="--char-index: 15;">T</span><span class="glow-char" style="--char-index: 16;">E</span><span class="glow-char" style="--char-index: 17;">C</span><span class="glow-char" style="--char-index: 18;">H</span>
+          </div>
+          <div class="hero-watermark-tagline">
+            <span class="glow-tagline-char" style="--char-index: 1;">P</span><span class="glow-tagline-char" style="--char-index: 2;">R</span><span class="glow-tagline-char" style="--char-index: 3;">O</span><span class="glow-tagline-char" style="--char-index: 4;">G</span><span class="glow-tagline-char" style="--char-index: 5;">R</span><span class="glow-tagline-char" style="--char-index: 6;">E</span><span class="glow-tagline-char" style="--char-index: 7;">S</span><span class="glow-tagline-char" style="--char-index: 8;">S</span><span class="glow-tagline-char" style="--char-index: 9;">.</span><span class="glow-space">&nbsp;</span><span class="glow-tagline-char" style="--char-index: 10;">C</span><span class="glow-tagline-char" style="--char-index: 11;">U</span><span class="glow-tagline-char" style="--char-index: 12;">L</span><span class="glow-tagline-char" style="--char-index: 13;">T</span><span class="glow-tagline-char" style="--char-index: 14;">I</span><span class="glow-tagline-char" style="--char-index: 15;">V</span><span class="glow-tagline-char" style="--char-index: 16;">A</span><span class="glow-tagline-char" style="--char-index: 17;">T</span><span class="glow-tagline-char" style="--char-index: 18;">E</span><span class="glow-tagline-char" style="--char-index: 19;">.</span><span class="glow-space">&nbsp;</span><span class="glow-tagline-char" style="--char-index: 20;">I</span><span class="glow-tagline-char" style="--char-index: 21;">N</span><span class="glow-tagline-char" style="--char-index: 22;">N</span><span class="glow-tagline-char" style="--char-index: 23;">O</span><span class="glow-tagline-char" style="--char-index: 24;">V</span><span class="glow-tagline-char" style="--char-index: 25;">A</span><span class="glow-tagline-char" style="--char-index: 26;">T</span><span class="glow-tagline-char" style="--char-index: 27;">E</span><span class="glow-tagline-char" style="--char-index: 28;">.</span>
+          </div>
+
+          <!-- Futuristic Neon Water Ripple Reflection Layer -->
+          <div class="hero-brand-reflection-layer" aria-hidden="true">
+            <div class="reflection-brand-text">CODETHRIVE INFOTECH</div>
+            <div class="reflection-tagline-text">PROGRESS. CULTIVATE. INNOVATE.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Infinite Moving Text Marquee Ticker
+       ========================================== -->
+  <div class="marquee-container">
+    <div class="marquee-content">
+      <div class="marquee-item">
+        <svg class="marquee-icon-spin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <span class="highlight">PROGRESS</span> • CULTIVATE • INNOVATE
+      </div>
+      <div class="marquee-item">
+        <svg class="marquee-icon-spin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="3"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        <span class="highlight">DIGITAL APPLICATIONS</span>
+      </div>
+      <div class="marquee-item">
+        <svg class="marquee-icon-spin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"/></svg>
+        <span class="highlight">AI & AUTOMATION</span>
+      </div>
+      <div class="marquee-item">
+        <svg class="marquee-icon-spin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4"/><circle cx="12" cy="15" r="1"/></svg>
+        <span class="highlight">ZERO-TRUST CYBERSECURITY</span>
+      </div>
+      <div class="marquee-item">
+        <svg class="marquee-icon-spin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>
+        <span class="highlight">CLOUD SOLUTIONS</span>
+      </div>
+      <div class="marquee-item">
+        <svg class="marquee-icon-spin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        <span class="highlight">FLEET ERP PLATFORMS</span>
+      </div>
+
+      <!-- Duplicated Sequence for 100% Seamless Infinite Running Loop -->
+      <div class="marquee-item">
+        <svg class="marquee-icon-spin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <span class="highlight">PROGRESS</span> • CULTIVATE • INNOVATE
+      </div>
+      <div class="marquee-item">
+        <svg class="marquee-icon-spin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="3"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        <span class="highlight">DIGITAL APPLICATIONS</span>
+      </div>
+      <div class="marquee-item">
+        <svg class="marquee-icon-spin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"/></svg>
+        <span class="highlight">AI & AUTOMATION</span>
+      </div>
+      <div class="marquee-item">
+        <svg class="marquee-icon-spin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4"/><circle cx="12" cy="15" r="1"/></svg>
+        <span class="highlight">ZERO-TRUST CYBERSECURITY</span>
+      </div>
+      <div class="marquee-item">
+        <svg class="marquee-icon-spin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>
+        <span class="highlight">CLOUD SOLUTIONS</span>
+      </div>
+      <div class="marquee-item">
+        <svg class="marquee-icon-spin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        <span class="highlight">FLEET ERP PLATFORMS</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       React.js Enterprise Cost Estimator Section
+       ========================================== -->
+  <section class="section" style="padding: 0 !important; margin: 0 !important;">
+    <div class="container">
+      <div id="react-estimator-root">
+        <!-- React component renders here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Company Profile & Who We Are
+       ========================================== -->
+  <section class="section section-bg-image section-bg-crisp section-bg-about" style="background: var(--bg-secondary); padding-top: 14px !important; padding-bottom: 28px !important; position: relative; overflow: hidden;">
+    <!-- Subtle Animated Vector Motion Graphic Overlay Behind Text -->
+    <div class="about-vector-motion-container" aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; opacity: 0.45;">
+      <svg class="about-vector-svg" viewBox="0 0 1200 600" fill="none" preserveAspectRatio="none" style="width: 100%; height: 100%;">
+        <!-- Flowing Cyber Bus Lines -->
+        <path d="M 0 120 H 1200 M 0 280 H 1200 M 0 440 H 1200 M 250 0 V 600 M 600 0 V 600 M 950 0 V 600" stroke="rgba(4, 93, 93, 0.22)" stroke-width="1.2" stroke-dasharray="8 6" class="anim-about-grid-line"/>
+        <path d="M 50 80 L 550 420 L 1150 80 M 100 520 L 600 180 L 1100 520" stroke="rgba(13, 148, 136, 0.28)" stroke-width="1.5" stroke-dasharray="6 6" class="anim-about-diagonal-line"/>
+        <!-- Animated Glowing Nodes -->
+        <circle cx="250" cy="120" r="5" fill="#045D5D" class="anim-about-node1"/>
+        <circle cx="600" cy="280" r="7" fill="#0D9488" class="anim-about-node2"/>
+        <circle cx="950" cy="440" r="6" fill="#34D399" class="anim-about-node3"/>
+        <circle cx="550" cy="420" r="5" fill="#045D5D" class="anim-about-node4"/>
+      </svg>
+    </div>
+
+    <div class="container" style="position: relative; z-index: 2;">
+      <div class="about-grid" style="text-align: left !important; align-items: flex-start !important;">
+        <div style="text-align: left !important; align-items: flex-start !important;">
+          <div class="badge badge-company-profile" style="margin-left: 0 !important; margin-right: auto !important;">Company Profile</div>
+          <h2 class="section-title about-company-title" style="text-align: left !important; white-space: nowrap !important; margin-left: 0 !important; margin-right: auto !important;">About <span class="title-teal">CodeThrive</span> Infotech</h2>
+          <p class="about-company-paragraph" style="font-size: 0.92rem !important; line-height: 1.65 !important; color: #1e293b !important; font-weight: 600 !important; margin-bottom: 12px !important; text-align: justify !important;">
+            We are CodeThrive Infotech—a dedicated team of software architects, digital designers, and tech strategists committed to transforming business goals into impactful digital solutions.
+          </p>
+          <p class="about-company-paragraph" style="font-size: 0.92rem !important; line-height: 1.65 !important; color: #1e293b !important; font-weight: 600 !important; margin-top: 0 !important; position: relative; z-index: 3; text-align: justify !important;">
+            At CodeThrive Infotech, we look beyond standard development services to become an active technical partner in your growth. From robust cloud infrastructures to fluid cross-platform mobile apps, our priority is accelerating enterprise potential through technology.
+          </p>
+        </div>
+
+        <div class="who-we-are-list">
+          <div class="who-item">
+            <svg class="spin-icon-hover" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/>
+            </svg>
+            <span>Experienced Software Engineers</span>
+          </div>
+          <div class="who-item">
+            <svg class="spin-icon-hover" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 4 23 10 17 10"/>
+              <polyline points="1 20 1 14 7 14"/>
+              <path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/>
+            </svg>
+            <span>Agile & Transparent Delivery</span>
+          </div>
+          <div class="who-item">
+            <svg class="spin-icon-hover" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="M12 8v4"/>
+              <path d="M12 16h.01"/>
+            </svg>
+            <span>Enterprise Grade Security</span>
+          </div>
+          <div class="who-item">
+            <svg class="spin-icon-hover" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 18v-6a9 9 0 0118 0v6"/>
+              <path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/>
+            </svg>
+            <span>24/7 Premium Support</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       Demo Projects Teaser
+       ========================================== -->
+  <section class="section section-bg-image section-bg-industries" style="background: var(--bg-secondary);" id="industries-projects">
+    <div class="container">
+      <div class="section-header-flex" style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 40px; flex-wrap: wrap; gap: 20px;">
+        <div style="max-width: 650px; text-align: left !important;">
+          <div class="badge badge-industries-projects">Industries & Projects</div>
+          <h2 class="section-title" style="margin-bottom: 8px; text-align: left !important;">Cross-Industry <span class="text-gradient">Impact</span></h2>
+          <p class="section-subtitle" style="text-align: left !important; text-align-last: left !important; margin-left: 0 !important; margin-right: auto !important; display: block !important; width: 100% !important;">Showcasing tailored project architectures across prominent business sectors.</p>
+        </div>
+
+        <!-- Carousel Navigation Controls (Prev & Next) -->
+        <div class="carousel-nav-controls" style="display: flex; gap: 12px;">
+          <button id="carousel-prev-btn" class="btn btn-secondary" aria-label="Previous Slide" style="padding: 10px 20px; font-weight: 800; border-radius: var(--radius-full);">
+            ← Prev
+          </button>
+          <button id="carousel-next-btn" class="btn btn-primary" aria-label="Next Slide" style="padding: 10px 20px; font-weight: 800; border-radius: var(--radius-full);">
+            Next →
+          </button>
+        </div>
+      </div>
+
+      <!-- Horizontal Carousel Track -->
+      <div class="projects-carousel-wrapper" style="overflow: hidden; margin-bottom: 40px;">
+        <div id="projects-carousel-track" class="projects-carousel-track">
+          
+          <!-- Card 1: Healthcare ERP -->
+          <div class="project-carousel-card">
+            <div class="project-card-image-wrap">
+              <img src="images/tookapic-monitor-933392_1920.jpg" alt="Healthcare ERP System" class="project-card-img" />
+              <div class="project-card-tag">Healthcare ERP</div>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">Healthcare ERP</h3>
+              <p class="project-card-desc">Unified patient data systems reducing administration time by 40% with instant EHR sync.</p>
+              <a href="projects.html" class="service-link" style="margin-top: 12px;">View Template Demo →</a>
+            </div>
+          </div>
+
+          <!-- Card 2: FinTech Portals -->
+          <div class="project-carousel-card">
+            <div class="project-card-image-wrap">
+              <img src="images/tungart7-technology-8676540_1920.jpg" alt="FinTech Portals" class="project-card-img" />
+              <div class="project-card-tag">FinTech Portals</div>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">FinTech Portals</h3>
+              <p class="project-card-desc">Highly secure, scalable ledger and payment processing gateways with zero-latency SLA.</p>
+              <a href="projects.html" class="service-link" style="margin-top: 12px;">View Template Demo →</a>
+            </div>
+          </div>
+
+          <!-- Card 3: E-Commerce Native & Bakery -->
+          <div class="project-carousel-card">
+            <div class="project-card-image-wrap">
+              <img src="images/ronaldcandonga-job-5382501_1920.jpg" alt="E-Commerce Native" class="project-card-img" />
+              <div class="project-card-tag">E-Commerce Native</div>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">E-Commerce Native</h3>
+              <p class="project-card-desc">Omnichannel shopping platforms with real-time inventory tracking for bakeries & storefronts.</p>
+              <a href="projects.html" class="service-link" style="margin-top: 12px;">View Template Demo →</a>
+            </div>
+          </div>
+
+          <!-- Card 4: Fitness & Medical Storefronts -->
+          <div class="project-carousel-card">
+            <div class="project-card-image-wrap">
+              <img src="images/thedigitalartist-ai-generated-7945684_1920.jpg" alt="Fitness & Medical Storefronts" class="project-card-img" />
+              <div class="project-card-tag">Fitness & Medical</div>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">Fitness & Medical Storefronts</h3>
+              <p class="project-card-desc">High-performance web portals for gym memberships, medical uploads, and retail stores.</p>
+              <a href="projects.html" class="service-link" style="margin-top: 12px;">View Template Demo →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Show More Projects CTA Button -->
+      <div style="text-align: center;">
+        <a href="projects.html" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.05rem;">
+          Show More Projects →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Proven Excellence & Global Rating Section
+       ========================================== -->
+  <section class="section trust-bar section-bg-image section-bg-crisp section-bg-proven" id="proven-excellence">
+    <div class="container">
+      <div class="proven-excellence-wrapper">
+        
+        <!-- Left Side: Global Rating Hero Box (3D Tilt & Aura) -->
+        <div class="rating-hero-card 3d-tilt-hero-card">
+          <div class="rating-score-num">4.9</div>
+          <div class="rating-stars-gold">
+            <span style="--star-idx: 1;">★</span>
+            <span style="--star-idx: 2;">★</span>
+            <span style="--star-idx: 3;">★</span>
+            <span style="--star-idx: 4;">★</span>
+            <span style="--star-idx: 5;">★</span>
+          </div>
+          <div class="rating-label">Average Global Rating</div>
+          <div class="rating-bottom-bar"></div>
+        </div>
+
+        <!-- Right Side: Content & 3 Metric Stat Cards -->
+        <div>
+          <div class="badge" style="margin-left: auto !important; margin-right: auto !important; display: table !important; margin-bottom: 16px !important;"><span class="badge-dot"></span>Proven Excellence</div>
+          <h2 class="section-title" style="margin-bottom: 12px;"><span class="trusted-title-teal" style="color: #045D5D !important; font-weight: 900;">Trusted</span> by <span class="text-gradient">Industry Leaders</span></h2>
+          <p class="section-subtitle" style="margin-bottom: 32px; max-width: 100%;">
+            We craft reliable digital platforms designed for longevity. Guided by high client satisfaction standards, CodeThrive Infotech delivers top-tier software infrastructures built to excel.
+          </p>
+
+          <!-- 3 Metric Cards Grid with Staggered Floating Bobs & 3D Spinning Numbers -->
+          <div class="proven-stats-grid">
+            <!-- Stat 1: 50+ Clients Empowered -->
+            <div class="proven-stat-card stat-card-bob1">
+              <div class="stat-number proven-stat-num spin-number-3d" data-target="50" data-suffix="+">50+</div>
+              <div class="proven-stat-label">Clients Empowered</div>
+            </div>
+
+            <!-- Stat 2: 100% Project Delivery -->
+            <div class="proven-stat-card stat-card-bob2">
+              <div class="stat-number proven-stat-num spin-number-3d" data-target="100" data-suffix="%">100%</div>
+              <div class="proven-stat-label">Project Delivery</div>
+            </div>
+
+            <!-- Stat 3: 24/7 Active Support -->
+            <div class="proven-stat-card stat-card-bob3">
+              <div class="proven-stat-num spin-number-3d">24/7</div>
+              <div class="proven-stat-label">Active Support</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Our Clients Section (Client Cards & Continuous Ticker)
+       ========================================== -->
+  <section class="section section-bg-image section-bg-clients" id="our-clients" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge">OUR CLIENTS</div>
+        <h2 class="section-title">Our <span class="text-gradient">Clients</span></h2>
+        <p class="section-subtitle">Partnering with forward-thinking organizations across diverse industries.</p>
+      </div>
+
+      <!-- 5 Client Person Pod Cards Grid -->
+      <div class="client-person-grid">
+        
+        <!-- Client Person 1: Sky Blue Pastel -->
+        <div class="client-person-pod person-pod-bob1 client-pod-pastel-blue" data-client-key="samyuktha" style="cursor: pointer;">
+          <div class="client-person-avatar-wrap">
+            <div class="client-person-avatar" style="overflow: hidden; background: #ffffff; padding: 2px;">
+              <img src="images/samyuktha_logo.jpg" alt="Samyuktha Tours & Travels Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;" />
+            </div>
+            <div class="avatar-ring-pulse"></div>
+          </div>
+          
+          <div class="client-badge-tag">Travel & Tourism</div>
+          <h3 class="client-card-title">Samyuktha Tours & Travels</h3>
+          <p class="client-card-desc">Comprehensive digital travel reservations, custom itinerary builders, and booking management systems.</p>
+          <div class="client-view-work-link" style="margin-top: 14px; font-weight: 800; font-size: 0.85rem; color: #0284C7; display: inline-flex; align-items: center; gap: 6px;">View Works Overview →</div>
+        </div>
+
+        <!-- Client Person 2: Amber Gold Pastel -->
+        <div class="client-person-pod person-pod-bob2 client-pod-pastel-amber" data-client-key="madurai-tour-taxi" style="cursor: pointer;">
+          <div class="client-person-avatar-wrap">
+            <div class="client-person-avatar" style="overflow: hidden; background: #ffffff; padding: 2px;">
+              <img src="images/madurai_tour_taxi_logo.png" alt="Madurai Tour Taxi Logo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%; display: block; background: #fff;" />
+            </div>
+            <div class="avatar-ring-pulse"></div>
+          </div>
+          
+          <div class="client-badge-tag">Fleet ERP</div>
+          <h3 class="client-card-title">Madurai Tour Taxi</h3>
+          <p class="client-card-desc">High-capacity fleet management tools and real-time automated taxi reservation software.</p>
+          <div class="client-view-work-link" style="margin-top: 14px; font-weight: 800; font-size: 0.85rem; color: #D97706; display: inline-flex; align-items: center; gap: 6px;">View Works Overview →</div>
+        </div>
+
+        <!-- Client Person 3: Coral Rose Pastel -->
+        <div class="client-person-pod person-pod-bob3 client-pod-pastel-rose" data-client-key="madurai-best-tours" style="cursor: pointer;">
+          <div class="client-person-avatar-wrap">
+            <div class="client-person-avatar" style="overflow: hidden; background: #ffffff; padding: 2px;">
+              <img src="images/madurai_best_tours_logo.jpeg" alt="Madurai Best Tours & Travels Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;" />
+            </div>
+            <div class="avatar-ring-pulse"></div>
+          </div>
+          
+          <div class="client-badge-tag">Tourism Platform</div>
+          <h3 class="client-card-title">Madurai Best Tours & Travels</h3>
+          <p class="client-card-desc">Integrated regional tourism booking engines with secure multi-payment gateways.</p>
+          <div class="client-view-work-link" style="margin-top: 14px; font-weight: 800; font-size: 0.85rem; color: #E11D48; display: inline-flex; align-items: center; gap: 6px;">View Works Overview →</div>
+        </div>
+
+        <!-- Client Person 4: Mint Emerald Pastel -->
+        <div class="client-person-pod person-pod-bob1 client-pod-pastel-mint" data-client-key="therapy-universe" style="cursor: pointer;">
+          <div class="client-person-avatar-wrap">
+            <div class="client-person-avatar" style="overflow: hidden; background: #ffffff; padding: 2px;">
+              <img src="images/therapy_universe_logo.png" alt="The Therapy Universe Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;" />
+            </div>
+            <div class="avatar-ring-pulse"></div>
+          </div>
+          
+          <div class="client-badge-tag">Healthcare ERP</div>
+          <h3 class="client-card-title">The Therapy Universe</h3>
+          <p class="client-card-desc">Modern clinical management portals and streamlined patient appointment scheduling software.</p>
+          <div class="client-view-work-link" style="margin-top: 14px; font-weight: 800; font-size: 0.85rem; color: #059669; display: inline-flex; align-items: center; gap: 6px;">View Works Overview →</div>
+        </div>
+
+        <!-- Client Person 5: Lavender Purple Pastel -->
+        <div class="client-person-pod person-pod-bob2 client-pod-pastel-purple" data-client-key="amf-studio" style="cursor: pointer;">
+          <div class="client-person-avatar-wrap">
+            <div class="client-person-avatar" style="overflow: hidden; background: #ffffff; padding: 2px;">
+              <img src="images/amf_studio_logo.png" alt="AMF Studio Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;" />
+            </div>
+            <div class="avatar-ring-pulse"></div>
+          </div>
+          
+          <div class="client-badge-tag">Media & Enterprise</div>
+          <h3 class="client-card-title">AMF Studio</h3>
+          <p class="client-card-desc">Enterprise video production management and high-end digital media workflow platforms.</p>
+          <div class="client-view-work-link" style="margin-top: 14px; font-weight: 800; font-size: 0.85rem; color: #7C3AED; display: inline-flex; align-items: center; gap: 6px;">View Works Overview →</div>
+        </div>
+
+      </div>
+
+      <!-- Client Partnerships Continuous Marquee Ticker -->
+      <div class="client-marquee-wrapper">
+        <div class="client-marquee-label">Fostering enduring technology partnerships with industry leaders.</div>
+        <div class="marquee-container">
+          <div class="marquee-content">
+            <span class="marquee-item"><img src="images/samyuktha_logo.jpg" alt="Samyuktha Logo" />Samyuktha Tours & Travels</span>
+            <span class="marquee-item"><img src="images/madurai_tour_taxi_logo.png" alt="Madurai Tour Taxi Logo" style="background: #fff;" />Madurai Tour Taxi</span>
+            <span class="marquee-item"><img src="images/madurai_best_tours_logo.jpeg" alt="Madurai Best Tours Logo" />Madurai Best Tours & Travels</span>
+            <span class="marquee-item"><img src="images/therapy_universe_logo.png" alt="Therapy Universe Logo" />The Therapy Universe</span>
+            <span class="marquee-item"><img src="images/amf_studio_logo.png" alt="AMF Studio Logo" />AMF Studio</span>
+            
+            <!-- Duplicated for Infinite Seamless Ticker Loop -->
+            <span class="marquee-item"><img src="images/samyuktha_logo.jpg" alt="Samyuktha Logo" />Samyuktha Tours & Travels</span>
+            <span class="marquee-item"><img src="images/madurai_tour_taxi_logo.png" alt="Madurai Tour Taxi Logo" style="background: #fff;" />Madurai Tour Taxi</span>
+            <span class="marquee-item"><img src="images/madurai_best_tours_logo.jpeg" alt="Madurai Best Tours Logo" />Madurai Best Tours & Travels</span>
+            <span class="marquee-item"><img src="images/therapy_universe_logo.png" alt="Therapy Universe Logo" />The Therapy Universe</span>
+            <span class="marquee-item"><img src="images/amf_studio_logo.png" alt="AMF Studio Logo" />AMF Studio</span>
+
+            <!-- Triplicated for Ultra-Wide Screen Seamless Coverage -->
+            <span class="marquee-item"><img src="images/samyuktha_logo.jpg" alt="Samyuktha Logo" />Samyuktha Tours & Travels</span>
+            <span class="marquee-item"><img src="images/madurai_tour_taxi_logo.png" alt="Madurai Tour Taxi Logo" style="background: #fff;" />Madurai Tour Taxi</span>
+            <span class="marquee-item"><img src="images/madurai_best_tours_logo.jpeg" alt="Madurai Best Tours Logo" />Madurai Best Tours & Travels</span>
+            <span class="marquee-item"><img src="images/therapy_universe_logo.png" alt="Therapy Universe Logo" />The Therapy Universe</span>
+            <span class="marquee-item"><img src="images/amf_studio_logo.png" alt="AMF Studio Logo" />AMF Studio</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  <!-- ==========================================
+       Client Stories Section (Running Marquee Rows with Left & Right Avatar Pods)
+       ========================================== -->
+  <section class="section section-bg-image section-bg-crisp section-bg-stories" id="client-stories" style="overflow: hidden; padding: 48px 0;">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 32px;">
+        <div class="badge">Client Stories</div>
+        <h2 class="section-title">What Our <span class="text-gradient">Clients Say</span></h2>
+        <p class="section-subtitle">We maintain a 4.5+ star average rating. Discover why enterprises rely on CodeThrive Infotech for digital transformation.</p>
+      </div>
+    </div>
+
+    <!-- Running Ticker Container Across Screen Width -->
+    <div class="stories-running-ticker-wrapper">
+      
+      <!-- Line 1: Running Left -->
+      <div class="stories-ticker-row row-scroll-left">
+        <div class="stories-ticker-track">
+          
+          <!-- Pod 1 (Left Avatar): Sneha L. -->
+          <div class="testimonial-pod pod-style-left">
+            <div class="avatar-wheel-container">
+              <svg class="avatar-tri-ring" viewBox="0 0 100 100">
+                <path d="M 50 5 A 45 45 0 0 1 89 27.5 L 50 50 Z" fill="#045D5D"/>
+                <path d="M 89 27.5 A 45 45 0 0 1 50 95 L 50 50 Z" fill="#5e8d83"/>
+                <path d="M 50 95 A 45 45 0 0 1 11 27.5 L 50 50 Z" fill="#004B49"/>
+              </svg>
+              <div class="avatar-photo-space">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200&q=80" alt="Sneha L." class="avatar-portrait-img" />
+              </div>
+            </div>
+            <div class="pod-content-body">
+              <div class="pod-name-banner">Sneha L.</div>
+              <div class="pod-designation-text">Designation- Founder, Home Interiors</div>
+              <div class="pod-stars-rating">★★★★★</div>
+              <p class="pod-quote-text">"The 3D interior configurator increased our conversion rate by 30%. Clients love visualizing customized designs in real time."</p>
+            </div>
+          </div>
+
+          <!-- Pod 2 (Right Avatar): Rohit K. -->
+          <div class="testimonial-pod pod-style-right">
+            <div class="pod-content-body">
+              <div class="pod-name-banner">Rohit K.</div>
+              <div class="pod-designation-text">Designation- VP Engineering, Tech Solutions</div>
+              <div class="pod-stars-rating">★★★★★</div>
+              <p class="pod-quote-text">"Our platform now includes built-in AI analytics, delivering actionable operational data to our users effortlessly."</p>
+            </div>
+            <div class="avatar-wheel-container">
+              <svg class="avatar-tri-ring" viewBox="0 0 100 100">
+                <path d="M 50 5 A 45 45 0 0 1 89 27.5 L 50 50 Z" fill="#045D5D"/>
+                <path d="M 89 27.5 A 45 45 0 0 1 50 95 L 50 50 Z" fill="#5e8d83"/>
+                <path d="M 50 95 A 45 45 0 0 1 11 27.5 L 50 50 Z" fill="#004B49"/>
+              </svg>
+              <div class="avatar-photo-space">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&h=200&q=80" alt="Rohit K." class="avatar-portrait-img" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Pod 3 (Left Avatar): Meena S. -->
+          <div class="testimonial-pod pod-style-left">
+            <div class="avatar-wheel-container">
+              <svg class="avatar-tri-ring" viewBox="0 0 100 100">
+                <path d="M 50 5 A 45 45 0 0 1 89 27.5 L 50 50 Z" fill="#045D5D"/>
+                <path d="M 89 27.5 A 45 45 0 0 1 50 95 L 50 50 Z" fill="#5e8d83"/>
+                <path d="M 50 95 A 45 45 0 0 1 11 27.5 L 50 50 Z" fill="#004B49"/>
+              </svg>
+              <div class="avatar-photo-space">
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&h=200&q=80" alt="Meena S." class="avatar-portrait-img" />
+              </div>
+            </div>
+            <div class="pod-content-body">
+              <div class="pod-name-banner">Meena S.</div>
+              <div class="pod-designation-text">Designation- Director, Travel Agency</div>
+              <div class="pod-stars-rating">★★★★★</div>
+              <p class="pod-quote-text">"The booking engine simplified complex tour itineraries, and our travelers frequently compliment the fast checkout process."</p>
+            </div>
+          </div>
+
+          <!-- Duplicate Loop for Line 1 -->
+          <!-- Pod 1 (Left Avatar): Sneha L. -->
+          <div class="testimonial-pod pod-style-left">
+            <div class="avatar-wheel-container">
+              <svg class="avatar-tri-ring" viewBox="0 0 100 100">
+                <path d="M 50 5 A 45 45 0 0 1 89 27.5 L 50 50 Z" fill="#045D5D"/>
+                <path d="M 89 27.5 A 45 45 0 0 1 50 95 L 50 50 Z" fill="#5e8d83"/>
+                <path d="M 50 95 A 45 45 0 0 1 11 27.5 L 50 50 Z" fill="#004B49"/>
+              </svg>
+              <div class="avatar-photo-space">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200&q=80" alt="Sneha L." class="avatar-portrait-img" />
+              </div>
+            </div>
+            <div class="pod-content-body">
+              <div class="pod-name-banner">Sneha L.</div>
+              <div class="pod-designation-text">Designation- Founder, Home Interiors</div>
+              <div class="pod-stars-rating">★★★★★</div>
+              <p class="pod-quote-text">"The 3D interior configurator increased our conversion rate by 30%. Clients love visualizing customized designs in real time."</p>
+            </div>
+          </div>
+
+          <!-- Pod 2 (Right Avatar): Rohit K. -->
+          <div class="testimonial-pod pod-style-right">
+            <div class="pod-content-body">
+              <div class="pod-name-banner">Rohit K.</div>
+              <div class="pod-designation-text">Designation- VP Engineering, Tech Solutions</div>
+              <div class="pod-stars-rating">★★★★★</div>
+              <p class="pod-quote-text">"Our platform now includes built-in AI analytics, delivering actionable operational data to our users effortlessly."</p>
+            </div>
+            <div class="avatar-wheel-container">
+              <svg class="avatar-tri-ring" viewBox="0 0 100 100">
+                <path d="M 50 5 A 45 45 0 0 1 89 27.5 L 50 50 Z" fill="#045D5D"/>
+                <path d="M 89 27.5 A 45 45 0 0 1 50 95 L 50 50 Z" fill="#5e8d83"/>
+                <path d="M 50 95 A 45 45 0 0 1 11 27.5 L 50 50 Z" fill="#004B49"/>
+              </svg>
+              <div class="avatar-photo-space">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&h=200&q=80" alt="Rohit K." class="avatar-portrait-img" />
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Line 2: Running Right -->
+      <div class="stories-ticker-row row-scroll-right" style="margin-top: 24px;">
+        <div class="stories-ticker-track">
+
+          <!-- Pod 4 (Right Avatar): Ramesh K. -->
+          <div class="testimonial-pod pod-style-right">
+            <div class="pod-content-body">
+              <div class="pod-name-banner">Ramesh K.</div>
+              <div class="pod-designation-text">Designation- Project Manager, Construction</div>
+              <div class="pod-stars-rating">★★★★★</div>
+              <p class="pod-quote-text">"Daily field expense tracking and site photo logs keep projects transparent. The workflow is modern and easy for field staff."</p>
+            </div>
+            <div class="avatar-wheel-container">
+              <svg class="avatar-tri-ring" viewBox="0 0 100 100">
+                <path d="M 50 5 A 45 45 0 0 1 89 27.5 L 50 50 Z" fill="#045D5D"/>
+                <path d="M 89 27.5 A 45 45 0 0 1 50 95 L 50 50 Z" fill="#5e8d83"/>
+                <path d="M 50 95 A 45 45 0 0 1 11 27.5 L 50 50 Z" fill="#004B49"/>
+              </svg>
+              <div class="avatar-photo-space">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80" alt="Ramesh K." class="avatar-portrait-img" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Pod 5 (Left Avatar): Priya D. -->
+          <div class="testimonial-pod pod-style-left">
+            <div class="avatar-wheel-container">
+              <svg class="avatar-tri-ring" viewBox="0 0 100 100">
+                <path d="M 50 5 A 45 45 0 0 1 89 27.5 L 50 50 Z" fill="#045D5D"/>
+                <path d="M 89 27.5 A 45 45 0 0 1 50 95 L 50 50 Z" fill="#5e8d83"/>
+                <path d="M 50 95 A 45 45 0 0 1 11 27.5 L 50 50 Z" fill="#004B49"/>
+              </svg>
+              <div class="avatar-photo-space">
+                <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=200&h=200&q=80" alt="Priya D." class="avatar-portrait-img" />
+              </div>
+            </div>
+            <div class="pod-content-body">
+              <div class="pod-name-banner">Priya D.</div>
+              <div class="pod-designation-text">Designation- Head of Ops, Academy</div>
+              <div class="pod-stars-rating">★★★★★</div>
+              <p class="pod-quote-text">"Managing student records, grading, and online testing is now centralized. Instructors appreciate the intuitive dashboard, and parents love portal access."</p>
+            </div>
+          </div>
+
+          <!-- Pod 3 (Right Avatar): Meena S. -->
+          <div class="testimonial-pod pod-style-right">
+            <div class="pod-content-body">
+              <div class="pod-name-banner">Meena S.</div>
+              <div class="pod-designation-text">Designation- Director, Travel Agency</div>
+              <div class="pod-stars-rating">★★★★★</div>
+              <p class="pod-quote-text">"The booking engine simplified complex tour itineraries, and our travelers frequently compliment the fast checkout process."</p>
+            </div>
+            <div class="avatar-wheel-container">
+              <svg class="avatar-tri-ring" viewBox="0 0 100 100">
+                <path d="M 50 5 A 45 45 0 0 1 89 27.5 L 50 50 Z" fill="#045D5D"/>
+                <path d="M 89 27.5 A 45 45 0 0 1 50 95 L 50 50 Z" fill="#5e8d83"/>
+                <path d="M 50 95 A 45 45 0 0 1 11 27.5 L 50 50 Z" fill="#004B49"/>
+              </svg>
+              <div class="avatar-photo-space">
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&h=200&q=80" alt="Meena S." class="avatar-portrait-img" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Duplicate Loop for Line 2 -->
+          <!-- Pod 4 (Right Avatar): Ramesh K. -->
+          <div class="testimonial-pod pod-style-right">
+            <div class="pod-content-body">
+              <div class="pod-name-banner">Ramesh K.</div>
+              <div class="pod-designation-text">Designation- Project Manager, Construction</div>
+              <div class="pod-stars-rating">★★★★★</div>
+              <p class="pod-quote-text">"Daily field expense tracking and site photo logs keep projects transparent. The workflow is modern and easy for field staff."</p>
+            </div>
+            <div class="avatar-wheel-container">
+              <svg class="avatar-tri-ring" viewBox="0 0 100 100">
+                <path d="M 50 5 A 45 45 0 0 1 89 27.5 L 50 50 Z" fill="#045D5D"/>
+                <path d="M 89 27.5 A 45 45 0 0 1 50 95 L 50 50 Z" fill="#5e8d83"/>
+                <path d="M 50 95 A 45 45 0 0 1 11 27.5 L 50 50 Z" fill="#004B49"/>
+              </svg>
+              <div class="avatar-photo-space">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80" alt="Ramesh K." class="avatar-portrait-img" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Pod 5 (Left Avatar): Priya D. -->
+          <div class="testimonial-pod pod-style-left">
+            <div class="avatar-wheel-container">
+              <svg class="avatar-tri-ring" viewBox="0 0 100 100">
+                <path d="M 50 5 A 45 45 0 0 1 89 27.5 L 50 50 Z" fill="#045D5D"/>
+                <path d="M 89 27.5 A 45 45 0 0 1 50 95 L 50 50 Z" fill="#5e8d83"/>
+                <path d="M 50 95 A 45 45 0 0 1 11 27.5 L 50 50 Z" fill="#004B49"/>
+              </svg>
+              <div class="avatar-photo-space">
+                <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=200&h=200&q=80" alt="Priya D." class="avatar-portrait-img" />
+              </div>
+            </div>
+            <div class="pod-content-body">
+              <div class="pod-name-banner">Priya D.</div>
+              <div class="pod-designation-text">Designation- Head of Ops, Academy</div>
+              <div class="pod-stars-rating">★★★★★</div>
+              <p class="pod-quote-text">"Managing student records, grading, and online testing is now centralized. Instructors appreciate the intuitive dashboard, and parents love portal access."</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FAQ Section (Interactive Accordion)
+       ========================================== -->
+  <!-- ==========================================
+       FAQ Section (Interactive Animated Accordions & Vector Mesh)
+       ========================================== -->
+  <section class="section section-bg-image section-bg-crisp section-bg-faq" id="faq" style="position: relative; overflow: hidden; background: var(--bg-secondary);">
+    <!-- Background Animated Vector Diagram for FAQ Section -->
+    <div class="faq-bg-vector-container">
+      <svg class="faq-bg-svg" viewBox="0 0 1200 650" fill="none" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="faqLineGrad" x1="0" y1="0" x2="1200" y2="650" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#045D5D" stop-opacity="0.18"/>
+            <stop offset="0.5" stop-color="#5e8d83" stop-opacity="0.25"/>
+            <stop offset="1" stop-color="#004B49" stop-opacity="0.15"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Floating Interconnected FAQ Node Lines -->
+        <path d="M 150 120 C 350 180 850 60 1050 140 M 100 320 C 400 240 800 400 1100 300 M 150 520 C 450 440 750 580 1050 480" stroke="url(#faqLineGrad)" stroke-width="2" stroke-dasharray="6 6" class="anim-digital-flow"/>
+
+        <!-- Orbiting Question Pulse Rings -->
+        <g class="anim-node-ring-1">
+          <circle cx="180" cy="140" r="45" stroke="#045D5D" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <circle cx="180" cy="140" r="14" fill="rgba(17, 69, 56, 0.12)"/>
+        </g>
+        <g class="anim-node-ring-3">
+          <circle cx="1020" cy="310" r="50" stroke="#5e8d83" stroke-width="1.5" stroke-dasharray="6 4"/>
+          <circle cx="1020" cy="310" r="16" fill="rgba(94, 141, 131, 0.15)"/>
+        </g>
+        <g class="anim-node-ring-5">
+          <circle cx="160" cy="500" r="42" stroke="#004B49" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <circle cx="160" cy="500" r="12" fill="rgba(15, 68, 76, 0.12)"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="container" style="position: relative; z-index: 2;">
+      <div class="section-header">
+        <div class="badge">FAQ</div>
+        <h2 class="section-title">Frequently Asked <span class="text-gradient">Questions</span></h2>
+        <p class="section-subtitle">Clear responses to your key inquiries. Transparency guides everything we build.</p>
+      </div>
+
+      <div class="faq-container faq-grid-layout">
+        
+        <!-- Question 1 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What is the estimated investment for a software project?</span>
+            <div class="faq-icon-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="faq-plus-icon">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            <p>Project investments vary depending on scope, feature complexity, and custom integrations. We provide transparent pricing tiers and detailed cost estimates before development begins.</p>
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What is the typical development timeline?</span>
+            <div class="faq-icon-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="faq-plus-icon">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            <p>Standard projects typically range from 4 to 12 weeks depending on requirements. We follow agile milestones so you see active progress every week.</p>
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Can non-technical team members update site content?</span>
+            <div class="faq-icon-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="faq-plus-icon">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. We engineer intuitive administrative dashboards and content management portals that allow non-technical staff to update text, images, products, and records easily.</p>
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Are your solutions fully responsive across mobile devices?</span>
+            <div class="faq-icon-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="faq-plus-icon">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely. Every web application and portal we build is fully responsive, optimized for smartphones, tablets, laptops, and 4K displays.</p>
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Can you build a billing, booking, or ERP system?</span>
+            <div class="faq-icon-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="faq-plus-icon">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. We specialize in custom billing engines, automated appointment booking platforms, and real-time inventory ERP systems tailored specifically to your business operations.</p>
+          </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What post-launch support and maintenance do you offer?</span>
+            <div class="faq-icon-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="faq-plus-icon">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            <p>We provide ongoing technical support, regular security updates, cloud backups, and feature enhancement options to ensure long-term stability.</p>
+          </div>
+        </div>
+
+        <!-- Additional 10 FAQ Questions (Hidden by default, revealed on More click) -->
+        <div class="faq-extra-wrapper" id="faqExtraWrapper" style="display: none; grid-column: 1 / -1; width: 100%; margin-top: 20px;">
+          <div class="faq-grid-layout" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
+            
+            <!-- Question 7 -->
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>How do you handle data security and client confidentiality?</span>
+                <div class="faq-icon-badge">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="faq-plus-icon">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-answer">
+                <p>Security is paramount. We sign non-disclosure agreements (NDAs), enforce zero-trust protocols, encrypt all data at rest and in transit (AES-256), and adhere to strict SOC2 and GDPR compliance standards.</p>
+              </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>Do you provide cloud deployment and server management?</span>
+                <div class="faq-icon-badge">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="faq-plus-icon">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. We configure automated multi-cloud deployment pipelines on AWS, Google Cloud, and Azure, including serverless architecture, load balancing, SSL configuration, and 24/7 uptime monitoring.</p>
+              </div>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>Can CodeThrive Infotech integrate third-party APIs & payment gateways?</span>
+                <div class="faq-icon-badge">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="faq-plus-icon">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-answer">
+                <p>Absolutely. We seamlessly integrate payment gateways (Razorpay, Stripe, PayPal), CRM systems (Salesforce, HubSpot), ERP databases, AI endpoints, and custom REST/GraphQL APIs.</p>
+              </div>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>What software development methodology do you follow?</span>
+                <div class="faq-icon-badge">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="faq-plus-icon">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-answer">
+                <p>We utilize Agile Scrum methodology with bi-weekly sprint cycles. You receive regular progress updates, interactive staging demos, and transparent code commits throughout development.</p>
+              </div>
+            </div>
+
+            <!-- Question 11 -->
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>Who owns the final source code and intellectual property?</span>
+                <div class="faq-icon-badge">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="faq-plus-icon">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-answer">
+                <p>You own 100% of the final source code, intellectual property rights, database schemas, and digital assets upon project completion and final sign-off.</p>
+              </div>
+            </div>
+
+            <!-- Question 12 -->
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>Can you upgrade or redesign our legacy software application?</span>
+                <div class="faq-icon-badge">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="faq-plus-icon">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. We modernize legacy codebases by refactoring monolithic architectures into modular microservices, enhancing performance, updating UI/UX designs, and migrating systems to secure cloud environments.</p>
+              </div>
+            </div>
+
+            <!-- Question 13 -->
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>How do you ensure high application speed and performance?</span>
+                <div class="faq-icon-badge">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="faq-plus-icon">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-answer">
+                <p>We optimize database queries, implement multi-tier Redis caching, enable global CDN edge distribution, compress assets, and conduct rigorous load testing for sub-second responses.</p>
+              </div>
+            </div>
+
+            <!-- Question 14 -->
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>Do you offer dedicated developers for custom hire?</span>
+                <div class="faq-icon-badge">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="faq-plus-icon">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. We offer flexible dedicated developer and team augmentation engagement models where our specialized software engineers integrate directly into your internal workflows.</p>
+              </div>
+            </div>
+
+            <!-- Question 15 -->
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>What happens if we want to add new features post-launch?</span>
+                <div class="faq-icon-badge">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="faq-plus-icon">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-answer">
+                <p>We architect all software with modular, scalable code structures. Adding new features or scaling your platform post-launch is straightforward through ongoing maintenance plans or feature sprints.</p>
+              </div>
+            </div>
+
+            <!-- Question 16 -->
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>How do we get started with CodeThrive Infotech on a new project?</span>
+                <div class="faq-icon-badge">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="faq-plus-icon">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-answer">
+                <p>Simply click "Connect With Our Team" or submit our contact form. Our technical team will schedule an initial discovery call within 24 hours to analyze your requirements and present an architectural blueprint.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- More FAQs Toggle Button -->
+        <div style="grid-column: 1 / -1; width: 100%; text-align: center; margin-top: 32px;">
+          <button id="moreFaqBtn" class="btn btn-secondary btn-more-faq" style="padding: 12px 36px; font-weight: 800; border-radius: 30px; display: inline-flex; align-items: center; gap: 10px; cursor: pointer;">
+            <span id="moreFaqText">More FAQs</span>
+            <svg id="moreFaqIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.35s ease;">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CTA Section
+       ========================================== -->
+  <section class="section" style="background: #FFFFFF; text-align: center;">
+    <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <h2 class="section-title" style="text-align: center !important;">Ready for your <span class="text-gradient">Project?</span></h2>
+      <p class="section-subtitle" style="text-align: center !important; text-align-last: center !important; margin-left: auto !important; margin-right: auto !important; max-width: 680px !important; margin-bottom: 32px !important;">
+        Let's create something extraordinary together. We look forward to hearing from you.
+      </p>
+      <a href="contact.html#contact-form" class="btn btn-primary" style="margin-left: auto !important; margin-right: auto !important;">
+        <span>Connect With Our Team</span>
+        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Footer Section
+       ========================================== -->
+  <footer class="footer new-watermark-footer">
+    <div class="container" style="position: relative; z-index: 2;">
+      <div class="footer-grid-3col">
+        <!-- Column 1: Brand Profile & Small Social Icons -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 14px;">
+            <img src="images/company-logo.png" alt="CodeThrive Infotech Logo" class="brand-logo-img" />
+            <span class="footer-brand-text">CODETHRIVE INFOTECH</span>
+          </a>
+          <p class="footer-brand-desc">
+            Empowering enterprises with smart, scalable, and secure digital solutions. Transform your vision into reality with CodeThrive Infotech.
+          </p>
+          <div class="footer-social-icons">
+            <a href="tel:+919150781685" class="footer-social-btn" title="Call Us" aria-label="Call Us">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            </a>
+            <a href="https://wa.me/919150781685" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="WhatsApp" aria-label="WhatsApp">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.762.459 3.48 1.332 4.992l-1.417 5.176 5.297-1.389c1.458.796 3.097 1.215 4.773 1.216h.004c5.505 0 9.988-4.478 9.989-9.985 0-2.668-1.037-5.176-2.925-7.065-1.888-1.888-4.396-2.927-7.063-2.929zm5.952 14.286c-.25.702-1.238 1.34-1.72 1.386-.48.046-1.107.215-3.666-.826-3.197-1.303-5.249-4.549-5.408-4.761-.158-.212-1.294-1.722-1.294-3.287 0-1.564.818-2.335 1.108-2.652.29-.317.633-.396.844-.396.21 0 .422.002.607.01.196.008.461-.074.72.548.267.643.909 2.217.988 2.378.079.16.132.348.026.56-.105.212-.158.344-.316.533-.158.188-.333.421-.476.564-.158.158-.323.33-.138.647.185.317.822 1.357 1.767 2.199 1.217 1.084 2.24 1.42 2.557 1.578.317.158.502.132.687-.079.185-.212.793-.923 1.004-1.24.212-.317.423-.264.713-.158.29.106 1.848.871 2.164 1.029.317.158.528.238.607.37.079.132.079.767-.171 1.469z"/></svg>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Instagram" aria-label="Instagram">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="LinkedIn" aria-label="LinkedIn">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Facebook" aria-label="Facebook">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+          <div class="footer-copyright-text">
+            &copy; 2026 CodeThrive Infotech. All rights reserved.
+          </div>
+        </div>
+
+        <!-- Column 2: QUICK LINKS -->
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">QUICK LINKS</h4>
+          <ul class="footer-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: CONTACT US -->
+        <div class="footer-contact-col">
+          <h4 class="footer-col-title">CONTACT US</h4>
+          <div class="footer-contact-list">
+            <p><strong>Phone:</strong> <a href="tel:+919150781685">+91 91507 81685</a></p>
+            <p><strong>Email:</strong> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@codethriveinfotech.in" target="_blank" rel="noopener noreferrer">info@codethriveinfotech.in</a></p>
+            <p><strong>Location:</strong> <a href="https://maps.app.goo.gl/AgyaE6mujDEaVjZr8?g_st=aw" target="_blank" rel="noopener" style="text-decoration: underline;">No 1, Srihari Nivas, Indira Nagar, Sugam, Coimbatore - 641045</a></p>
+          </div>
+          <div class="footer-privacy-wrap">
+            <a href="contact.html" class="footer-privacy-link">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GIANT TRANSPARENT WATERMARK BRAND TEXT AT THE BOTTOM -->
+    <div class="footer-watermark-text" aria-hidden="true">
+      CODETHRIVE INFOTECH
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       Client Works Interactive Popup Modal System
+       ========================================== -->
+  <div class="modal-backdrop client-works-modal-backdrop" id="clientWorksModalBackdrop">
+    <div class="modal-container client-works-modal-container" id="clientWorksModalContainer">
+      <button class="modal-close" id="clientWorksModalCloseBtn" aria-label="Close Modal">&times;</button>
+      <div id="clientWorksModalContent"></div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="btn btn-primary back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7"/></svg>
+  </button>
+
+  <!-- Floating Call Button (Bottom Right Corner) -->
+  <a href="tel:+919150781685" 
+     class="call-float-btn" 
+     aria-label="Call CodeThrive Infotech">
+    <span class="float-tooltip-pop">📞 Call Us: +91 91507 81685</span>
+    <svg class="call-icon-svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+      <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+    </svg>
+  </a>
+
+  <!-- Floating WhatsApp Icon (Bottom Right Corner) -->
+  <a href="https://wa.me/919150781685?text=Hello%20CodeThrive%20Infotech%2C%20I%20would%20like%20to%20discuss%20a%20project." 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="whatsapp-float-btn" 
+     aria-label="Chat on WhatsApp">
+    <span class="float-tooltip-pop">💬 Chat on WhatsApp</span>
+    <svg class="whatsapp-icon-svg" viewBox="0 0 24 24" width="30" height="30">
+      <path fill="#FFFFFF" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/>
+      <path fill="#FFFFFF" d="M12.01 2C6.48 2 2 6.48 2 12.01c0 1.94.55 3.75 1.5 5.28L2 22l4.82-1.47c1.48.88 3.21 1.48 5.19 1.48 5.53 0 10.01-4.48 10.01-10.01S17.54 2 12.01 2zm0 18.02c-1.76 0-3.41-.48-4.83-1.32l-.35-.21-2.86.87.88-2.79-.23-.37C3.71 14.77 3.2 13.06 3.2 12.01c0-4.86 3.95-8.81 8.81-8.81s8.81 3.95 8.81 8.81-3.95 8.81-8.81 8.81z"/>
+    </svg>
+  </a>
+
+  <!-- JavaScript & React Components -->
+  <script src="js/main.js"></script>
+  <script type="text/babel" src="js/react-components.js"></script>
+</body>
+</html>

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo Projects & Portfolio • CodeThrive Infotech</title>
+  <meta name="description" content="Explore CodeThrive Infotech's Demo Projects portfolio featuring custom web applications, e-commerce stores, AI engines, and enterprise solutions." />
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- React 18 & Babel CDN Scripts -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Master Stylesheet (Dark Navy & Metallic Silver Theme) -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Low-Opacity Background Watermark Logos -->
+  <div class="bg-watermark"></div>
+  <div class="bg-watermark-left"></div>
+
+  <!-- ==========================================
+       Header / Navigation Bar
+       ========================================== -->
+  <header class="header">
+    <div class="container navbar">
+      <div class="brand-group">
+        <a href="index.html" class="brand-logo">
+          <img src="images/company-logo.png" alt="CodeThrive Infotech Logo" class="brand-logo-img" />
+          <span>CodeThrive <span class="text-gradient">Infotech</span></span>
+        </a>
+        <div class="brand-tagline-micro">Progress. Cultivate. Innovate.</div>
+      </div>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="industries.html" class="nav-link">Industries</a>
+        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="insights.html" class="nav-link">Insights</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="contact.html#contact-form" class="btn btn-primary">Connect With Our Team</a>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open Menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       Projects Page Hero Banner (Rich Dark Intro with High Opacity BG & Gradient Teal Text)
+       ========================================== -->
+  <section class="section projects-hero-banner" style="background: linear-gradient(135deg, #041215 0%, #002322 40%, #02171B 75%, #070D16 100%) !important; position: relative; overflow: hidden; min-height: 720px !important; padding: 140px 0 110px 0 !important; display: flex; align-items: center; justify-content: center; box-sizing: border-box;">
+    
+    <!-- Background Image Layer featuring 2 New Uploaded Images with 100% Full Opacity (No Dimming) -->
+    <div class="projects-hero-bg-image-layer" style="position: absolute; inset: 0; pointer-events: none; z-index: 0; overflow: hidden;">
+      <div style="position: absolute; inset: 0; background: url('images/projects-bg-1.jpg') center/cover no-repeat; opacity: 1; animation: projectsHeroCrossFade100_1 10s ease-in-out infinite;"></div>
+      <div style="position: absolute; inset: 0; background: url('images/projects-bg-2.jpg') center/cover no-repeat; opacity: 0; animation: projectsHeroCrossFade100_2 10s ease-in-out infinite;"></div>
+      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(16, 29, 38, 0.30) 0%, rgba(4, 75, 73, 0.15) 50%, rgba(16, 29, 38, 0.45) 100%); z-index: 1;"></div>
+    </div>
+
+    <div class="container" style="position: relative; z-index: 3; text-align: center;">
+      <!-- Hero Text Content (Expanded & Large Prominent Typography) -->
+      <div class="hero-content" style="max-width: 980px; margin: 0 auto; text-align: center; padding: 24px 0;">
+        <div class="badge hero-white-glow-tagline" style="margin: 0 auto 20px auto; font-size: 0.95rem; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; padding: 8px 24px; border-radius: 24px; color: #34D399 !important; background: rgba(4, 35, 34, 0.75) !important; border: 1.8px solid rgba(52, 211, 153, 0.6) !important; text-shadow: 0 0 16px rgba(52, 211, 153, 0.7) !important; box-shadow: 0 6px 25px rgba(0, 0, 0, 0.45), 0 0 20px rgba(52, 211, 153, 0.3) !important; display: inline-block;">OUR PORTFOLIO SHOWCASE</div>
+        
+        <h1 class="hero-title hero-white-teal-silver-gradient" style="font-size: clamp(2.8rem, 5.2vw, 4.4rem); line-height: 1.15; font-weight: 900; margin-bottom: 22px; max-width: 980px; margin-left: auto; margin-right: auto; background: linear-gradient(110deg, #FFFFFF 0%, #E2E8F0 25%, #34D399 65%, #2DD4BF 100%) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; filter: drop-shadow(0 6px 25px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 30px rgba(52, 211, 153, 0.5)) !important;">
+          Featured Projects & <span style="background: inherit; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Demos.</span>
+        </h1>
+        
+        <p class="hero-desc hero-white-glow-desc" style="font-size: 1.25rem; color: #FFFFFF !important; line-height: 1.75; max-width: 860px; margin: 0 auto 32px auto; font-weight: 600 !important; text-align: center !important; text-shadow: 0 3px 16px rgba(0, 0, 0, 0.95), 0 0 24px rgba(0, 0, 0, 0.8) !important;">
+          Explore our interactive software demos, tailored web storefronts, AI integrations, and enterprise platform templates.
+        </p>
+
+        <div class="hero-ctas" style="display: flex; gap: 18px; flex-wrap: wrap; justify-content: center;">
+          <a href="#projectsGrid" class="btn btn-primary" style="padding: 14px 32px; font-size: 1.05rem;">
+            <span>Explore Live Demos →</span>
+          </a>
+          <a href="contact.html#contact-form" class="btn btn-secondary" style="padding: 14px 32px; font-size: 1.05rem;">Request Custom Solution</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Infinite Moving Text Marquee Ticker
+       ========================================== -->
+  <div class="marquee-container">
+    <div class="marquee-content">
+      <div class="marquee-item"><span class="highlight">RESTAURANT WEBSITE</span></div>
+      <div class="marquee-item"><span class="highlight">GYM PORTAL</span></div>
+      <div class="marquee-item"><span class="highlight">CAKE & BAKERY SHOP</span></div>
+      <div class="marquee-item"><span class="highlight">MEDICAL SHOP STOREFRONT</span></div>
+      <div class="marquee-item"><span class="highlight">PET SHOP CATALOG</span></div>
+      <div class="marquee-item"><span class="highlight">GROCERIES STORE</span></div>
+      <div class="marquee-item"><span class="highlight">CLOTHING STORE</span></div>
+      <div class="marquee-item"><span class="highlight">ORGANICS STORE</span></div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       Demo Projects Showcase & Filter
+       ========================================== -->
+  <section class="section portfolio-hero-section" id="portfolioSection">
+    <!-- Moving Fluid Aurora Gradient Orbs & Scrolling Tech Grid Overlay -->
+    <div class="portfolio-bg-particles">
+      <div class="bg-moving-aurora-1"></div>
+      <div class="bg-moving-aurora-2"></div>
+      <div class="bg-moving-aurora-3"></div>
+    </div>
+    <svg class="portfolio-particle-nodes-svg" viewBox="0 0 1400 800" fill="none">
+      <!-- Animated Rotating Tech Rings -->
+      <circle class="node-ring" cx="200" cy="180" r="90" stroke="rgba(94,141,131,0.15)" stroke-width="1.5" stroke-dasharray="8 12"/>
+      <circle class="node-ring" cx="1200" cy="620" r="110" stroke="rgba(17,69,56,0.15)" stroke-width="1.5" stroke-dasharray="10 16"/>
+
+      <!-- Floating Particle Nodes -->
+      <circle class="node-dot" cx="120" cy="150" r="4" fill="#5e8d83" />
+      <circle class="node-dot" cx="450" cy="80" r="3" fill="#045D5D" />
+      <circle class="node-dot" cx="980" cy="120" r="5" fill="#d2e1cc" />
+      <circle class="node-dot" cx="1250" cy="220" r="3" fill="#5e8d83" />
+      <circle class="node-dot" cx="280" cy="650" r="4" fill="#045D5D" />
+      <circle class="node-dot" cx="820" cy="720" r="3" fill="#5e8d83" />
+      <circle class="node-dot" cx="1150" cy="600" r="4" fill="#d2e1cc" />
+      <line x1="120" y1="150" x2="450" y2="80" stroke="rgba(94,141,131,0.2)" stroke-dasharray="4 4" />
+      <line x1="980" y1="120" x2="1250" y2="220" stroke="rgba(17,69,56,0.2)" stroke-dasharray="4 4" />
+      <line x1="280" y1="650" x2="820" y2="720" stroke="rgba(94,141,131,0.15)" stroke-dasharray="4 4" />
+    </svg>
+
+    <div class="container" style="position: relative; z-index: 4;">
+      <div class="solutions-grid pebble-grid" id="projectsGrid">
+
+        <!-- Project 1: Restaurant & Hospitality Portal -->
+        <div class="solution-card-wrapper" data-category="web">
+          <div class="creative-project-card icon-shape-card">
+            <div class="creative-card-top-row">
+              <div class="icon-shaped-image-frame">
+                <img src="images/restaurant-card-icon.png" alt="Restaurant & Hospitality Portal" class="icon-shaped-img" />
+                <div class="icon-shape-badge" title="Hospitality Sector">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                </div>
+              </div>
+              <div class="creative-card-badge-top">HOSPITALITY</div>
+            </div>
+            <div class="creative-card-body">
+              <div class="creative-card-meta"><span class="creative-core-tag">● CODETHRIVE ARCHITECTURE</span></div>
+              <h3 class="creative-card-title">Restaurant & Hospitality Portal</h3>
+              <p class="creative-card-desc">An elegant, interactive culinary portal featuring table reservation workflows, digital menus, and venue galleries.</p>
+              <div class="creative-card-tags">
+                <span class="creative-tag-pill">Table Reservation</span>
+                <span class="creative-tag-pill">Digital Menus</span>
+                <span class="creative-tag-pill">Venue Galleries</span>
+              </div>
+              <div class="creative-card-footer">
+                <a href="https://chipper-narwhal-2b443d.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-creative-demo" data-direct-url="https://chipper-narwhal-2b443d.netlify.app/">
+                  <span class="btn-text-full">Launch Live Website</span>
+                  <span class="btn-text-mobile">Launch Live →</span>
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Fitness & Gym Management -->
+        <div class="solution-card-wrapper" data-category="web">
+          <div class="creative-project-card icon-shape-card">
+            <div class="creative-card-top-row">
+              <div class="icon-shaped-image-frame">
+                <img src="images/fitness-card-icon.png" alt="Fitness & Gym Management" class="icon-shaped-img" />
+                <div class="icon-shape-badge" title="Fitness Sector">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </div>
+              </div>
+              <div class="creative-card-badge-top">FITNESS</div>
+            </div>
+            <div class="creative-card-body">
+              <div class="creative-card-meta"><span class="creative-core-tag">● CODETHRIVE ARCHITECTURE</span></div>
+              <h3 class="creative-card-title">Fitness & Gym Management</h3>
+              <p class="creative-card-desc">A high-energy fitness club portal equipped with membership class scheduling, trainer profiles, and class booking tools.</p>
+              <div class="creative-card-tags">
+                <span class="creative-tag-pill">Class Scheduling</span>
+                <span class="creative-tag-pill">Trainer Booking</span>
+                <span class="creative-tag-pill">Progress Tracking</span>
+              </div>
+              <div class="creative-card-footer">
+                <a href="https://ornate-squirrel-175112.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-creative-demo" data-direct-url="https://ornate-squirrel-175112.netlify.app/">
+                  <span class="btn-text-full">Launch Live Website</span>
+                  <span class="btn-text-mobile">Launch Live →</span>
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Bakery & Confectionery Store -->
+        <div class="solution-card-wrapper" data-category="web">
+          <div class="creative-project-card icon-shape-card">
+            <div class="creative-card-top-row">
+              <div class="icon-shaped-image-frame">
+                <img src="images/bakery-card-icon.jpg" alt="Bakery & Confectionery Store" class="icon-shaped-img" />
+                <div class="icon-shape-badge" title="Bakery Sector">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.701 2.701 0 01-1.5-.454M9 6v2m3-2v2m3-2v2M4 11h16a1 1 0 011 1v7a1 1 0 01-1 1H4a1 1 0 01-1-1v-7a1 1 0 011-1z"/></svg>
+                </div>
+              </div>
+              <div class="creative-card-badge-top">E-COMMERCE</div>
+            </div>
+            <div class="creative-card-body">
+              <div class="creative-card-meta"><span class="creative-core-tag">● CODETHRIVE ARCHITECTURE</span></div>
+              <h3 class="creative-card-title">Bakery & Confectionery Store</h3>
+              <p class="creative-card-desc">A delightful online storefront featuring custom cake builders, order scheduling, and automated delivery tracking.</p>
+              <div class="creative-card-tags">
+                <span class="creative-tag-pill">Custom Cake Builder</span>
+                <span class="creative-tag-pill">Order Scheduling</span>
+                <span class="creative-tag-pill">Delivery Tracking</span>
+              </div>
+              <div class="creative-card-footer">
+                <a href="https://ephemeral-semolina-06c7fc.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-creative-demo" data-direct-url="https://ephemeral-semolina-06c7fc.netlify.app/">
+                  <span class="btn-text-full">Launch Live Website</span>
+                  <span class="btn-text-mobile">Launch Live →</span>
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Medical & Pharmacy Storefront -->
+        <div class="solution-card-wrapper" data-category="web">
+          <div class="creative-project-card icon-shape-card">
+            <div class="creative-card-top-row">
+              <div class="icon-shaped-image-frame">
+                <img src="images/medical-card-icon.png" alt="Medical & Pharmacy Storefront" class="icon-shaped-img" />
+                <div class="icon-shape-badge" title="Healthcare Sector">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                </div>
+              </div>
+              <div class="creative-card-badge-top">HEALTHCARE</div>
+            </div>
+            <div class="creative-card-body">
+              <div class="creative-card-meta"><span class="creative-core-tag">● CODETHRIVE ARCHITECTURE</span></div>
+              <h3 class="creative-card-title">Medical & Pharmacy Storefront</h3>
+              <p class="creative-card-desc">A secure healthcare portal supporting e-prescriptions, automated medicine refills, and encrypted patient data sync.</p>
+              <div class="creative-card-tags">
+                <span class="creative-tag-pill">E-Prescriptions</span>
+                <span class="creative-tag-pill">Refill Reminders</span>
+                <span class="creative-tag-pill">Encrypted Data</span>
+              </div>
+              <div class="creative-card-footer">
+                <a href="https://sparkly-pixie-11db8a.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-creative-demo" data-direct-url="https://sparkly-pixie-11db8a.netlify.app/">
+                  <span class="btn-text-full">Launch Live Website</span>
+                  <span class="btn-text-mobile">Launch Live →</span>
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Pet Shop & Veterinary Catalog -->
+        <div class="solution-card-wrapper" data-category="web">
+          <div class="creative-project-card icon-shape-card">
+            <div class="creative-card-top-row">
+              <div class="icon-shaped-image-frame">
+                <img src="images/petshop-card-icon.png" alt="Pet Shop & Veterinary Catalog" class="icon-shaped-img" />
+                <div class="icon-shape-badge" title="Pet Shop Sector">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.684a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                </div>
+              </div>
+              <div class="creative-card-badge-top">RETAIL</div>
+            </div>
+            <div class="creative-card-body">
+              <div class="creative-card-meta"><span class="creative-core-tag">● CODETHRIVE ARCHITECTURE</span></div>
+              <h3 class="creative-card-title">Pet Shop & Veterinary Catalog</h3>
+              <p class="creative-card-desc">An all-in-one pet care commerce engine with breed-specific nutrition tools, veterinary booking, and adoption catalogs.</p>
+              <div class="creative-card-tags">
+                <span class="creative-tag-pill">Vet Booking</span>
+                <span class="creative-tag-pill">Pet Nutrition</span>
+                <span class="creative-tag-pill">Adoption Catalog</span>
+              </div>
+              <div class="creative-card-footer">
+                <a href="https://joyful-gelato-a2cbd9.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-creative-demo" data-direct-url="https://joyful-gelato-a2cbd9.netlify.app/">
+                  <span class="btn-text-full">Launch Live Website</span>
+                  <span class="btn-text-mobile">Launch Live →</span>
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: Groceries & Fresh Produce Store -->
+        <div class="solution-card-wrapper" data-category="web">
+          <div class="creative-project-card icon-shape-card">
+            <div class="creative-card-top-row">
+              <div class="icon-shaped-image-frame">
+                <img src="images/grocery-card-icon.png" alt="Groceries & Fresh Produce Store" class="icon-shaped-img" />
+                <div class="icon-shape-badge" title="Grocery Sector">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                </div>
+              </div>
+              <div class="creative-card-badge-top">GROCERY</div>
+            </div>
+            <div class="creative-card-body">
+              <div class="creative-card-meta"><span class="creative-core-tag">● CODETHRIVE ARCHITECTURE</span></div>
+              <h3 class="creative-card-title">Groceries & Fresh Produce Store</h3>
+              <p class="creative-card-desc">A hyper-local grocery delivery platform featuring real-time inventory sync, subscription baskets, and route optimization.</p>
+              <div class="creative-card-tags">
+                <span class="creative-tag-pill">Hyper-Local Delivery</span>
+                <span class="creative-tag-pill">Inventory Sync</span>
+                <span class="creative-tag-pill">Subscription Baskets</span>
+              </div>
+              <div class="creative-card-footer">
+                <a href="https://stalwart-froyo-a435ec.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-creative-demo" data-direct-url="https://stalwart-froyo-a435ec.netlify.app/">
+                  <span class="btn-text-full">Launch Live Website</span>
+                  <span class="btn-text-mobile">Launch Live →</span>
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 7: Boutique Clothing & Apparel Store -->
+        <div class="solution-card-wrapper" data-category="web">
+          <div class="creative-project-card icon-shape-card">
+            <div class="creative-card-top-row">
+              <div class="icon-shaped-image-frame">
+                <img src="images/clothing-card-icon.png" alt="Boutique Clothing & Apparel Store" class="icon-shaped-img" />
+                <div class="icon-shape-badge" title="Fashion Sector">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+                </div>
+              </div>
+              <div class="creative-card-badge-top">FASHION</div>
+            </div>
+            <div class="creative-card-body">
+              <div class="creative-card-meta"><span class="creative-core-tag">● CODETHRIVE ARCHITECTURE</span></div>
+              <h3 class="creative-card-title">Boutique Clothing & Apparel Store</h3>
+              <p class="creative-card-desc">A luxury fashion e-commerce storefront featuring interactive lookbooks, size recommendations, and instant checkout.</p>
+              <div class="creative-card-tags">
+                <span class="creative-tag-pill">Interactive Lookbooks</span>
+                <span class="creative-tag-pill">Size Assistant</span>
+                <span class="creative-tag-pill">Multi-Currency</span>
+              </div>
+              <div class="creative-card-footer">
+                <a href="https://luminous-strudel-016c8f.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-creative-demo" data-direct-url="https://luminous-strudel-016c8f.netlify.app/">
+                  <span class="btn-text-full">Launch Live Website</span>
+                  <span class="btn-text-mobile">Launch Live →</span>
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 8: Organic Farm & Eco-Products Store -->
+        <div class="solution-card-wrapper" data-category="web">
+          <div class="creative-project-card icon-shape-card">
+            <div class="creative-card-top-row">
+              <div class="icon-shaped-image-frame">
+                <img src="images/organic-card-icon.png" alt="Organic Farm & Eco-Products Store" class="icon-shaped-img" />
+                <div class="icon-shape-badge" title="Organic Eco Sector">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2h1.5a2.5 2.5 0 002.5-2.5V7a2 2 0 00-2-2h-1.5A2.5 2.5 0 0113 2.5V1h-2a4 4 0 00-4 4z"/></svg>
+                </div>
+              </div>
+              <div class="creative-card-badge-top">ORGANIC</div>
+            </div>
+            <div class="creative-card-body">
+              <div class="creative-card-meta"><span class="creative-core-tag">● CODETHRIVE ARCHITECTURE</span></div>
+              <h3 class="creative-card-title">Organic Farm & Eco-Products Store</h3>
+              <p class="creative-card-desc">Sustainable farm-to-table platform tracking product origins, eco-certifications, and recurring farm box deliveries.</p>
+              <div class="creative-card-tags">
+                <span class="creative-tag-pill">Farm-to-Table</span>
+                <span class="creative-tag-pill">Eco Tracking</span>
+                <span class="creative-tag-pill">Recurring Baskets</span>
+              </div>
+              <div class="creative-card-footer">
+                <a href="https://silly-syrniki-acc03b.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-creative-demo" data-direct-url="https://silly-syrniki-acc03b.netlify.app/">
+                  <span class="btn-text-full">Launch Live Website</span>
+                  <span class="btn-text-mobile">Launch Live →</span>
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 9: AI Demand Forecasting Engine -->
+        <div class="solution-card-wrapper" data-category="ai">
+          <div class="creative-project-card icon-shape-card">
+            <div class="creative-card-top-row">
+              <div class="icon-shaped-image-frame">
+                <img src="images/ai-forecasting-card-icon.png" alt="AI Demand Forecasting Engine" class="icon-shaped-img" />
+                <div class="icon-shape-badge" title="AI Analytics Sector">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </div>
+              </div>
+              <div class="creative-card-badge-top">AI / ANALYTICS</div>
+            </div>
+            <div class="creative-card-body">
+              <div class="creative-card-meta"><span class="creative-core-tag">● CODETHRIVE AI CORE</span></div>
+              <h3 class="creative-card-title">AI Demand Forecasting Engine</h3>
+              <p class="creative-card-desc">Machine learning pipeline predicting retail stock requirements, preventing overstocking, and automating replenishment.</p>
+              <div class="creative-card-tags">
+                <span class="creative-tag-pill">Predictive Modeling</span>
+                <span class="creative-tag-pill">Stock Automation</span>
+                <span class="creative-tag-pill">ML Pipelines</span>
+              </div>
+              <div class="creative-card-footer">
+                <a href="contact.html#contact-form" class="btn-creative-demo" data-direct-url="contact.html#contact-form">
+                  <span class="btn-text-full">Request Architecture Quote</span>
+                  <span class="btn-text-mobile">Request Quote →</span>
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 10: Real-Time Customer Sentiment AI -->
+        <div class="solution-card-wrapper" data-category="ai">
+          <div class="creative-project-card icon-shape-card">
+            <div class="creative-card-top-row">
+              <div class="icon-shaped-image-frame">
+                <img src="images/sentiment-card-icon.png" alt="Real-Time Customer Sentiment AI" class="icon-shaped-img" />
+                <div class="icon-shape-badge" title="AI Sentiment Sector">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                </div>
+              </div>
+              <div class="creative-card-badge-top">AI / SENTIMENT</div>
+            </div>
+            <div class="creative-card-body">
+              <div class="creative-card-meta"><span class="creative-core-tag">● CODETHRIVE AI CORE</span></div>
+              <h3 class="creative-card-title">Real-Time Customer Sentiment AI</h3>
+              <p class="creative-card-desc">Natural language processing model analyzing customer feedback and live chat sentiment to trigger instant retention workflows.</p>
+              <div class="creative-card-tags">
+                <span class="creative-tag-pill">NLP Processing</span>
+                <span class="creative-tag-pill">Live Chat AI</span>
+                <span class="creative-tag-pill">Retention Triggers</span>
+              </div>
+              <div class="creative-card-footer">
+                <a href="contact.html#contact-form" class="btn-creative-demo" data-direct-url="contact.html#contact-form">
+                  <span class="btn-text-full">Request Architecture Quote</span>
+                  <span class="btn-text-mobile">Request Quote →</span>
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 11: Enterprise Cloud ERP Suite -->
+        <div class="solution-card-wrapper" data-category="enterprise">
+          <div class="creative-project-card icon-shape-card">
+            <div class="creative-card-top-row">
+              <div class="icon-shaped-image-frame">
+                <img src="images/erp-card-icon.png" alt="Enterprise Cloud ERP Suite" class="icon-shaped-img" />
+                <div class="icon-shape-badge" title="Enterprise Sector">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                </div>
+              </div>
+              <div class="creative-card-badge-top">ENTERPRISE / ERP</div>
+            </div>
+            <div class="creative-card-body">
+              <div class="creative-card-meta"><span class="creative-core-tag">● CODETHRIVE ENTERPRISE</span></div>
+              <h3 class="creative-card-title">Enterprise Cloud ERP Suite</h3>
+              <p class="creative-card-desc">Comprehensive ERP architecture unifying multi-tenant databases, financial auditing, and role-based access control.</p>
+              <div class="creative-card-tags">
+                <span class="creative-tag-pill">Multi-Tenant Architecture</span>
+                <span class="creative-tag-pill">SOC2 Compliance</span>
+                <span class="creative-tag-pill">Role RBAC</span>
+              </div>
+              <div class="creative-card-footer">
+                <a href="contact.html#contact-form" class="btn-creative-demo" data-direct-url="contact.html#contact-form">
+                  <span>Request Custom Build</span>
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 12: Global Logistics & Supply Chain -->
+        <div class="solution-card-wrapper" data-category="enterprise">
+          <div class="creative-project-card icon-shape-card">
+            <div class="creative-card-top-row">
+              <div class="icon-shaped-image-frame">
+                <img src="images/logistics-card-icon.png" alt="Global Logistics & Supply Chain" class="icon-shaped-img" />
+                <div class="icon-shape-badge" title="Logistics Sector">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 100-4 2 2 0 000 4zm10 0a2 2 0 100-4 2 2 0 000 4z"/></svg>
+                </div>
+              </div>
+              <div class="creative-card-badge-top">LOGISTICS</div>
+            </div>
+            <div class="creative-card-body">
+              <div class="creative-card-meta"><span class="creative-core-tag">● CODETHRIVE ENTERPRISE</span></div>
+              <h3 class="creative-card-title">Global Logistics & Supply Chain</h3>
+              <p class="creative-card-desc">End-to-end supply chain telemetry platform monitoring fleet GPS, customs clearance, and warehouse fulfillment in real time.</p>
+              <div class="creative-card-tags">
+                <span class="creative-tag-pill">Fleet Telemetry</span>
+                <span class="creative-tag-pill">Customs Sync</span>
+                <span class="creative-tag-pill">Fulfillment AI</span>
+              </div>
+              <div class="creative-card-footer">
+                <a href="contact.html#contact-form" class="btn-creative-demo" data-direct-url="contact.html#contact-form">
+                  <span>Request Custom Build</span>
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Modal Dialog (Demo Preview)
+       ========================================== -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal-container">
+      <button class="modal-close" id="modalCloseBtn">&times;</button>
+      <h3 class="solution-title" id="modalTitle" style="margin-bottom: 20px;">Project Demo Preview</h3>
+      <div id="modalBody">
+        <!-- Dynamic demo content -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       CTA Section
+       ========================================== -->
+  <section class="section" style="background: var(--bg-secondary); text-align: center;">
+    <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <h2 class="section-title" style="text-align: center !important;">Require a Custom Application for <span class="text-gradient">Your Business?</span></h2>
+      <p class="section-subtitle" style="text-align: center !important; text-align-last: center !important; margin-left: auto !important; margin-right: auto !important; max-width: 780px !important; margin-bottom: 32px !important;">
+        We tailor every digital application and enterprise software architecture to reflect your distinct brand and operational needs.
+      </p>
+      <a href="contact.html#contact-form" class="btn btn-primary" style="margin-left: auto !important; margin-right: auto !important;">Request Custom Build</a>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Footer Section
+       ========================================== -->
+  <footer class="footer new-watermark-footer">
+    <div class="container" style="position: relative; z-index: 2;">
+      <div class="footer-grid-3col">
+        <!-- Column 1: Brand Profile & Small Social Icons -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 14px;">
+            <img src="images/company-logo.png" alt="CodeThrive Infotech Logo" class="brand-logo-img" />
+            <span class="footer-brand-text">CODETHRIVE INFOTECH</span>
+          </a>
+          <p class="footer-brand-desc">
+            Empowering enterprises with smart, scalable, and secure digital solutions. Transform your vision into reality with CodeThrive Infotech.
+          </p>
+          <div class="footer-social-icons">
+            <a href="tel:+919150781685" class="footer-social-btn" title="Call Us" aria-label="Call Us">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            </a>
+            <a href="https://wa.me/919150781685" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="WhatsApp" aria-label="WhatsApp">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.762.459 3.48 1.332 4.992l-1.417 5.176 5.297-1.389c1.458.796 3.097 1.215 4.773 1.216h.004c5.505 0 9.988-4.478 9.989-9.985 0-2.668-1.037-5.176-2.925-7.065-1.888-1.888-4.396-2.927-7.063-2.929zm5.952 14.286c-.25.702-1.238 1.34-1.72 1.386-.48.046-1.107.215-3.666-.826-3.197-1.303-5.249-4.549-5.408-4.761-.158-.212-1.294-1.722-1.294-3.287 0-1.564.818-2.335 1.108-2.652.29-.317.633-.396.844-.396.21 0 .422.002.607.01.196.008.461-.074.72.548.267.643.909 2.217.988 2.378.079.16.132.348.026.56-.105.212-.158.344-.316.533-.158.188-.333.421-.476.564-.158.158-.323.33-.138.647.185.317.822 1.357 1.767 2.199 1.217 1.084 2.24 1.42 2.557 1.578.317.158.502.132.687-.079.185-.212.793-.923 1.004-1.24.212-.317.423-.264.713-.158.29.106 1.848.871 2.164 1.029.317.158.528.238.607.37.079.132.079.767-.171 1.469z"/></svg>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Instagram" aria-label="Instagram">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="LinkedIn" aria-label="LinkedIn">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Facebook" aria-label="Facebook">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+          <div class="footer-copyright-text">
+            &copy; 2026 CodeThrive Infotech. All rights reserved.
+          </div>
+        </div>
+
+        <!-- Column 2: QUICK LINKS -->
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">QUICK LINKS</h4>
+          <ul class="footer-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: CONTACT US -->
+        <div class="footer-contact-col">
+          <h4 class="footer-col-title">CONTACT US</h4>
+          <div class="footer-contact-list">
+            <p><strong>Phone:</strong> <a href="tel:+919150781685">+91 91507 81685</a></p>
+            <p><strong>Email:</strong> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@codethriveinfotech.in" target="_blank" rel="noopener noreferrer">info@codethriveinfotech.in</a></p>
+            <p><strong>Location:</strong> <a href="https://maps.app.goo.gl/AgyaE6mujDEaVjZr8?g_st=aw" target="_blank" rel="noopener" style="text-decoration: underline;">No 1, Srihari Nivas, Indira Nagar, Sugam, Coimbatore - 641045</a></p>
+          </div>
+          <div class="footer-privacy-wrap">
+            <a href="contact.html" class="footer-privacy-link">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GIANT TRANSPARENT WATERMARK BRAND TEXT AT THE BOTTOM -->
+    <div class="footer-watermark-text" aria-hidden="true">
+      CODETHRIVE INFOTECH
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="btn btn-primary back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7"/></svg>
+  </button>
+  <!-- Floating Call Button (Bottom Right Corner) -->
+  <a href="tel:+919150781685" 
+     class="call-float-btn" 
+     aria-label="Call CodeThrive Infotech">
+    <span class="float-tooltip-pop">📞 Call Us: +91 91507 81685</span>
+    <svg class="call-icon-svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+      <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+    </svg>
+  </a>
+
+  <!-- Floating WhatsApp Icon (Bottom Right Corner) -->
+  <a href="https://wa.me/919150781685?text=Hello%20CodeThrive%20Infotech%2C%20I%20would%20like%20to%20discuss%20a%20project." 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="whatsapp-float-btn" 
+     aria-label="Chat on WhatsApp">
+    <span class="float-tooltip-pop">💬 Chat on WhatsApp</span>
+    <svg class="whatsapp-icon-svg" viewBox="0 0 24 24" width="30" height="30">
+      <path fill="#FFFFFF" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/>
+      <path fill="#FFFFFF" d="M12.01 2C6.48 2 2 6.48 2 12.01c0 1.94.55 3.75 1.5 5.28L2 22l4.82-1.47c1.48.88 3.21 1.48 5.19 1.48 5.53 0 10.01-4.48 10.01-10.01S17.54 2 12.01 2zm0 18.02c-1.76 0-3.41-.48-4.83-1.32l-.35-.21-2.86.87.88-2.79-.23-.37C3.71 14.77 3.2 13.06 3.2 12.01c0-4.86 3.95-8.81 8.81-8.81s8.81 3.95 8.81 8.81-3.95 8.81-8.81 8.81z"/>
+    </svg>
+  </a>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

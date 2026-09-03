@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engineering Insights & Our Innovations • CodeThrive Infotech</title>
+  <meta name="description" content="Explore CodeThrive Infotech's strategic methodologies, artificial intelligence adoption, and core principles driving enterprise software solutions." />
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- React 18 & Babel CDN Scripts -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Master Stylesheet (Dark Navy & Metallic Silver Theme) -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Low-Opacity Background Watermark Logos -->
+  <div class="bg-watermark"></div>
+  <div class="bg-watermark-left"></div>
+
+  <!-- ==========================================
+       Header / Navigation Bar
+       ========================================== -->
+  <header class="header">
+    <div class="container navbar">
+      <div class="brand-group">
+        <a href="index.html" class="brand-logo">
+          <img src="images/company-logo.png" alt="CodeThrive Infotech Logo" class="brand-logo-img" />
+          <span>CodeThrive <span class="text-gradient">Infotech</span></span>
+        </a>
+        <div class="brand-tagline-micro">Progress. Cultivate. Innovate.</div>
+      </div>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="industries.html" class="nav-link">Industries</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="insights.html" class="nav-link active">Insights</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="contact.html#contact-form" class="btn btn-primary">Connect With Our Team</a>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open Menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       Insights Page Hero Banner (Rich Dark Intro with High Opacity BG & Gradient Teal Text)
+       ========================================== -->
+  <section class="section insights-hero-banner" style="background: linear-gradient(135deg, #041215 0%, #002322 40%, #02171B 75%, #070D16 100%) !important; position: relative; overflow: hidden; min-height: 720px !important; padding: 140px 0 110px 0 !important; display: flex; align-items: center; justify-content: center; box-sizing: border-box;">
+    
+    <!-- Background Image Layer featuring 2 New Uploaded Images with Cross-Fade Animation -->
+    <div class="insights-hero-bg-image-layer" style="position: absolute; inset: 0; pointer-events: none; z-index: 0; overflow: hidden;">
+      <div style="position: absolute; inset: 0; background: url('images/insights-hero-bg-1.jpg') center/cover no-repeat; opacity: 0.95; animation: insightsHeroCrossFade95_1 10s ease-in-out infinite;"></div>
+      <div style="position: absolute; inset: 0; background: url('images/insights-hero-bg-2.jpg') center/cover no-repeat; opacity: 0; animation: insightsHeroCrossFade95_2 10s ease-in-out infinite;"></div>
+      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(4, 18, 21, 0.40) 0%, rgba(4, 75, 73, 0.20) 50%, rgba(4, 18, 21, 0.55) 100%); z-index: 1;"></div>
+    </div>
+
+    <div class="container" style="position: relative; z-index: 3; text-align: center;">
+      <!-- Hero Text Content (Expanded & Large Prominent Typography) -->
+      <div class="hero-content" style="max-width: 980px; margin: 0 auto; text-align: center; padding: 24px 0;">
+        <div class="badge hero-white-glow-tagline" style="margin: 0 auto 20px auto; font-size: 0.95rem; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; padding: 8px 24px; border-radius: 24px; color: #34D399 !important; background: rgba(4, 35, 34, 0.75) !important; border: 1.8px solid rgba(52, 211, 153, 0.6) !important; text-shadow: 0 0 16px rgba(52, 211, 153, 0.7) !important; box-shadow: 0 6px 25px rgba(0, 0, 0, 0.45), 0 0 20px rgba(52, 211, 153, 0.3) !important; display: inline-block;">KNOWLEDGE BASE & TECH STRATEGY</div>
+        
+        <h1 class="hero-title hero-white-teal-silver-gradient" style="font-size: clamp(2.8rem, 5.2vw, 4.4rem); line-height: 1.15; font-weight: 900; margin-bottom: 22px; max-width: 980px; margin-left: auto; margin-right: auto; background: linear-gradient(110deg, #FFFFFF 0%, #E2E8F0 25%, #34D399 65%, #2DD4BF 100%) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; filter: drop-shadow(0 6px 25px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 30px rgba(52, 211, 153, 0.5)) !important;">
+          Tech Insights & <span style="background: inherit; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Articles.</span>
+        </h1>
+        
+        <p class="hero-desc hero-white-glow-desc" style="font-size: 1.25rem; color: #FFFFFF !important; line-height: 1.75; max-width: 860px; margin: 0 auto 32px auto; font-weight: 600 !important; text-align: center !important; text-shadow: 0 3px 16px rgba(0, 0, 0, 0.95), 0 0 24px rgba(0, 0, 0, 0.8) !important;">
+          Deep dives into enterprise architecture, cloud optimization, AI integration, and modern software design patterns driving enterprise success.
+        </p>
+
+        <div class="hero-ctas" style="display: flex; gap: 18px; flex-wrap: wrap; justify-content: center;">
+          <a href="#insights-cards" class="btn btn-primary" style="padding: 14px 32px; font-size: 1.05rem;">
+            <span>Explore Tech Insights →</span>
+          </a>
+          <a href="contact.html#contact-form" class="btn btn-secondary" style="padding: 14px 32px; font-size: 1.05rem;">Connect With Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Infinite Moving Text Marquee Ticker
+       ========================================== -->
+  <div class="marquee-container">
+    <div class="marquee-content">
+      <div class="marquee-item"><span class="highlight">BLUEPRINT ESTABLISHED</span></div>
+      <div class="marquee-item"><span class="highlight">CORE AI & ENGINEERING</span></div>
+      <div class="marquee-item"><span class="highlight">SECURITY-FIRST PARADIGM</span></div>
+      <div class="marquee-item"><span class="highlight">SCALING THE TALENT</span></div>
+      <div class="marquee-item"><span class="highlight">DEVOPS & AUTOMATION</span></div>
+      <div class="marquee-item"><span class="highlight">ENTERPRISE COMPLIANCE</span></div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       Innovations Articles Grid & Filter
+       ========================================== -->
+  <section class="section insights-grid-section" id="insights-cards" style="position: relative; overflow: hidden; padding-top: 60px; padding-bottom: 80px;">
+    
+    <!-- Background Image Layer behind the boxes grid section alone with 80% opacity -->
+    <div class="insights-neural-bg-layer" style="position: absolute; inset: 0; pointer-events: none; z-index: 1;">
+      <div style="width: 100%; height: 100%; background: url('images/insights-cards-bg.jpg') center/cover no-repeat; opacity: 0.80 !important;"></div>
+      <div style="position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(10, 20, 26, 0.15) 0%, rgba(7, 13, 22, 0.40) 88%);"></div>
+    </div>
+
+    <div class="container" style="position: relative; z-index: 3;">
+
+      <!-- 3D Stack Carousel Viewport Container (Matching Reference Screenshot) -->
+      <div class="stack-carousel-viewport">
+        <div class="stack-carousel-track" id="stackCarouselTrack">
+          
+          <!-- Slide 1: Growth (Foundational Engineering Blueprint - Pastel Blue) -->
+          <div class="stack-carousel-card active-card" data-category="growth" data-index="0">
+            <div class="pastel-header pastel-header-blue">
+              <svg class="pastel-header-diagram-svg" viewBox="0 0 320 100" fill="none">
+                <!-- Rich Microservices Architecture & Growth Trendline Vector Design -->
+                <rect x="30" y="55" width="40" height="28" rx="4" fill="rgba(255,255,255,0.7)" stroke="#0284C7" stroke-width="2"/>
+                <rect x="90" y="25" width="40" height="28" rx="4" fill="rgba(255,255,255,0.7)" stroke="#0284C7" stroke-width="2"/>
+                <rect x="150" y="55" width="40" height="28" rx="4" fill="rgba(255,255,255,0.7)" stroke="#0284C7" stroke-width="2"/>
+                <rect x="210" y="25" width="40" height="28" rx="4" fill="rgba(255,255,255,0.7)" stroke="#0284C7" stroke-width="2"/>
+                <path d="M50 55 L110 53 L170 55 L230 25 L280 15" stroke="#38BDF8" stroke-width="3" stroke-dasharray="4 3"/>
+                <circle cx="280" cy="15" r="5" fill="#0284C7"/>
+              </svg>
+              <div class="pastel-avatar-badge" style="width: 82px !important; height: 82px !important; min-width: 82px !important; min-height: 82px !important; overflow: hidden !important; padding: 3px !important; border-radius: 22px !important; border: 3px solid #FFFFFF !important; box-shadow: 0 10px 25px rgba(2, 132, 199, 0.38) !important;">
+                <img src="images/insights-growth-icon.png" alt="Foundational Engineering Blueprint Growth Icon" style="width: 100% !important; height: 100% !important; object-fit: cover !important; border-radius: 17px !important; display: block !important;" />
+              </div>
+              <div class="pastel-role-badge">GROWTH</div>
+            </div>
+            <div class="pastel-card-body">
+              <h3 class="pastel-card-title">Foundational Engineering Blueprint</h3>
+              <p class="pastel-card-quote">"Establishing a clean technical vision focused on building resilient, scalable, and high-performance digital systems."</p>
+              <div class="card-feature-checklist">
+                <div class="checklist-item"><span>Custom UI/UX Architecture</span></div>
+                <div class="checklist-item"><span>Responsive Enterprise Development</span></div>
+                <div class="checklist-item"><span>Microservices & Cloud Infrastructure</span></div>
+              </div>
+              <div class="pastel-card-bottom-row">
+                <span class="pastel-brand-core-tag">● CODETHRIVE CORE</span>
+                <span class="card-link" data-article-read="Foundational Engineering Blueprint" data-article-category="GROWTH" data-article-text="Establishing a clean technical vision focused on building resilient, scalable, and high-performance digital systems for modern organizations. Our priority remains clean architectural standards, robust data governance, and long-term client collaboration. Key takeaways include zero-downtime microservices and automated stress test suites.">
+                  <span>Explore →</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Engineering (Next-Gen AI & Core Architecture - Pastel Emerald) -->
+          <div class="stack-carousel-card next-card-1" data-category="engineering" data-index="1">
+            <div class="pastel-header pastel-header-emerald">
+              <svg class="pastel-header-diagram-svg" viewBox="0 0 320 100" fill="none">
+                <!-- AI Neural Network & Synapse Connections Vector Design -->
+                <circle cx="60" cy="50" r="12" fill="rgba(255,255,255,0.8)" stroke="#059669" stroke-width="2"/>
+                <circle cx="120" cy="25" r="10" fill="rgba(255,255,255,0.8)" stroke="#059669" stroke-width="2"/>
+                <circle cx="120" cy="75" r="10" fill="rgba(255,255,255,0.8)" stroke="#059669" stroke-width="2"/>
+                <circle cx="200" cy="50" r="16" fill="rgba(255,255,255,0.9)" stroke="#059669" stroke-width="2.5"/>
+                <circle cx="260" cy="30" r="10" fill="rgba(255,255,255,0.8)" stroke="#059669" stroke-width="2"/>
+                <line x1="72" y1="50" x2="110" y2="25" stroke="#059669" stroke-width="2"/>
+                <line x1="72" y1="50" x2="110" y2="75" stroke="#059669" stroke-width="2"/>
+                <line x1="130" y1="25" x2="184" y2="50" stroke="#059669" stroke-width="2"/>
+                <line x1="130" y1="75" x2="184" y2="50" stroke="#059669" stroke-width="2"/>
+                <line x1="216" y1="50" x2="250" y2="30" stroke="#059669" stroke-width="2"/>
+              </svg>
+              <div class="pastel-avatar-badge" style="width: 82px !important; height: 82px !important; min-width: 82px !important; min-height: 82px !important; overflow: hidden !important; padding: 3px !important; border-radius: 22px !important; border: 3px solid #FFFFFF !important; box-shadow: 0 10px 25px rgba(5, 150, 105, 0.38) !important;">
+                <img src="images/insights-engineering-icon.png" alt="Next-Gen AI & Core Architecture Icon" style="width: 100% !important; height: 100% !important; object-fit: cover !important; border-radius: 17px !important; display: block !important;" />
+              </div>
+              <div class="pastel-role-badge" style="color: #059669;">ENGINEERING</div>
+            </div>
+            <div class="pastel-card-body">
+              <h3 class="pastel-card-title">Next-Gen AI & Core Architecture</h3>
+              <p class="pastel-card-quote">"Leveraging artificial intelligence and scalable software design patterns to unlock new operational efficiencies."</p>
+              <div class="card-feature-checklist">
+                <div class="checklist-item"><span>Generative AI & LLM Integration</span></div>
+                <div class="checklist-item"><span>Automated Workflow Intelligence</span></div>
+                <div class="checklist-item"><span>Real-Time Telemetry & Data Pipelines</span></div>
+              </div>
+              <div class="pastel-card-bottom-row">
+                <span class="pastel-brand-core-tag" style="color: #059669;">● CODETHRIVE CORE</span>
+                <span class="card-link" data-article-read="Next-Gen AI & Core Architecture" data-article-category="ENGINEERING" data-article-text="Leveraging artificial intelligence and scalable software design patterns to unlock new operational efficiencies. We integrate custom machine learning pipelines directly into enterprise microservices, dramatically reducing compute overhead and streamlining automated decision processes.">
+                  <span>Explore →</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Security (Zero-Trust Security Frameworks - Pastel Purple) -->
+          <div class="stack-carousel-card next-card-2" data-category="security" data-index="2">
+            <div class="pastel-header pastel-header-purple">
+              <svg class="pastel-header-diagram-svg" viewBox="0 0 320 100" fill="none">
+                <!-- Cyber Shield Vault & Keyhole Vector Design -->
+                <path d="M160 15 L225 32 V68 C225 88, 160 98, 160 98 C160 98, 95 88, 95 68 V32 Z" fill="rgba(255,255,255,0.6)" stroke="#7C3AED" stroke-width="2.5"/>
+                <circle cx="160" cy="52" r="12" stroke="#7C3AED" stroke-width="2"/>
+                <path d="M160 52 V64" stroke="#7C3AED" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+              <div class="pastel-avatar-badge" style="width: 82px !important; height: 82px !important; min-width: 82px !important; min-height: 82px !important; overflow: hidden !important; padding: 3px !important; border-radius: 22px !important; border: 3px solid #FFFFFF !important; box-shadow: 0 10px 25px rgba(124, 58, 237, 0.38) !important;">
+                <img src="images/insights-security-icon.png" alt="Zero-Trust Security Frameworks Icon" style="width: 100% !important; height: 100% !important; object-fit: cover !important; border-radius: 17px !important; display: block !important;" />
+              </div>
+              <div class="pastel-role-badge" style="color: #7C3AED;">SECURITY</div>
+            </div>
+            <div class="pastel-card-body">
+              <h3 class="pastel-card-title">Zero-Trust Security Frameworks</h3>
+              <p class="pastel-card-quote">"Implementing defense-in-depth protocols, end-to-end encryption, and rigorous access controls across digital networks."</p>
+              <div class="card-feature-checklist">
+                <div class="checklist-item"><span>Identity & Access Management (IAM)</span></div>
+                <div class="checklist-item"><span>Automated Threat Intelligence</span></div>
+                <div class="checklist-item"><span>Enterprise Compliance & Encryption</span></div>
+              </div>
+              <div class="pastel-card-bottom-row">
+                <span class="pastel-brand-core-tag" style="color: #7C3AED;">● CODETHRIVE CORE</span>
+                <span class="card-link" data-article-read="Zero-Trust Security Frameworks" data-article-category="SECURITY" data-article-text="Implementing defense-in-depth protocols, end-to-end encryption, and rigorous access controls across cloud networks. Security is not an afterthought—it is built into every API layer, database connection, and deployment script from day zero.">
+                  <span>Explore →</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4: Growth (Strategic Client Expansion - Pastel Rose) -->
+          <div class="stack-carousel-card far-card" data-category="growth" data-index="3">
+            <div class="pastel-header pastel-header-rose">
+              <svg class="pastel-header-diagram-svg" viewBox="0 0 320 100" fill="none">
+                <!-- Rocket Expansion & Global Orbit Vector Design -->
+                <circle cx="160" cy="50" r="32" stroke="#E11D48" stroke-width="1.5" stroke-dasharray="4 4"/>
+                <path d="M160 20 L170 42 H150 Z" fill="#E11D48"/>
+                <path d="M50 75 Q160 25 270 75" stroke="#E11D48" stroke-width="2.5"/>
+              </svg>
+              <div class="pastel-avatar-badge" style="width: 82px !important; height: 82px !important; min-width: 82px !important; min-height: 82px !important; overflow: hidden !important; padding: 3px !important; border-radius: 22px !important; border: 3px solid #FFFFFF !important; box-shadow: 0 10px 25px rgba(225, 29, 72, 0.38) !important;">
+                <img src="images/insights-expansion-icon.png" alt="Strategic Client Expansion Growth Icon" style="width: 100% !important; height: 100% !important; object-fit: cover !important; border-radius: 17px !important; display: block !important;" />
+              </div>
+              <div class="pastel-role-badge" style="color: #E11D48;">GROWTH</div>
+            </div>
+            <div class="pastel-card-body">
+              <h3 class="pastel-card-title">Strategic Client Expansion</h3>
+              <p class="pastel-card-quote">"Formulating sustainable digital growth roadmaps that elevate customer engagement and create lasting value."</p>
+              <div class="card-feature-checklist">
+                <div class="checklist-item"><span>Scalable Market Penetration Models</span></div>
+                <div class="checklist-item"><span>Client Retention & Growth Analytics</span></div>
+                <div class="checklist-item"><span>Digital Ecosystem Monetization</span></div>
+              </div>
+              <div class="pastel-card-bottom-row">
+                <span class="pastel-brand-core-tag" style="color: #E11D48;">● CODETHRIVE CORE</span>
+                <span class="card-link" data-article-read="Strategic Client Expansion" data-article-category="GROWTH" data-article-text="Formulating sustainable digital growth roadmaps that elevate customer engagement and create lasting business value. Through data-backed insights and rapid market iteration, we help enterprises scale product offerings globally.">
+                  <span>Explore →</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5: People (Cultivating Engineering Excellence - Pastel Amber) -->
+          <div class="stack-carousel-card far-card" data-category="people" data-index="4">
+            <div class="pastel-header pastel-header-amber">
+              <svg class="pastel-header-diagram-svg" viewBox="0 0 320 100" fill="none">
+                <!-- Star Excellence & Collaborative Sprint Orbits Vector Design -->
+                <polygon points="160,18 168,38 190,38 172,50 178,72 160,58 142,72 148,50 130,38 152,38" fill="rgba(255,255,255,0.7)" stroke="#D97706" stroke-width="2"/>
+                <circle cx="90" cy="50" r="14" stroke="#D97706" stroke-width="2"/>
+                <circle cx="230" cy="50" r="14" stroke="#D97706" stroke-width="2"/>
+              </svg>
+              <div class="pastel-avatar-badge" style="width: 82px !important; height: 82px !important; min-width: 82px !important; min-height: 82px !important; overflow: hidden !important; padding: 3px !important; border-radius: 22px !important; border: 3px solid #FFFFFF !important; box-shadow: 0 10px 25px rgba(217, 119, 6, 0.38) !important;">
+                <img src="images/insights-people-icon.png" alt="Cultivating Engineering Excellence People Icon" style="width: 100% !important; height: 100% !important; object-fit: cover !important; border-radius: 17px !important; display: block !important;" />
+              </div>
+              <div class="pastel-role-badge" style="color: #D97706;">PEOPLE</div>
+            </div>
+            <div class="pastel-card-body">
+              <h3 class="pastel-card-title">Cultivating Engineering Excellence</h3>
+              <p class="pastel-card-quote">"Empowering technical teams through continuous learning, collaborative culture, and agile delivery practices."</p>
+              <div class="card-feature-checklist">
+                <div class="checklist-item"><span>Agile Team Empowerment & Training</span></div>
+                <div class="checklist-item"><span>Continuous Code Review Standards</span></div>
+                <div class="checklist-item"><span>Mentorship & Technical Leadership</span></div>
+              </div>
+              <div class="pastel-card-bottom-row">
+                <span class="pastel-brand-core-tag" style="color: #D97706;">● CODETHRIVE CORE</span>
+                <span class="card-link" data-article-read="Cultivating Engineering Excellence" data-article-category="PEOPLE" data-article-text="Empowering technical teams through continuous learning, collaborative culture, and agile delivery practices. High-performing engineering culture requires psychological safety, peer mentorship, and clear technical ownership.">
+                  <span>Explore →</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 6: Engineering (Automated DevOps & CI/CD Pipelines - Pastel Teal) -->
+          <div class="stack-carousel-card prev-card-2" data-category="engineering" data-index="5">
+            <div class="pastel-header pastel-header-teal">
+              <svg class="pastel-header-diagram-svg" viewBox="0 0 320 100" fill="none">
+                <!-- Infinity CI/CD Loop & Cloud Rack Vector Design -->
+                <path d="M110 50 C110 32, 140 32, 160 50 C180 68, 210 68, 210 50 C210 32, 180 32, 160 50 C140 68, 110 68, 110 50 Z" stroke="#0D9488" stroke-width="3" fill="none"/>
+                <circle cx="110" cy="50" r="5" fill="#0D9488"/>
+                <circle cx="210" cy="50" r="5" fill="#0D9488"/>
+              </svg>
+              <div class="pastel-avatar-badge" style="width: 82px !important; height: 82px !important; min-width: 82px !important; min-height: 82px !important; overflow: hidden !important; padding: 3px !important; border-radius: 22px !important; border: 3px solid #FFFFFF !important; box-shadow: 0 10px 25px rgba(13, 148, 136, 0.38) !important;">
+                <img src="images/insights-engineering-icon.png" alt="Automated DevOps & CI/CD Pipelines Engineering Icon" style="width: 100% !important; height: 100% !important; object-fit: cover !important; border-radius: 17px !important; display: block !important;" />
+              </div>
+              <div class="pastel-role-badge" style="color: #0D9488;">ENGINEERING</div>
+            </div>
+            <div class="pastel-card-body">
+              <h3 class="pastel-card-title">Automated DevOps & CI/CD Pipelines</h3>
+              <p class="pastel-card-quote">"Accelerating software release cycles with automated testing, containerized deployments, and cloud infrastructure."</p>
+              <div class="card-feature-checklist">
+                <div class="checklist-item"><span>Automated Testing & Build Pipelines</span></div>
+                <div class="checklist-item"><span>Containerization & Kubernetes</span></div>
+                <div class="checklist-item"><span>Zero-Downtime Release Orchestration</span></div>
+              </div>
+              <div class="pastel-card-bottom-row">
+                <span class="pastel-brand-core-tag" style="color: #0D9488;">● CODETHRIVE CORE</span>
+                <span class="card-link" data-article-read="Automated DevOps & CI/CD Pipelines" data-article-category="ENGINEERING" data-article-text="Accelerating software release cycles with automated testing, containerized deployments, and robust infrastructure as code. By automating continuous integration and deployment pipelines, teams ship features faster with zero downtime.">
+                  <span>Explore →</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 7: Security (Enterprise Compliance Tracker - Pastel Indigo) -->
+          <div class="stack-carousel-card prev-card-1" data-category="security" data-index="6">
+            <div class="pastel-header pastel-header-indigo">
+              <svg class="pastel-header-diagram-svg" viewBox="0 0 320 100" fill="none">
+                <!-- Compliance Verified Certificate Shield Vector Design -->
+                <rect x="110" y="20" width="100" height="60" rx="8" fill="rgba(255,255,255,0.7)" stroke="#4F46E5" stroke-width="2"/>
+                <line x1="130" y1="35" x2="190" y2="35" stroke="#4F46E5" stroke-width="2"/>
+                <line x1="130" y1="48" x2="175" y2="48" stroke="#4F46E5" stroke-width="2"/>
+                <circle cx="160" cy="62" r="8" fill="#4F46E5"/>
+              </svg>
+              <div class="pastel-avatar-badge" style="width: 82px !important; height: 82px !important; min-width: 82px !important; min-height: 82px !important; overflow: hidden !important; padding: 3px !important; border-radius: 22px !important; border: 3px solid #FFFFFF !important; box-shadow: 0 10px 25px rgba(79, 70, 229, 0.38) !important;">
+                <img src="images/insights-security-icon.png" alt="Enterprise Compliance Tracker Security Icon" style="width: 100% !important; height: 100% !important; object-fit: cover !important; border-radius: 17px !important; display: block !important;" />
+              </div>
+              <div class="pastel-role-badge" style="color: #4F46E5;">SECURITY</div>
+            </div>
+            <div class="pastel-card-body">
+              <h3 class="pastel-card-title">Enterprise Compliance Tracker</h3>
+              <p class="pastel-card-quote">"Navigating complex regulatory standards with automated audit logging, data privacy, and governance systems."</p>
+              <div class="card-feature-checklist">
+                <div class="checklist-item"><span>ISO & SOC2 Compliance Monitoring</span></div>
+                <div class="checklist-item"><span>Automated Audit Trails & Reports</span></div>
+                <div class="checklist-item"><span>Regulatory Data Privacy Governance</span></div>
+              </div>
+              <div class="pastel-card-bottom-row">
+                <span class="pastel-brand-core-tag" style="color: #4F46E5;">● CODETHRIVE CORE</span>
+                <span class="card-link" data-article-read="Enterprise Compliance Tracker" data-article-category="SECURITY" data-article-text="Navigating complex regulatory standards with automated audit logging, data privacy controls, and real-time governance tracking. We ensure full compliance with ISO 27001, SOC 2, and GDPR standards across all data stores.">
+                  <span>Explore →</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 8: Engineering (High-Throughput Data Infrastructure - Pastel Orange) -->
+          <div class="stack-carousel-card far-card" data-category="engineering" data-index="7">
+            <div class="pastel-header pastel-header-orange">
+              <svg class="pastel-header-diagram-svg" viewBox="0 0 320 100" fill="none">
+                <!-- High-Throughput Stream Waves & Shards Vector Design -->
+                <path d="M50 50 Q110 20 160 50 T270 50" stroke="#EA580C" stroke-width="3" fill="none"/>
+                <ellipse cx="160" cy="50" rx="30" ry="12" fill="rgba(255,255,255,0.7)" stroke="#EA580C" stroke-width="2"/>
+              </svg>
+              <div class="pastel-avatar-badge" style="width: 82px !important; height: 82px !important; min-width: 82px !important; min-height: 82px !important; overflow: hidden !important; padding: 3px !important; border-radius: 22px !important; border: 3px solid #FFFFFF !important; box-shadow: 0 10px 25px rgba(234, 88, 12, 0.38) !important;">
+                <img src="images/insights-engineering-icon.png" alt="High-Throughput Data Infrastructure Engineering Icon" style="width: 100% !important; height: 100% !important; object-fit: cover !important; border-radius: 17px !important; display: block !important;" />
+              </div>
+              <div class="pastel-role-badge" style="color: #EA580C;">ENGINEERING</div>
+            </div>
+            <div class="pastel-card-body">
+              <h3 class="pastel-card-title">High-Throughput Data Infrastructure</h3>
+              <p class="pastel-card-quote">"Building distributed event streams, scalable databases, and real-time analytics engines for enterprise loads."</p>
+              <div class="card-feature-checklist">
+                <div class="checklist-item"><span>Distributed Database Optimization</span></div>
+                <div class="checklist-item"><span>Low-Latency Query Execution</span></div>
+                <div class="checklist-item"><span>Big Data Analytics Pipelines</span></div>
+              </div>
+              <div class="pastel-card-bottom-row">
+                <span class="pastel-brand-core-tag" style="color: #EA580C;">● CODETHRIVE CORE</span>
+                <span class="card-link" data-article-read="High-Throughput Data Infrastructure" data-article-category="ENGINEERING" data-article-text="Building distributed event streams, high-availability databases, and real-time analytics engines capable of processing millions of events per second with sub-millisecond query latencies.">
+                  <span>Explore →</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 9: People (Cross-Functional Agile Leadership - Pastel Cyan) -->
+          <div class="stack-carousel-card far-card" data-category="people" data-index="8">
+            <div class="pastel-header pastel-header-cyan">
+              <svg class="pastel-header-diagram-svg" viewBox="0 0 320 100" fill="none">
+                <!-- Agile Leadership Synergy Command Nodes Vector Design -->
+                <circle cx="160" cy="40" r="16" fill="rgba(255,255,255,0.8)" stroke="#0284C7" stroke-width="2.5"/>
+                <circle cx="90" cy="70" r="12" fill="rgba(255,255,255,0.8)" stroke="#0284C7" stroke-width="2"/>
+                <circle cx="230" cy="70" r="12" fill="rgba(255,255,255,0.8)" stroke="#0284C7" stroke-width="2"/>
+                <line x1="148" y1="48" x2="102" y2="64" stroke="#0284C7" stroke-width="2"/>
+                <line x1="172" y1="48" x2="218" y2="64" stroke="#0284C7" stroke-width="2"/>
+              </svg>
+              <div class="pastel-avatar-badge" style="width: 82px !important; height: 82px !important; min-width: 82px !important; min-height: 82px !important; overflow: hidden !important; padding: 3px !important; border-radius: 22px !important; border: 3px solid #FFFFFF !important; box-shadow: 0 10px 25px rgba(2, 132, 199, 0.38) !important;">
+                <img src="images/insights-people-icon.png" alt="Cross-Functional Agile Leadership People Icon" style="width: 100% !important; height: 100% !important; object-fit: cover !important; border-radius: 17px !important; display: block !important;" />
+              </div>
+              <div class="pastel-role-badge" style="color: #0284C7;">PEOPLE</div>
+            </div>
+            <div class="pastel-card-body">
+              <h3 class="pastel-card-title">Cross-Functional Agile Leadership</h3>
+              <p class="pastel-card-quote">"Fostering seamless alignment between product managers, UI/UX designers, and core software architects."</p>
+              <div class="card-feature-checklist">
+                <div class="checklist-item"><span>Cross-Disciplinary Sprint Delivery</span></div>
+                <div class="checklist-item"><span>Executive Stakeholder Alignment</span></div>
+                <div class="checklist-item"><span>Rapid Prototyping & Iteration</span></div>
+              </div>
+              <div class="pastel-card-bottom-row">
+                <span class="pastel-brand-core-tag" style="color: #0284C7;">● CODETHRIVE CORE</span>
+                <span class="card-link" data-article-read="Cross-Functional Agile Leadership" data-article-category="PEOPLE" data-article-text="Fostering seamless alignment between product managers, UI/UX designers, and core software architects to deliver complex enterprise products on schedule and within budget.">
+                  <span>Explore →</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bottom Interactive Controls & Dots -->
+      <div class="stack-controls-row">
+        <button class="stack-ctrl-btn" id="stackPrevBtn" aria-label="Previous Slide">‹</button>
+        <div class="stack-dots-strip" id="stackCarouselDots">
+          <div class="stack-dot-item active" data-index="0"></div>
+          <div class="stack-dot-item" data-index="1"></div>
+          <div class="stack-dot-item" data-index="2"></div>
+          <div class="stack-dot-item" data-index="3"></div>
+          <div class="stack-dot-item" data-index="4"></div>
+          <div class="stack-dot-item" data-index="5"></div>
+          <div class="stack-dot-item" data-index="6"></div>
+          <div class="stack-dot-item" data-index="7"></div>
+          <div class="stack-dot-item" data-index="8"></div>
+        </div>
+        <button class="stack-ctrl-btn" id="stackNextBtn" aria-label="Next Slide">›</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Modal Dialog (Article Viewer)
+       ========================================== -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal-container">
+      <button class="modal-close" id="modalCloseBtn">&times;</button>
+      <h3 class="solution-title" id="modalTitle" style="margin-bottom: 20px;">Article Title</h3>
+      <div id="modalBody">
+        <!-- Injected dynamic article text -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       CTA Section
+       ========================================== -->
+  <section class="section" style="background: var(--bg-secondary); text-align: center;">
+    <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <h2 class="section-title" style="text-align: center !important;">Ready to Transform Your <span class="text-gradient">Engineering Strategy?</span></h2>
+      <p class="section-subtitle" style="text-align: center !important; text-align-last: center !important; margin-left: auto !important; margin-right: auto !important; max-width: 780px !important; margin-bottom: 32px !important;">
+        Collaborate with our software architects to build resilient, scalable digital systems for sustainable growth.
+      </p>
+      <a href="contact.html#contact-form" class="btn btn-primary" style="margin-left: auto !important; margin-right: auto !important;">Schedule Strategy Consultation</a>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Footer Section
+       ========================================== -->
+  <footer class="footer new-watermark-footer">
+    <div class="container" style="position: relative; z-index: 2;">
+      <div class="footer-grid-3col">
+        <!-- Column 1: Brand Profile & Small Social Icons -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 14px;">
+            <img src="images/company-logo.png" alt="CodeThrive Infotech Logo" class="brand-logo-img" />
+            <span class="footer-brand-text">CODETHRIVE INFOTECH</span>
+          </a>
+          <p class="footer-brand-desc">
+            Empowering enterprises with smart, scalable, and secure digital solutions. Transform your vision into reality with CodeThrive Infotech.
+          </p>
+          <div class="footer-social-icons">
+            <a href="tel:+919150781685" class="footer-social-btn" title="Call Us" aria-label="Call Us">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            </a>
+            <a href="https://wa.me/919150781685" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="WhatsApp" aria-label="WhatsApp">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.762.459 3.48 1.332 4.992l-1.417 5.176 5.297-1.389c1.458.796 3.097 1.215 4.773 1.216h.004c5.505 0 9.988-4.478 9.989-9.985 0-2.668-1.037-5.176-2.925-7.065-1.888-1.888-4.396-2.927-7.063-2.929zm5.952 14.286c-.25.702-1.238 1.34-1.72 1.386-.48.046-1.107.215-3.666-.826-3.197-1.303-5.249-4.549-5.408-4.761-.158-.212-1.294-1.722-1.294-3.287 0-1.564.818-2.335 1.108-2.652.29-.317.633-.396.844-.396.21 0 .422.002.607.01.196.008.461-.074.72.548.267.643.909 2.217.988 2.378.079.16.132.348.026.56-.105.212-.158.344-.316.533-.158.188-.333.421-.476.564-.158.158-.323.33-.138.647.185.317.822 1.357 1.767 2.199 1.217 1.084 2.24 1.42 2.557 1.578.317.158.502.132.687-.079.185-.212.793-.923 1.004-1.24.212-.317.423-.264.713-.158.29.106 1.848.871 2.164 1.029.317.158.528.238.607.37.079.132.079.767-.171 1.469z"/></svg>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Instagram" aria-label="Instagram">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="LinkedIn" aria-label="LinkedIn">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Facebook" aria-label="Facebook">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+          <div class="footer-copyright-text">
+            &copy; 2026 CodeThrive Infotech. All rights reserved.
+          </div>
+        </div>
+
+        <!-- Column 2: QUICK LINKS -->
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">QUICK LINKS</h4>
+          <ul class="footer-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: CONTACT US -->
+        <div class="footer-contact-col">
+          <h4 class="footer-col-title">CONTACT US</h4>
+          <div class="footer-contact-list">
+            <p><strong>Phone:</strong> <a href="tel:+919150781685">+91 91507 81685</a></p>
+            <p><strong>Email:</strong> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@codethriveinfotech.in" target="_blank" rel="noopener noreferrer">info@codethriveinfotech.in</a></p>
+            <p><strong>Location:</strong> <a href="https://maps.app.goo.gl/AgyaE6mujDEaVjZr8?g_st=aw" target="_blank" rel="noopener" style="text-decoration: underline;">No 1, Srihari Nivas, Indira Nagar, Sugam, Coimbatore - 641045</a></p>
+          </div>
+          <div class="footer-privacy-wrap">
+            <a href="contact.html" class="footer-privacy-link">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GIANT TRANSPARENT WATERMARK BRAND TEXT AT THE BOTTOM -->
+    <div class="footer-watermark-text" aria-hidden="true">
+      CODETHRIVE INFOTECH
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="btn btn-primary back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7"/></svg>
+  </button>
+
+  <!-- Floating Call Button (Bottom Right Corner) -->
+  <a href="tel:+919150781685" 
+     class="call-float-btn" 
+     aria-label="Call CodeThrive Infotech">
+    <span class="float-tooltip-pop">📞 Call Us: +91 91507 81685</span>
+    <svg class="call-icon-svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+      <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+    </svg>
+  </a>
+
+  <!-- Floating WhatsApp Icon (Bottom Right Corner) -->
+  <a href="https://wa.me/919150781685?text=Hello%20CodeThrive%20Infotech%2C%20I%20would%20like%20to%20discuss%20a%20project." 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="whatsapp-float-btn" 
+     aria-label="Chat on WhatsApp">
+    <span class="float-tooltip-pop">💬 Chat on WhatsApp</span>
+    <svg class="whatsapp-icon-svg" viewBox="0 0 24 24" width="30" height="30">
+      <path fill="#FFFFFF" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/>
+      <path fill="#FFFFFF" d="M12.01 2C6.48 2 2 6.48 2 12.01c0 1.94.55 3.75 1.5 5.28L2 22l4.82-1.47c1.48.88 3.21 1.48 5.19 1.48 5.53 0 10.01-4.48 10.01-10.01S17.54 2 12.01 2zm0 18.02c-1.76 0-3.41-.48-4.83-1.32l-.35-.21-2.86.87.88-2.79-.23-.37C3.71 14.77 3.2 13.06 3.2 12.01c0-4.86 3.95-8.81 8.81-8.81s8.81 3.95 8.81 8.81-3.95 8.81-8.81 8.81z"/>
+    </svg>
+  </a>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

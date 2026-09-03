@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | CodeThrive Infotech - Pioneering Digital Evolution</title>
+  <meta name="description" content="Learn about CodeThrive Infotech—our purpose-driven mission, enterprise vision, pioneering IT services, and digital engineering capabilities." />
+
+  <!-- Fonts & Core Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ==========================================
+       Header & Navigation
+       ========================================== -->
+  <header class="header">
+    <div class="container navbar">
+      <div class="brand-group">
+        <a href="index.html" class="brand-logo">
+          <img src="images/company-logo.png" alt="CodeThrive Infotech Logo" class="brand-logo-img" />
+          <span>CodeThrive <span class="text-gradient">Infotech</span></span>
+        </a>
+        <div class="brand-tagline-micro">Progress. Cultivate. Innovate.</div>
+      </div>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About Us</a>
+        <a href="industries.html" class="nav-link">Industries</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="insights.html" class="nav-link">Insights</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="contact.html#contact-form" class="btn btn-primary">Connect With Our Team</a>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open Menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       About Us Page Hero Banner (Rich Dark Intro with High Opacity BG & Gradient Teal Text)
+       ========================================== -->
+  <section class="section about-hero-banner" style="background: linear-gradient(135deg, #041215 0%, #002322 40%, #02171B 75%, #070D16 100%) !important; position: relative; overflow: hidden; min-height: 720px !important; padding: 140px 0 110px 0 !important; display: flex; align-items: center; justify-content: center; box-sizing: border-box;">
+    
+    <!-- Background Image Layer featuring 2 Uploaded Images with 90% Opacity -->
+    <div class="about-hero-bg-image-layer" style="position: absolute; inset: 0; pointer-events: none; z-index: 0; overflow: hidden;">
+      <div style="position: absolute; inset: 0; background: url('images/about-bg-1.jpg') center/cover no-repeat; opacity: 0.90; animation: aboutHeroCrossFade1 10s ease-in-out infinite;"></div>
+      <div style="position: absolute; inset: 0; background: url('images/about-bg-2.jpg') center/cover no-repeat; opacity: 0; animation: aboutHeroCrossFade2 10s ease-in-out infinite;"></div>
+      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(16, 29, 38, 0.40) 0%, rgba(4, 75, 73, 0.22) 50%, rgba(16, 29, 38, 0.55) 100%); z-index: 1;"></div>
+    </div>
+
+    <div class="container" style="position: relative; z-index: 3; text-align: center;">
+      <!-- Hero Text Content (Expanded & Large Prominent Typography) -->
+      <div class="hero-content" style="max-width: 980px; margin: 0 auto; text-align: center; padding: 24px 0;">
+        <div class="badge hero-white-glow-tagline" style="margin: 0 auto 20px auto; font-size: 0.95rem; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; padding: 8px 24px; border-radius: 24px; color: #34D399 !important; background: rgba(4, 35, 34, 0.75) !important; border: 1.8px solid rgba(52, 211, 153, 0.6) !important; text-shadow: 0 0 16px rgba(52, 211, 153, 0.7) !important; box-shadow: 0 6px 25px rgba(0, 0, 0, 0.45), 0 0 20px rgba(52, 211, 153, 0.3) !important; display: inline-block;">ABOUT CODETHRIVE INFOTECH</div>
+        
+        <h1 class="hero-title hero-white-teal-silver-gradient" style="font-size: clamp(2.8rem, 5.2vw, 4.4rem); line-height: 1.15; font-weight: 900; margin-bottom: 22px; max-width: 980px; margin-left: auto; margin-right: auto; background: linear-gradient(110deg, #FFFFFF 0%, #E2E8F0 25%, #34D399 65%, #2DD4BF 100%) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; filter: drop-shadow(0 6px 25px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 30px rgba(52, 211, 153, 0.5)) !important;">
+          Pioneering Enterprise <span style="background: inherit; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Digital Solutions.</span>
+        </h1>
+        
+        <p class="hero-desc hero-white-glow-desc" style="font-size: 1.25rem; color: #FFFFFF !important; line-height: 1.75; max-width: 860px; margin: 0 auto 32px auto; font-weight: 600 !important; text-align: center !important; text-shadow: 0 3px 16px rgba(0, 0, 0, 0.95), 0 0 24px rgba(0, 0, 0, 0.8) !important;">
+          Welcome to CodeThrive Infotech. We build modern digital infrastructure, scalable cloud software, and intelligent enterprise tools designed for real-world reliability and growth.
+        </p>
+
+        <div class="hero-ctas" style="display: flex; gap: 18px; flex-wrap: wrap; justify-content: center;">
+          <a href="contact.html#contact-form" class="btn btn-primary" style="padding: 14px 32px; font-size: 1.05rem;">Connect With Our Team</a>
+          <a href="#mission-vision" class="btn btn-secondary" style="padding: 14px 32px; font-size: 1.05rem;">Explore Mission & Vision</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 1: Purpose Driven - Our Mission & Vision
+       ========================================== -->
+  <section class="section section-bg-image section-bg-mission" id="mission-vision">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge">Purpose Driven</div>
+        <h2 class="section-title">Our Mission & <span class="text-gradient">Vision</span></h2>
+        <p class="section-subtitle">
+          Guiding enterprise digital evolution with purpose, technical precision, and measurable outcomes.
+        </p>
+      </div>
+
+      <div class="mission-vision-grid">
+        <!-- Left Side: Mission Flip Card -->
+        <div class="flip-card-container" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <!-- Front Face: High Quality Corporate Team Silhouette Image -->
+            <div class="flip-card-front flip-card-front-mission" style="background: url('images/about-bg-1.jpg') center/cover no-repeat !important; position: relative;">
+              <div class="flip-card-front-content">
+                <div class="badge" style="background: rgba(4,35,34,0.75); color: #fff; border: 1px solid rgba(255,255,255,0.4); text-transform: uppercase;">Our Mission</div>
+                <h3 style="font-size: 1.85rem; font-weight: 900; margin-top: 12px; color: #FFFFFF; line-height: 1.25; text-shadow: 0 2px 10px rgba(0,0,0,0.85);">Rocketing Enterprise Digital Execution</h3>
+              </div>
+              <div class="flip-cue-badge">
+                <span>Hover or Touch to Flip</span>
+                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+              </div>
+            </div>
+
+            <!-- Back Face: Text Content -->
+            <div class="flip-card-back glass-card">
+              <div class="mv-card-header">
+                <div class="mv-icon-badge mv-icon-blue">
+                  <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                  </svg>
+                </div>
+                <h3 class="mv-card-title">Our Mission</h3>
+              </div>
+              <p class="mv-card-text">
+                To engineer advanced, dependable, and expandable software frameworks that allow organizations to excel in an evolving marketplace. We are focused on turning complex operational hurdles into streamlined, user-centric digital tools. By adopting modern engineering benchmarks and staying ahead of technological trends, we turn strategic goals into dependable execution. Our primary focus is building resilient platforms designed for real-world reliability.
+              </p>
+              <div class="mv-accent-bar mv-bar-blue"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Vision Flip Card -->
+        <div class="flip-card-container" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <!-- Front Face: High Quality Software Team Collaboration Image -->
+            <div class="flip-card-front flip-card-front-vision" style="background: url('images/about-bg-2.jpg') center/cover no-repeat !important; position: relative;">
+              <div class="flip-card-front-content">
+                <div class="badge" style="background: rgba(255,255,255,0.2); color: #fff; border: 1px solid rgba(255,255,255,0.4); text-transform: uppercase;">Our Vision</div>
+                <h3 style="font-size: 1.85rem; font-weight: 900; margin-top: 12px; color: #FFFFFF; line-height: 1.25;">Pioneering Tomorrow's Digital Ecosystems</h3>
+              </div>
+              <div class="flip-cue-badge">
+                <span>Hover or Touch to Flip</span>
+                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+              </div>
+            </div>
+
+            <!-- Back Face: Text Content -->
+            <div class="flip-card-back glass-card">
+              <div class="mv-card-header">
+                <div class="mv-icon-badge mv-icon-cyan">
+                  <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                  </svg>
+                </div>
+                <h3 class="mv-card-title">Our Vision</h3>
+              </div>
+              <p class="mv-card-text">
+                To establish ourselves as a global technology partner renowned for unwavering quality, creative problem-solving, and sustainable client growth. We picture a digital ecosystem where automation and intelligent software architecture define standard business operations, enabling enterprises of every scale to achieve higher productivity and lasting value.
+              </p>
+              <div class="mv-accent-bar mv-bar-cyan"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 2: IT Services & Solutions - Pioneering Digital Solutions
+       ========================================== -->
+  <section class="section section-bg-image section-bg-crisp section-bg-services" id="services" style="position: relative;">
+    <!-- Background Animated Vector Diagram for Pioneering Digital Solutions -->
+    <div class="services-bg-diagram-container">
+      <svg class="services-bg-svg" viewBox="0 0 1200 650" fill="none" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="digitalLineGrad" x1="0" y1="0" x2="1200" y2="650" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#045D5D" stop-opacity="0.25"/>
+            <stop offset="0.5" stop-color="#5e8d83" stop-opacity="0.35"/>
+            <stop offset="1" stop-color="#004B49" stop-opacity="0.2"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Digital Solution Grid Circuit Bus Pathways -->
+        <path d="M 80 160 H 1120 M 80 460 H 1120 M 200 80 V 540 M 600 80 V 540 M 1000 80 V 540" stroke="url(#digitalLineGrad)" stroke-width="1.8" stroke-dasharray="6 6" class="anim-digital-flow"/>
+        <path d="M 200 160 L 600 460 M 600 160 L 1000 460 M 600 160 L 200 460 M 1000 160 L 600 460" stroke="#5e8d83" stroke-width="1.2" stroke-dasharray="4 4" opacity="0.4" class="anim-digital-flow-fast"/>
+
+        <!-- Concentric Node Rings behind the 6 Service Boxes -->
+        <g class="anim-node-ring-1">
+          <circle cx="200" cy="160" r="70" stroke="#045D5D" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <circle cx="200" cy="160" r="45" stroke="#5e8d83" stroke-width="1.8" opacity="0.6"/>
+          <circle cx="200" cy="160" r="18" fill="rgba(17, 69, 56, 0.12)"/>
+        </g>
+        <g class="anim-node-ring-2">
+          <circle cx="600" cy="160" r="75" stroke="#004B49" stroke-width="1.5" stroke-dasharray="6 4"/>
+          <circle cx="600" cy="160" r="50" stroke="#5e8d83" stroke-width="1.8" opacity="0.7"/>
+          <circle cx="600" cy="160" r="20" fill="rgba(15, 68, 76, 0.12)"/>
+        </g>
+        <g class="anim-node-ring-3">
+          <circle cx="1000" cy="160" r="70" stroke="#045D5D" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <circle cx="1000" cy="160" r="45" stroke="#5e8d83" stroke-width="1.8" opacity="0.6"/>
+          <circle cx="1000" cy="160" r="18" fill="rgba(17, 69, 56, 0.12)"/>
+        </g>
+        <g class="anim-node-ring-4">
+          <circle cx="200" cy="460" r="70" stroke="#004B49" stroke-width="1.5" stroke-dasharray="6 4"/>
+          <circle cx="200" cy="460" r="45" stroke="#5e8d83" stroke-width="1.8" opacity="0.65"/>
+          <circle cx="200" cy="460" r="18" fill="rgba(15, 68, 76, 0.12)"/>
+        </g>
+        <g class="anim-node-ring-5">
+          <circle cx="600" cy="460" r="75" stroke="#045D5D" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <circle cx="600" cy="460" r="50" stroke="#5e8d83" stroke-width="1.8" opacity="0.7"/>
+          <circle cx="600" cy="460" r="20" fill="rgba(17, 69, 56, 0.12)"/>
+        </g>
+        <g class="anim-node-ring-6">
+          <circle cx="1000" cy="460" r="70" stroke="#004B49" stroke-width="1.5" stroke-dasharray="6 4"/>
+          <circle cx="1000" cy="460" r="45" stroke="#5e8d83" stroke-width="1.8" opacity="0.6"/>
+          <circle cx="1000" cy="460" r="18" fill="rgba(15, 68, 76, 0.12)"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="container" style="position: relative; z-index: 2;">
+      <div class="section-header">
+        <div class="badge">IT Services & Solutions</div>
+        <h2 class="section-title">Pioneering <span class="text-gradient">Digital Solutions</span></h2>
+        <p class="section-subtitle">
+          Applying deep domain knowledge to build modern cloud frameworks, operational enterprise tools, and engaging digital customer experiences.
+        </p>
+      </div>
+
+      <div class="services-open-grid">
+        <!-- Service 01: Cloud Infrastructure (Blue Theme) -->
+        <div class="service-open-node node-card-blue">
+          <div class="card-bg-watermark">
+            <img src="images/card-icon-cloud.png" alt="Cloud Infrastructure Watermark" class="card-watermark-img" />
+          </div>
+          <div class="node-header">
+            <span class="node-number">01</span>
+            <div class="node-icon-spin">
+              <img src="images/card-icon-cloud.png" alt="Cloud Infrastructure Icon" class="card-spin-custom-img" />
+            </div>
+          </div>
+          <h3 class="node-title">Cloud Infrastructure</h3>
+          <p class="node-desc">Scalable multi-cloud deployment, serverless pipelines, and high-availability architecture for continuous uptime.</p>
+          <a href="projects.html" class="node-link">Explore Capability →</a>
+          <div class="node-accent-line"></div>
+        </div>
+
+        <!-- Service 02: AI & Smart Automation (Emerald Theme) -->
+        <div class="service-open-node node-card-emerald">
+          <div class="card-bg-watermark">
+            <img src="images/card-icon-ai.png" alt="AI & Smart Automation Watermark" class="card-watermark-img" />
+          </div>
+          <div class="node-header">
+            <span class="node-number">02</span>
+            <div class="node-icon-spin">
+              <img src="images/card-icon-ai.png" alt="AI & Smart Automation Icon" class="card-spin-custom-img card-spin-ai-img" />
+            </div>
+          </div>
+          <h3 class="node-title">AI & Smart Automation</h3>
+          <p class="node-desc">Integrating intelligent algorithms to automate complex enterprise workflows and elevate operational output.</p>
+          <a href="projects.html" class="node-link">Explore Capability →</a>
+          <div class="node-accent-line"></div>
+        </div>
+
+        <!-- Service 03: Digital Product Engineering (Purple Theme) -->
+        <div class="service-open-node node-card-purple">
+          <div class="card-bg-watermark">
+            <img src="images/card-icon-product.png" alt="Digital Product Engineering Watermark" class="card-watermark-img" />
+          </div>
+          <div class="node-header">
+            <span class="node-number">03</span>
+            <div class="node-icon-spin">
+              <img src="images/card-icon-product.png" alt="Digital Product Engineering Icon" class="card-spin-custom-img card-spin-product-img" />
+            </div>
+          </div>
+          <h3 class="node-title">Digital Product Engineering</h3>
+          <p class="node-desc">Architecting intuitive mobile and web platforms focused on seamless user experience and fluid responsiveness.</p>
+          <a href="projects.html" class="node-link">Explore Capability →</a>
+          <div class="node-accent-line"></div>
+        </div>
+
+        <!-- Service 04: Cybersecurity Defense (Rose Theme) -->
+        <div class="service-open-node node-card-rose">
+          <div class="card-bg-watermark">
+            <img src="images/card-icon-security.png" alt="Cybersecurity Defense Watermark" class="card-watermark-img" />
+          </div>
+          <div class="node-header">
+            <span class="node-number">04</span>
+            <div class="node-icon-spin">
+              <img src="images/card-icon-security.png" alt="Cybersecurity Defense Icon" class="card-spin-custom-img" />
+            </div>
+          </div>
+          <h3 class="node-title">Cybersecurity Defense</h3>
+          <p class="node-desc">Implementing zero-trust network protocols, robust data encryption, and active security vulnerability monitoring.</p>
+          <a href="projects.html" class="node-link">Explore Capability →</a>
+          <div class="node-accent-line"></div>
+        </div>
+
+        <!-- Service 05: Enterprise Analytics (Amber Theme) -->
+        <div class="service-open-node node-card-amber">
+          <div class="card-bg-watermark">
+            <img src="images/card-icon-analytics.png" alt="Enterprise Analytics Watermark" class="card-watermark-img" />
+          </div>
+          <div class="node-header">
+            <span class="node-number">05</span>
+            <div class="node-icon-spin">
+              <img src="images/card-icon-analytics.png" alt="Enterprise Analytics Icon" class="card-spin-custom-img" />
+            </div>
+          </div>
+          <h3 class="node-title">Enterprise Analytics</h3>
+          <p class="node-desc">Transforming raw organizational data into actionable executive insights through real-time intelligence dashboards.</p>
+          <a href="projects.html" class="node-link">Explore Capability →</a>
+          <div class="node-accent-line"></div>
+        </div>
+
+        <!-- Service 06: IoT Platforms (Teal Theme) -->
+        <div class="service-open-node node-card-teal">
+          <div class="card-bg-watermark">
+            <img src="images/card-icon-iot.png" alt="IoT Platforms Watermark" class="card-watermark-img" />
+          </div>
+          <div class="node-header">
+            <span class="node-number">06</span>
+            <div class="node-icon-spin">
+              <img src="images/card-icon-iot.png" alt="IoT Platforms Icon" class="card-spin-custom-img" />
+            </div>
+          </div>
+          <h3 class="node-title">IoT Platforms</h3>
+          <p class="node-desc">Connecting hardware and smart sensors for real-time operational transparency and monitoring.</p>
+          <a href="projects.html" class="node-link">Explore Capability →</a>
+          <div class="node-accent-line"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ==========================================
+       CTA Banner Section
+       ========================================== -->
+  <section class="section" style="background: var(--bg-main); text-align: center;">
+    <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <h2 class="section-title" style="text-align: center !important;">Ready to Elevate Your <span class="text-gradient">Enterprise Architecture?</span></h2>
+      <p class="section-subtitle" style="text-align: center !important; text-align-last: center !important; margin-left: auto !important; margin-right: auto !important; max-width: 780px !important; margin-bottom: 32px !important;">
+        Connect with our software engineering leaders to discuss custom cloud frameworks, AI automation, or scalable digital platforms.
+      </p>
+      <a href="contact.html#contact-form" class="btn btn-primary" style="margin-left: auto !important; margin-right: auto !important;">Schedule Engineering Consultation</a>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Footer Section
+       ========================================== -->
+  <footer class="footer new-watermark-footer">
+    <div class="container">
+      <div class="footer-grid-3col">
+        <!-- Col 1: Brand Info -->
+        <div>
+          <div class="brand-logo" style="margin-bottom: 16px;">
+            <img src="images/company-logo.png" alt="CodeThrive Infotech Logo" class="brand-logo-img" />
+            <span class="footer-brand-text">CodeThrive Infotech</span>
+          </div>
+          <p class="footer-brand-desc">
+            Progress. Cultivate. Innovate. Engineering scalable digital platforms, modern cloud architectures, and intelligent software applications.
+          </p>
+          
+          <div class="footer-social-icons">
+            <a href="tel:+919150781685" class="footer-social-btn" title="Call Us" aria-label="Call Us">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            </a>
+            <a href="https://wa.me/919150781685?text=Hello%20CodeThrive%20Infotech%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="WhatsApp" aria-label="WhatsApp">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.762.459 3.48 1.332 4.992l-1.417 5.176 5.297-1.389c1.458.796 3.097 1.215 4.773 1.216h.004c5.505 0 9.988-4.478 9.989-9.985 0-2.668-1.037-5.176-2.925-7.065-1.888-1.888-4.396-2.927-7.063-2.929zm5.952 14.286c-.25.702-1.238 1.34-1.72 1.386-.48.046-1.107.215-3.666-.826-3.197-1.303-5.249-4.549-5.408-4.761-.158-.212-1.294-1.722-1.294-3.287 0-1.564.818-2.335 1.108-2.652.29-.317.633-.396.844-.396.21 0 .422.002.607.01.196.008.461-.074.72.548.267.643.909 2.217.988 2.378.079.16.132.348.026.56-.105.212-.158.344-.316.533-.158.188-.333.421-.476.564-.158.158-.323.33-.138.647.185.317.822 1.357 1.767 2.199 1.217 1.084 2.24 1.42 2.557 1.578.317.158.502.132.687-.079.185-.212.793-.923 1.004-1.24.212-.317.423-.264.713-.158.29.106 1.848.871 2.164 1.029.317.158.528.238.607.37.079.132.079.767-.171 1.469z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Instagram" aria-label="Instagram">
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="LinkedIn" aria-label="LinkedIn">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Facebook" aria-label="Facebook">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+          <div class="footer-copyright-text">
+            &copy; 2026 CodeThrive Infotech. All rights reserved.
+          </div>
+        </div>
+
+        <!-- Column 2: QUICK LINKS -->
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">QUICK LINKS</h4>
+          <ul class="footer-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact Info -->
+        <div>
+          <div class="footer-col-title">Reach Us</div>
+          <div class="footer-contact-list">
+            <p><strong>Phone:</strong> <a href="tel:+919150781685">+91 91507 81685</a></p>
+            <p><strong>Email:</strong> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@codethriveinfotech.in" target="_blank" rel="noopener noreferrer">info@codethriveinfotech.in</a></p>
+            <p><strong>Location:</strong> <a href="https://maps.app.goo.gl/AgyaE6mujDEaVjZr8?g_st=aw" target="_blank" rel="noopener" style="text-decoration: underline;">No 1, Srihari Nivas, Indira Nagar, Sugam, Coimbatore - 641045</a></p>
+          </div>
+          <div class="footer-privacy-wrap">
+            <a href="contact.html" class="footer-privacy-link">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WATERMARK TEXT -->
+    <div class="footer-watermark-text" aria-hidden="true">
+      CODETHRIVE INFOTECH
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="btn btn-primary back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7"/></svg>
+  </button>
+
+  <!-- Floating Call Button (Bottom Right Corner) -->
+  <a href="tel:+919150781685" 
+     class="call-float-btn" 
+     aria-label="Call CodeThrive Infotech">
+    <span class="float-tooltip-pop">📞 Call Us: +91 91507 81685</span>
+    <svg class="call-icon-svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+      <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+    </svg>
+  </a>
+
+  <!-- Floating WhatsApp Icon (Bottom Right Corner) -->
+  <a href="https://wa.me/919150781685?text=Hello%20CodeThrive%20Infotech%2C%20I%20would%20like%20to%20discuss%20a%20project." 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="whatsapp-float-btn" 
+     aria-label="Chat on WhatsApp">
+    <span class="float-tooltip-pop">💬 Chat on WhatsApp</span>
+    <svg class="whatsapp-icon-svg" viewBox="0 0 24 24" width="30" height="30">
+      <path fill="#FFFFFF" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/>
+      <path fill="#FFFFFF" d="M12.01 2C6.48 2 2 6.48 2 12.01c0 1.94.55 3.75 1.5 5.28L2 22l4.82-1.47c1.48.88 3.21 1.48 5.19 1.48 5.53 0 10.01-4.48 10.01-10.01S17.54 2 12.01 2zm0 18.02c-1.76 0-3.41-.48-4.83-1.32l-.35-.21-2.86.87.88-2.79-.23-.37C3.71 14.77 3.2 13.06 3.2 12.01c0-4.86 3.95-8.81 8.81-8.81s8.81 3.95 8.81 8.81-3.95 8.81-8.81 8.81z"/>
+    </svg>
+  </a>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
