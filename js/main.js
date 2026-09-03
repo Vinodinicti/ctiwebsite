@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeToggleBtn = document.getElementById('themeToggleBtn');
   const themeIcon = document.getElementById('themeIcon');
   
-  const savedTheme = localStorage.getItem('codethrive_theme') || 'dark';
+  const savedTheme = localStorage.getItem('codethrive_theme') || 'light';
   document.documentElement.setAttribute('data-theme', savedTheme);
   updateThemeIcon(savedTheme);
 

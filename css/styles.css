@@ -119,8 +119,20 @@ p, .solution-desc, .who-desc, .client-card-desc, .editorial-excerpt, .floating-i
 }
 
 .section-subtitle {
-  color: #045D5D;
+  color: #045D5D !important;
   font-weight: 700 !important;
+}
+
+[data-theme="dark"] .section-subtitle {
+  color: #2dd4bf !important;
+}
+
+.project-card-desc {
+  color: #045D5D !important;
+}
+
+[data-theme="dark"] .project-card-desc {
+  color: #2dd4bf !important;
 }
 
 [data-theme="dark"] body,
@@ -1633,11 +1645,42 @@ button, input, select, textarea {
   margin-bottom: 8px;
 }
 
+[data-theme="dark"] .project-card-title {
+  color: #FFFFFF !important;
+}
+
 .project-card-desc {
   font-size: 0.95rem;
-  color: #045D5D;
+  color: #045D5D !important;
   line-height: 1.6;
   flex-grow: 1;
+}
+
+[data-theme="dark"] .project-card-desc {
+  color: #2dd4bf !important;
+}
+
+.service-link {
+  color: #045D5D !important;
+  font-weight: 700;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.service-link:hover {
+  color: #114538 !important;
+}
+
+[data-theme="dark"] .service-link {
+  color: #2dd4bf !important;
+}
+
+[data-theme="dark"] .service-link:hover {
+  color: #5eead4 !important;
+}
+
+[data-theme="dark"] .project-carousel-card {
+  background: var(--bg-card, #161d23);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 /* --- Purpose Driven Our Mission & Vision 2-Side Animated Cards --- */
