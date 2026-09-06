@@ -237,10 +237,12 @@ button, input, select, textarea {
 }
 
 .marquee-content {
-  display: flex;
-  white-space: nowrap;
-  animation: marqueeContinuousCycle 12s linear infinite;
-  gap: 40px;
+  display: flex !important;
+  width: max-content !important;
+  white-space: nowrap !important;
+  animation: marqueeContinuousCycle 18s linear infinite normal !important;
+  will-change: transform !important;
+  gap: 40px !important;
 }
 
 @keyframes marqueeContinuousCycle {
@@ -612,7 +614,7 @@ button, input, select, textarea {
   left: 0;
   width: 100%;
   height: var(--header-height);
-  z-index: 1000;
+  z-index: 99999 !important;
   background: #FFFFFF !important;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -3613,9 +3615,9 @@ textarea.form-control {
 
 /* Card Bottom Tag & Explore Link */
 .pastel-card-bottom-row {
-  display: flex !items-center !important;
+  display: flex !important;
   align-items: center !important;
-  justify-content: space-between !important;
+  justify-content: center !important;
   padding-top: 14px !important;
   margin-top: 14px !important;
   border-top: 1.5px dashed #E2E8F0 !important;
@@ -6595,43 +6597,173 @@ textarea.form-control {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    width: 40px !important;
-    height: 40px !important;
+    width: 42px !important;
+    height: 42px !important;
     padding: 0 !important;
-    border-radius: 10px !important;
-    border: 1px solid rgba(17, 69, 56, 0.15) !important;
-    background: rgba(17, 69, 56, 0.04) !important;
-    color: #161d23 !important;
+    border-radius: 12px !important;
+    border: 1.5px solid rgba(4, 93, 93, 0.25) !important;
+    background: linear-gradient(135deg, rgba(4, 93, 93, 0.08) 0%, rgba(13, 148, 136, 0.14) 100%) !important;
+    color: #045D5D !important;
+    box-shadow: 0 4px 12px rgba(4, 93, 93, 0.08) !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
   }
 
+  .mobile-toggle:hover,
+  .mobile-toggle:active {
+    background: linear-gradient(135deg, #045D5D 0%, #0D9488 100%) !important;
+    color: #FFFFFF !important;
+    border-color: #0D9488 !important;
+    transform: scale(1.05) !important;
+    box-shadow: 0 6px 18px rgba(4, 93, 93, 0.3) !important;
+  }
+
+  /* Crisp & Vibrant Designer Gradient Mobile Drawer Menu */
   .nav-menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 84%;
-    max-width: 320px;
-    height: 100vh;
-    background: rgba(9, 22, 26, 0.98);
-    padding: 90px 28px 40px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 22px;
-    box-shadow: -10px 0 35px rgba(0, 0, 0, 0.5);
-    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    z-index: 9999;
+    position: fixed !important;
+    top: 0 !important;
+    right: -100% !important;
+    width: 86% !important;
+    max-width: 340px !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    background: linear-gradient(165deg, #021417 0%, #042528 45%, #07383c 100%) !important;
+    padding: 85px 22px 36px 22px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 14px !important;
+    border-left: 2.5px solid #0D9488 !important;
+    box-shadow: -15px 0 45px rgba(0, 0, 0, 0.85), -2px 0 24px rgba(52, 211, 153, 0.3) !important;
+    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    z-index: 10000 !important;
+    overflow-y: auto !important;
+    box-sizing: border-box !important;
+    pointer-events: auto !important;
+  }
+
+  /* Ambient Glowing Color Orbs inside Drawer */
+  .nav-menu::before {
+    content: '' !important;
+    position: absolute !important;
+    top: -50px !important;
+    right: -50px !important;
+    width: 220px !important;
+    height: 220px !important;
+    border-radius: 50% !important;
+    background: radial-gradient(circle, rgba(52, 211, 153, 0.35) 0%, rgba(13, 148, 136, 0.1) 50%, transparent 70%) !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+  }
+
+  .nav-menu::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: -40px !important;
+    left: -40px !important;
+    width: 200px !important;
+    height: 200px !important;
+    border-radius: 50% !important;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.28) 0%, rgba(2, 132, 199, 0.08) 50%, transparent 70%) !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
   }
 
   .nav-menu.active {
-    right: 0;
+    right: 0 !important;
   }
 
+  /* Vibrant & High-Contrast Nav Link Cards in Mobile Drawer */
   .nav-link {
-    font-size: 1.15rem !important;
+    font-size: 1.08rem !important;
+    font-weight: 800 !important;
     color: #FFFFFF !important;
+    padding: 16px 22px !important;
+    border-radius: 18px !important;
+    background: linear-gradient(135deg, rgba(8, 48, 52, 0.95) 0%, rgba(14, 68, 74, 0.95) 100%) !important;
+    border: 1.5px solid rgba(52, 211, 153, 0.45) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    letter-spacing: 0.5px !important;
+    text-decoration: none !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    position: relative !important;
+    z-index: 100 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4) !important;
+    overflow: hidden !important;
+    -webkit-tap-highlight-color: rgba(52, 211, 153, 0.3) !important;
+  }
+
+  /* Right Arrow Chevron indicator inside Nav Link */
+  .nav-link::before {
+    content: '→' !important;
+    font-size: 1.25rem !important;
+    font-weight: 900 !important;
+    color: #34D399 !important;
+    order: 2 !important;
+    text-shadow: 0 0 10px rgba(52, 211, 153, 0.8) !important;
+    transition: transform 0.3s ease, color 0.3s ease !important;
+    pointer-events: none !important;
+  }
+
+  .nav-link:hover,
+  .nav-link:active,
+  .nav-link:focus {
+    background: linear-gradient(135deg, rgba(12, 65, 70, 0.98) 0%, rgba(18, 90, 96, 0.98) 100%) !important;
+    border-color: #34D399 !important;
+    color: #FFFFFF !important;
+    transform: translateX(-4px) !important;
+    box-shadow: 0 8px 24px rgba(4, 93, 93, 0.5), 0 0 16px rgba(52, 211, 153, 0.4) !important;
+  }
+
+  .nav-link:hover::before,
+  .nav-link:active::before {
+    color: #38BDF8 !important;
+    transform: translateX(4px) !important;
+  }
+
+  /* Active Nav Link Glowing Gradient Card */
+  .nav-link.active {
+    background: linear-gradient(135deg, #059669 0%, #0D9488 50%, #0284C7 100%) !important;
+    border: 2px solid #34D399 !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 10px 30px rgba(5, 150, 105, 0.55), 0 0 20px rgba(52, 211, 153, 0.6) !important;
+    transform: translateX(-2px) !important;
+  }
+
+  .nav-link.active::before {
+    content: '●' !important;
+    font-size: 0.85rem !important;
+    color: #34D399 !important;
+    text-shadow: 0 0 10px rgba(52, 211, 153, 0.9) !important;
   }
 
   .nav-link::after {
-    background: #5e8d83 !important;
+    display: none !important;
+  }
+
+  /* Translucent Dark Overlay Backdrop (No Blur Bug) */
+  .nav-drawer-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(4, 18, 21, 0.75) !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.35s ease, visibility 0.35s ease !important;
+    z-index: 99990 !important;
+    pointer-events: auto !important;
+  }
+
+  .nav-drawer-overlay.active {
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 
   /* Subpage Hero Banners Mobile Optimization */
@@ -6807,13 +6939,21 @@ textarea.form-control {
     font-size: 0.68rem !important;
   }
 
-  .section-bg-clients .client-person-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 12px 10px !important;
+  .section-bg-clients .client-person-grid,
+  .client-person-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 30px 10px !important;
     align-items: stretch !important;
   }
 
-  .section-bg-clients .client-person-pod {
+  .section-bg-clients .client-person-pod,
+  .client-person-pod {
+    flex: 0 1 calc(33.333% - 8px) !important;
+    width: calc(33.333% - 8px) !important;
+    min-width: 0 !important;
+    max-width: none !important;
     padding: 22px 8px 12px !important;
     border-radius: 16px !important;
     min-height: 120px !important;
@@ -8529,17 +8669,19 @@ textarea.form-control {
    OUR CLIENTS SECTION - ENLARGED LOGOS & PERFECTLY CENTERED CARD CONTENT
    ========================================================================== */
 .client-person-grid {
-  display: grid !important;
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
   justify-content: center !important;
   align-items: stretch !important;
-  gap: 28px !important;
+  gap: 40px 28px !important;
   margin-top: 50px !important;
 }
 
 .client-person-pod {
-  flex: 0 0 auto !important;
-  max-width: none !important;
+  flex: 0 1 calc(33.333% - 20px) !important;
+  width: calc(33.333% - 20px) !important;
+  min-width: 280px !important;
+  max-width: 380px !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
@@ -8585,21 +8727,23 @@ textarea.form-control {
   transition: transform 0.35s ease !important;
 }
 
-@media (max-width: 640px) {
-  .section-bg-clients .client-person-grid {
-    display: grid !important;
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 10px !important;
-    margin-top: 20px !important;
-    justify-content: stretch !important;
+@media (max-width: 768px) {
+  .section-bg-clients .client-person-grid,
+  .client-person-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 30px 10px !important;
+    margin-top: 25px !important;
   }
 
-  .section-bg-clients .client-person-pod {
-    flex: 0 0 auto !important;
+  .section-bg-clients .client-person-pod,
+  .client-person-pod {
+    flex: 0 1 calc(33.333% - 8px) !important;
+    width: calc(33.333% - 8px) !important;
+    min-width: 0 !important;
     max-width: none !important;
-    width: 100% !important;
-    min-height: 150px !important;
-    padding: 18px 8px 12px !important;
+    padding: 22px 8px 12px !important;
     border-radius: 16px !important;
   }
 
@@ -10729,17 +10873,25 @@ textarea.form-control {
     max-height: 105px !important;
     border-radius: 12px !important;
     overflow: hidden !important;
-    margin-bottom: 8px !important;
+    margin-bottom: 0px !important;
   }
 
   .creative-card-top-row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px !important;
     margin-bottom: 6px !important;
+    width: 100% !important;
   }
 
   .creative-card-badge-top {
     font-size: 0.58rem !important;
     padding: 2px 6px !important;
     border-radius: 8px !important;
+    position: static !important;
+    align-self: flex-start !important;
+    white-space: nowrap !important;
   }
 
   .creative-card-body {
@@ -10987,3 +11139,128 @@ textarea.form-control {
     right: 56px !important;
   }
 }
+
+/* ==========================================================================
+   INDUSTRIES PAGE DESKTOP VS MOBILE CARD DESCRIPTIONS
+   ========================================================================== */
+.desc-mobile {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .desc-full {
+    display: none !important;
+  }
+  .desc-mobile {
+    display: inline !important;
+  }
+
+  /* Faster Marquee & Scrolling Card Motion Across Website on Mobile View Alone */
+  .marquee-content,
+  .client-marquee-wrapper .marquee-content {
+    animation-duration: 14s !important;
+    animation-direction: normal !important;
+    animation-timing-function: linear !important;
+    animation-iteration-count: infinite !important;
+    will-change: transform !important;
+  }
+
+  .row-scroll-left .stories-ticker-track {
+    animation-duration: 14s !important;
+    animation-direction: normal !important;
+    animation-timing-function: linear !important;
+    animation-iteration-count: infinite !important;
+    will-change: transform !important;
+  }
+
+  .row-scroll-right .stories-ticker-track {
+    animation-duration: 15s !important;
+    animation-direction: normal !important;
+    animation-timing-function: linear !important;
+    animation-iteration-count: infinite !important;
+    will-change: transform !important;
+  }
+
+  /* ==========================================================================
+     UNIFIED STANDARDIZED MOBILE VIEW FOOTER FORMAT & SIZING ACROSS ALL PAGES
+     ========================================================================== */
+  footer.footer,
+  footer.new-watermark-footer {
+    padding-top: 28px !important;
+    padding-bottom: 22px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .footer-grid-3col {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 18px 14px !important;
+    margin-bottom: 14px !important;
+    text-align: left !important;
+  }
+
+  .footer-brand-col {
+    grid-column: 1 / -1 !important;
+    text-align: left !important;
+  }
+
+  .footer-brand-text {
+    font-size: 1.02rem !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.2px !important;
+  }
+
+  .footer-brand-desc {
+    font-size: 0.78rem !important;
+    line-height: 1.45 !important;
+    margin-bottom: 10px !important;
+    max-width: 100% !important;
+  }
+
+  .footer-col-title {
+    font-size: 0.78rem !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 8px !important;
+    font-weight: 800 !important;
+  }
+
+  .footer-menu a,
+  .footer-contact-list p,
+  .footer-contact-list a {
+    font-size: 0.78rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .footer-social-btn {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .footer-social-btn svg {
+    width: 13px !important;
+    height: 13px !important;
+  }
+
+  .footer-copyright-text {
+    font-size: 0.74rem !important;
+    margin-top: 10px !important;
+  }
+
+  .footer-privacy-link {
+    font-size: 0.72rem !important;
+    padding: 3px 12px !important;
+  }
+
+  .footer-watermark-text {
+    font-size: clamp(1.0rem, 4.8vw, 1.8rem) !important;
+    bottom: 4px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+

@@ -79,14 +79,43 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   if (mobileToggle && navMenu) {
-    mobileToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
+    let navOverlay = document.querySelector('.nav-drawer-overlay');
+    if (!navOverlay) {
+      navOverlay = document.createElement('div');
+      navOverlay.className = 'nav-drawer-overlay';
+      document.body.appendChild(navOverlay);
+    }
+
+    function toggleMobileMenu() {
+      const isOpen = navMenu.classList.toggle('active');
+      navOverlay.classList.toggle('active', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    }
+
+    function closeMobileMenu() {
+      navMenu.classList.remove('active');
+      navOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    mobileToggle.addEventListener('click', toggleMobileMenu);
+    navOverlay.addEventListener('click', closeMobileMenu);
 
     document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
+      link.addEventListener('click', function(e) {
+        const targetUrl = this.getAttribute('href');
+        closeMobileMenu();
+        if (targetUrl && !targetUrl.startsWith('#') && targetUrl !== '#') {
+          e.preventDefault();
+          window.location.href = targetUrl;
+        }
       });
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+        closeMobileMenu();
+      }
     });
   }
 
@@ -828,11 +857,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderStackPositions();
 
-    // --- Automatic Card Sliding Motion (Unconditional Auto-Rotation Every 2.5 Seconds) ---
-    setInterval(() => {
-      activeIndex = (activeIndex + 1) % stackCards.length;
-      renderStackPositions();
-    }, 2500);
+    // --- Automatic Card Sliding Motion (Faster 1.4s on Mobile View, 2.5s on Desktop) ---
+    function scheduleNextStackSlide() {
+      const delay = (window.innerWidth <= 768) ? 1400 : 2500;
+      setTimeout(() => {
+        activeIndex = (activeIndex + 1) % stackCards.length;
+        renderStackPositions();
+        scheduleNextStackSlide();
+      }, delay);
+    }
+    scheduleNextStackSlide();
   }
 
   // --- 11. Client Works Interactive Pop-up Modal System ---
@@ -964,7 +998,7 @@ document.addEventListener('DOMContentLoaded', () => {
               `).join('')}
             </div>
             <a href="contact.html#contact-form" class="btn client-modal-btn" style="padding: 10px 20px; font-size: 0.85rem; font-weight: 800; border-radius: 20px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
-              Discuss Similar Project →
+              Discuss Similar Project
             </a>
           </div>
         `;

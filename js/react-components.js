@@ -101,7 +101,7 @@ function EnterpriseEstimator() {
         </div>
 
         <a href="contact.html#contact-form" className="btn btn-primary">
-          Get Formal Scope Quote →
+          Get Formal Scope Quote
         </a>
       </div>
     </div>
