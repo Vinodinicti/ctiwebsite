@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery • CodeThrive Infotech</title>
+  <meta name="description" content="CodeThrive Infotech Gallery - Explore our visual chronicle, team culture, workplace innovation, and enterprise milestones." />
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css?v=2" />
+
+  <style>
+    /* 3D Gallery Carousel & Custom Section Styles */
+    .gallery-hero-section {
+      padding-top: calc(var(--header-height, 85px) + 20px);
+      padding-bottom: 50px;
+      position: relative;
+      overflow: hidden;
+      background: #000000 !important;
+    }
+
+    /* Single Background Image Hero Banner (Matching standard page hero layout) */
+    .gallery-hero-banner {
+      background: #000000 !important;
+      position: relative;
+      overflow: hidden;
+      min-height: calc(85vh - 85px) !important;
+      padding: 110px 0 60px 0 !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+
+    .gallery-hero-bg-layer {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .gallery-hero-bg-single {
+      position: absolute;
+      inset: 0;
+      background: url('images/business-team-meeting-modern-office-with-city-view.jpg') center/cover no-repeat;
+      opacity: 0.50;
+    }
+
+    .gallery-hero-bg-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.65) 0%, rgba(0, 0, 0, 0.88) 100%);
+      z-index: 1;
+    }
+
+    /* 3D Showcase Section Below Hero Banner - White Background & High-Contrast Typography */
+    .gallery-showcase-section {
+      background: #FFFFFF !important;
+      color: #0F172A !important;
+      position: relative;
+      padding: 70px 0 95px 0 !important;
+      overflow: hidden;
+    }
+
+    .gallery-showcase-section .section-header .badge {
+      color: #047857 !important;
+      background: rgba(16, 185, 129, 0.12) !important;
+      border: 1.5px solid rgba(16, 185, 129, 0.45) !important;
+      font-weight: 800 !important;
+      letter-spacing: 1.5px !important;
+      padding: 6px 18px !important;
+      border-radius: 20px !important;
+      display: inline-block !important;
+      margin-bottom: 12px !important;
+    }
+
+    .gallery-showcase-section .section-title {
+      color: #0F172A !important;
+      font-size: clamp(1.8rem, 3.6vw, 2.6rem) !important;
+      font-weight: 900 !important;
+      margin-bottom: 12px !important;
+    }
+
+    .gallery-showcase-section .section-title .text-gradient {
+      background: linear-gradient(135deg, #059669 0%, #0D9488 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+    }
+
+    .gallery-showcase-section .section-subtitle {
+      color: #334155 !important;
+      font-size: 1.02rem !important;
+      font-weight: 600 !important;
+      line-height: 1.6 !important;
+      max-width: 720px;
+      margin: 0 auto 30px auto !important;
+    }
+
+    /* 3D Arc Curved Perspective Coverflow Carousel Container */
+    .coverflow-carousel-container {
+      position: relative;
+      width: 100%;
+      max-width: 1250px;
+      margin: 30px auto 20px auto;
+      height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      perspective: 1200px;
+      perspective-origin: 50% 50%;
+      overflow: hidden;
+    }
+
+    .coverflow-track {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform-style: preserve-3d;
+    }
+
+    .coverflow-item {
+      position: absolute;
+      width: 440px;
+      height: 275px;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+      border: 2px solid rgba(16, 185, 129, 0.35);
+      cursor: pointer;
+      user-select: none;
+      transform-style: preserve-3d;
+      backface-visibility: hidden;
+      background: #0F172A;
+    }
+
+    .coverflow-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover !important;
+      display: block;
+      transition: all 0.5s ease;
+    }
+
+    /* Active Center Image: Elevated 3D Front View, 100% Clean & Visible */
+    .coverflow-item.pos-active {
+      transform: translateX(0) scale(1.12) translateZ(100px) rotateY(0deg) !important;
+      z-index: 30 !important;
+      opacity: 1 !important;
+      border: 2.5px solid #059669 !important;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25), 0 0 30px rgba(16, 185, 129, 0.4) !important;
+    }
+
+    .coverflow-item.pos-left-1 {
+      transform: translateX(-250px) scale(0.85) translateZ(-40px) rotateY(24deg) !important;
+      z-index: 15 !important;
+      opacity: 0.85 !important;
+      border-color: rgba(16, 185, 129, 0.4) !important;
+    }
+
+    .coverflow-item.pos-right-1 {
+      transform: translateX(250px) scale(0.85) translateZ(-40px) rotateY(-24deg) !important;
+      z-index: 15 !important;
+      opacity: 0.85 !important;
+      border-color: rgba(16, 185, 129, 0.4) !important;
+    }
+
+    .coverflow-item.pos-left-2 {
+      transform: translateX(-430px) scale(0.70) translateZ(-100px) rotateY(40deg) !important;
+      z-index: 8 !important;
+      opacity: 0.65 !important;
+    }
+
+    .coverflow-item.pos-right-2 {
+      transform: translateX(430px) scale(0.70) translateZ(-100px) rotateY(-40deg) !important;
+      z-index: 8 !important;
+      opacity: 0.65 !important;
+    }
+
+    .coverflow-item.pos-left-3 {
+      transform: translateX(-560px) scale(0.55) translateZ(-180px) rotateY(52deg) !important;
+      z-index: 4 !important;
+      opacity: 0.45 !important;
+    }
+
+    .coverflow-item.pos-right-3 {
+      transform: translateX(580px) scale(0.55) translateZ(-180px) rotateY(-52deg) !important;
+      z-index: 4 !important;
+      opacity: 0.45 !important;
+    }
+
+    .coverflow-item.pos-hidden {
+      transform: scale(0.3) translateZ(-300px) !important;
+      opacity: 0 !important;
+      z-index: 0 !important;
+      pointer-events: none !important;
+    }
+
+    /* Carousel Nav Buttons */
+    .carousel-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #0F172A;
+      border: 1.8px solid #059669;
+      color: #34D399;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 40 !important;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    .carousel-nav-btn:hover {
+      background: #059669;
+      color: #FFFFFF;
+      transform: translateY(-50%) scale(1.12);
+      box-shadow: 0 0 25px rgba(16, 185, 129, 0.5);
+    }
+
+    .carousel-nav-btn.prev-btn { left: 15px; }
+    .carousel-nav-btn.next-btn { right: 15px; }
+
+    /* Responsive Mobile Overrides for 100% Image Visibility & Proper Formatting */
+    @media (max-width: 992px) {
+      .gallery-hero-banner {
+        min-height: auto !important;
+        padding: 90px 0 50px 0 !important;
+      }
+      .coverflow-carousel-container {
+        max-width: 760px;
+        height: 340px;
+      }
+      .coverflow-item {
+        width: 320px;
+        height: 200px;
+      }
+      .coverflow-item.pos-left-1 { transform: translateX(-170px) scale(0.82) rotateY(20deg) !important; }
+      .coverflow-item.pos-right-1 { transform: translateX(170px) scale(0.82) rotateY(-20deg) !important; }
+      .coverflow-item.pos-left-2 { transform: translateX(-300px) scale(0.65) rotateY(35deg) !important; }
+      .coverflow-item.pos-right-2 { transform: translateX(300px) scale(0.65) rotateY(-35deg) !important; }
+      .coverflow-item.pos-left-3, .coverflow-item.pos-right-3 { display: none !important; }
+    }
+
+    @media (max-width: 768px) {
+      .gallery-hero-banner {
+        padding: 85px 0 40px 0 !important;
+      }
+      .hero-title {
+        font-size: 1.8rem !important;
+      }
+      .hero-desc {
+        font-size: 0.9rem !important;
+        padding: 0 12px;
+      }
+      .gallery-showcase-section {
+        padding: 40px 0 60px 0 !important;
+      }
+      .coverflow-carousel-container {
+        height: 290px;
+        margin: 15px auto 10px auto;
+      }
+      .coverflow-item {
+        width: 260px;
+        height: 165px;
+        border-radius: 14px;
+      }
+      .coverflow-item.pos-active {
+        transform: translateX(0) scale(1.06) translateZ(40px) !important;
+        z-index: 30 !important;
+      }
+      .coverflow-item.pos-left-1 {
+        transform: translateX(-130px) scale(0.75) rotateY(18deg) !important;
+        z-index: 10 !important;
+        opacity: 0.60 !important;
+      }
+      .coverflow-item.pos-right-1 {
+        transform: translateX(130px) scale(0.75) rotateY(-18deg) !important;
+        z-index: 10 !important;
+        opacity: 0.60 !important;
+      }
+      .coverflow-item.pos-left-2, .coverflow-item.pos-right-2, .coverflow-item.pos-left-3, .coverflow-item.pos-right-3 { display: none !important; }
+      
+      .carousel-nav-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 0.9rem;
+        z-index: 40 !important;
+      }
+      .carousel-nav-btn.prev-btn { left: 4px; }
+      .carousel-nav-btn.next-btn { right: 4px; }
+    }
+
+    @media (max-width: 480px) {
+      .gallery-hero-banner {
+        padding: 75px 0 35px 0 !important;
+      }
+      .coverflow-carousel-container {
+        height: 240px;
+        margin: 10px auto 5px auto;
+      }
+      .coverflow-item {
+        width: 215px;
+        height: 140px;
+        border-radius: 12px;
+      }
+      .coverflow-item.pos-active {
+        transform: translateX(0) scale(1.05) !important;
+        z-index: 30 !important;
+      }
+      .coverflow-item.pos-left-1 {
+        transform: translateX(-90px) scale(0.72) rotateY(14deg) !important;
+        z-index: 10 !important;
+        opacity: 0.50 !important;
+      }
+      .coverflow-item.pos-right-1 {
+        transform: translateX(90px) scale(0.72) rotateY(-14deg) !important;
+        z-index: 10 !important;
+        opacity: 0.50 !important;
+      }
+      
+      .carousel-nav-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 0.8rem;
+      }
+      .carousel-nav-btn.prev-btn { left: 2px; }
+      .carousel-nav-btn.next-btn { right: 2px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Low-Opacity Background Watermark Logos -->
+  <div class="bg-watermark"></div>
+  <div class="bg-watermark-left"></div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="header">
+    <div class="container navbar">
+      <div class="brand-group">
+        <a href="index.html" class="brand-logo">
+          <img src="images/company-logo.png" alt="CodeThrive Infotech Logo" class="brand-logo-img" />
+          <div class="brand-text-wrapper">
+            <span class="brand-title">CodeThrive <span class="text-gradient">Infotech</span></span>
+            <div class="brand-tagline-micro">Progress. Cultivate. Innovate.</div>
+          </div>
+        </a>
+      </div>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="gallery.html" class="nav-link active">Gallery</a>
+        <a href="industries.html" class="nav-link">Industries</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="insights.html" class="nav-link">Insights</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="contact.html#contact-form" class="btn btn-primary">Connect With Our Team</a>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open Menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       Gallery Page Hero Banner (Single Background Image Hero matching About/Industries pages)
+       ========================================== -->
+  <section class="section gallery-hero-banner">
+    <!-- Ambient Glowing Dark Color Pulse Orbs -->
+    <div class="hero-dark-orb dark-orb-left" aria-hidden="true"></div>
+    <div class="hero-dark-orb dark-orb-right" aria-hidden="true"></div>
+
+    <!-- Animated Cyber Tech Grid Bus Background -->
+    <div class="hero-dark-cyber-grid" aria-hidden="true">
+      <svg class="dark-cyber-svg" viewBox="0 0 1400 800" fill="none" preserveAspectRatio="none">
+        <path d="M 0 200 H 1400 M 0 400 H 1400 M 0 600 H 1400 M 350 0 V 800 M 700 0 V 800 M 1050 0 V 800" stroke="rgba(52, 211, 153, 0.15)" stroke-width="1.2" stroke-dasharray="8 6" class="anim-dark-grid-line"/>
+        <path d="M 100 150 L 700 450 L 1300 150 M 200 650 L 700 350 L 1200 650" stroke="rgba(2, 132, 199, 0.18)" stroke-width="1.5" stroke-dasharray="6 6" class="anim-dark-diagonal-line"/>
+        <circle cx="350" cy="200" r="4" fill="#34D399" class="anim-dark-pulse-node1"/>
+        <circle cx="700" cy="400" r="6" fill="#38BDF8" class="anim-dark-pulse-node2"/>
+        <circle cx="1050" cy="600" r="5" fill="#2DD4BF" class="anim-dark-pulse-node3"/>
+      </svg>
+    </div>
+
+    <!-- Single IT Company Workspace Background Image Layer -->
+    <div class="gallery-hero-bg-layer">
+      <div class="gallery-hero-bg-single"></div>
+      <div class="gallery-hero-bg-overlay"></div>
+    </div>
+
+    <div class="container" style="position: relative; z-index: 3; text-align: center;">
+      <div class="hero-content" style="max-width: 980px; margin: 0 auto; text-align: center; padding: 24px 0;">
+        <div class="badge hero-white-glow-tagline" style="margin: 0 auto 14px auto; font-size: 0.82rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; padding: 6px 18px; border-radius: 24px; color: #34D399 !important; background: rgba(15, 23, 42, 0.85) !important; border: 1.8px solid rgba(52, 211, 153, 0.65) !important; text-shadow: 0 0 16px rgba(52, 211, 153, 0.7) !important; box-shadow: 0 6px 25px rgba(0, 0, 0, 0.45), 0 0 20px rgba(52, 211, 153, 0.35) !important; display: inline-block;">LIFE AT CODETHRIVE</div>
+        
+        <h1 class="hero-title" style="font-size: clamp(1.5rem, 3.2vw, 2.3rem) !important; line-height: 1.18; font-weight: 900; color: #FFFFFF !important; margin-bottom: 14px; text-align: center !important; filter: drop-shadow(0 6px 25px rgba(0, 0, 0, 0.9)) !important;">
+          Beyond the Code: Our Culture, Energy & Visual Story.
+        </h1>
+        
+        <p class="hero-desc hero-white-glow-desc" style="font-size: 0.98rem !important; color: #F8FAFC !important; line-height: 1.65; max-width: 800px; margin: 0 auto 24px auto; font-weight: 500 !important; text-align: center !important;">
+          Step behind the scenes at CodeThrive Infotech. Explore our vibrant workplace culture, team synergy, and real-world engineering moments captured live.
+        </p>
+
+        <div class="hero-ctas" style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
+          <a href="#gallery-showcase" class="btn btn-primary" style="padding: 10px 22px !important; font-size: 0.92rem !important;">Explore Photo Showcase</a>
+          <a href="contact.html#contact-form" class="btn btn-secondary" style="padding: 10px 22px !important; font-size: 0.92rem !important;">Connect With Our Team</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3D Visual Showcase Section (Images Below Hero Banner)
+       ========================================== -->
+  <section class="section gallery-showcase-section" id="gallery-showcase">
+    <div class="container">
+      <div class="section-header" style="text-align: center; margin-bottom: 25px;">
+        <div class="badge">OUR VISUAL DIARY</div>
+        <h2 class="section-title">Workplace Moments & <span class="text-gradient">Milestones</span></h2>
+        <p class="section-subtitle" style="max-width: 700px; margin: 0 auto;">
+          Auto-playing interactive 3D visual showcase featuring our team, workspace, and company milestones.
+        </p>
+      </div>
+
+      <!-- 3D Curved Arc Coverflow Carousel -->
+      <div class="coverflow-carousel-container">
+        <button class="carousel-nav-btn prev-btn" id="prevBtn" aria-label="Previous Image">&lt;</button>
+
+        <div class="coverflow-track" id="coverflowTrack">
+          <div class="coverflow-item">
+            <img src="images/Gallerry/office_workspace_team.jpg" alt="CodeThrive Infotech Workspace Team" decoding="async" />
+          </div>
+          <div class="coverflow-item">
+            <img src="images/Gallerry/office_reception_desk.jpg" alt="CodeThrive Infotech Reception Desk" decoding="async" />
+          </div>
+          <div class="coverflow-item">
+            <img src="images/Gallerry/SAVE_20260908_223119.jpg" alt="CodeThrive Infotech Gallery Photo 1" decoding="async" />
+          </div>
+          <div class="coverflow-item">
+            <img src="images/Gallerry/SAVE_20260908_223316.jpg" alt="CodeThrive Infotech Gallery Photo 2" decoding="async" />
+          </div>
+          <div class="coverflow-item">
+            <img src="images/Gallerry/SAVE_20260908_223339.jpg" alt="CodeThrive Infotech Gallery Photo 3" decoding="async" />
+          </div>
+          <div class="coverflow-item">
+            <img src="images/Gallerry/SAVE_20260908_223403.jpg" alt="CodeThrive Infotech Gallery Photo 4" decoding="async" />
+          </div>
+          <div class="coverflow-item">
+            <img src="images/Gallerry/SAVE_20260908_223409.jpg" alt="CodeThrive Infotech Gallery Photo 5" decoding="async" />
+          </div>
+        </div>
+
+        <button class="carousel-nav-btn next-btn" id="nextBtn" aria-label="Next Image">&gt;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Standard Site Footer (Identical 3-Column Layout Across All Pages) -->
+  <footer class="footer new-watermark-footer">
+    <div class="container" style="position: relative; z-index: 2;">
+      <div class="footer-grid-3col">
+        <!-- Column 1: Brand Profile & Social Media Icons -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 14px;">
+            <img src="images/company-logo.png" alt="CodeThrive Infotech Logo" class="brand-logo-img" />
+            <span class="footer-brand-text">CODETHRIVE INFOTECH</span>
+          </a>
+          <p class="footer-brand-desc">
+            Empowering enterprises with smart, scalable, and secure digital solutions. Transform your vision into reality with CodeThrive Infotech.
+          </p>
+          <div class="footer-social-icons">
+            <a href="tel:+919150781685" class="footer-social-btn" title="Call Us" aria-label="Call Us">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            </a>
+            <a href="https://wa.me/919150781685" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="WhatsApp" aria-label="WhatsApp">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.762.459 3.48 1.332 4.992l-1.417 5.176 5.297-1.389c1.458.796 3.097 1.215 4.773 1.216h.004c5.505 0 9.988-4.478 9.989-9.985 0-2.668-1.037-5.176-2.925-7.065-1.888-1.888-4.396-2.927-7.063-2.929zm5.952 14.286c-.25.702-1.238 1.34-1.72 1.386-.48.046-1.107.215-3.666-.826-3.197-1.303-5.249-4.549-5.408-4.761-.158-.212-1.294-1.722-1.294-3.287 0-1.564.818-2.335 1.108-2.652.29-.317.633-.396.844-.396.21 0 .422.002.607.01.196.008.461-.074.72.548.267.643.909 2.217.988 2.378.079.16.132.348.026.56-.105.212-.158.344-.316.533-.158.188-.333.421-.476.564-.158.158-.323.33-.138.647.185.317.822 1.357 1.767 2.199 1.217 1.084 2.24 1.42 2.557 1.578.317.158.502.132.687-.079.185-.212.793-.923 1.004-1.24.212-.317.423-.264.713-.158.29.106 1.848.871 2.164 1.029.317.158.528.238.607.37.079.132.079.767-.171 1.469z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/codethrive-infotech-5b6361402" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="LinkedIn" aria-label="LinkedIn">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="https://github.com/Codethriveinfotech" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="GitHub" aria-label="GitHub">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/codethriveinfotech_official?igsh=MTIzZXA5MXF5dXRlaQ==" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Instagram" aria-label="Instagram">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/share/18pBfimAcw/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Facebook" aria-label="Facebook">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@CodeThriveInfotech" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="YouTube" aria-label="YouTube">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+          <div class="footer-copyright-text">
+            &copy; 2026 CodeThrive Infotech. All rights reserved.
+          </div>
+        </div>
+
+        <!-- Column 2: QUICK LINKS -->
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">QUICK LINKS</h4>
+          <ul class="footer-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: CONTACT US -->
+        <div class="footer-contact-col">
+          <h4 class="footer-col-title">CONTACT US</h4>
+          <div class="footer-contact-list">
+            <p><strong>Phone:</strong> <a href="tel:+919150781685">+91 91507 81685</a></p>
+            <p><strong>Email:</strong> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@codethriveinfotech.in" target="_blank" rel="noopener noreferrer">info@codethriveinfotech.in</a></p>
+            <p><strong>Location:</strong> <a href="https://maps.app.goo.gl/AgyaE6mujDEaVjZr8?g_st=aw" target="_blank" rel="noopener" style="text-decoration: underline;">No 1, Srihari Nivas, Indira Nagar, Sugam, Coimbatore - 641045</a></p>
+          </div>
+          <div class="footer-privacy-wrap">
+            <a href="contact.html" class="footer-privacy-link">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Giant Transparent Watermark Text -->
+    <div class="footer-watermark-text" aria-hidden="true">
+      CODETHRIVE INFOTECH
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="btn btn-primary back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7"/></svg>
+  </button>
+
+  <!-- Floating Call Button -->
+  <a href="tel:+919150781685" class="call-float-btn" aria-label="Call CodeThrive Infotech">
+    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+  </a>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919150781685" target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.762.459 3.48 1.332 4.992l-1.417 5.176 5.297-1.389c1.458.796 3.097 1.215 4.773 1.216h.004c5.505 0 9.988-4.478 9.989-9.985 0-2.668-1.037-5.176-2.925-7.065-1.888-1.888-4.396-2.927-7.063-2.929zm5.952 14.286c-.25.702-1.238 1.34-1.72 1.386-.48.046-1.107.215-3.666-.826-3.197-1.303-5.249-4.549-5.408-4.761-.158-.212-1.294-1.722-1.294-3.287 0-1.564.818-2.335 1.108-2.652.29-.317.633-.396.844-.396.21 0 .422.002.607.01.196.008.461-.074.72.548.267.643.909 2.217.988 2.378.079.16.132.348.026.56-.105.212-.158.344-.316.533-.158.188-.333.421-.476.564-.158.158-.323.33-.138.647.185.317.822 1.357 1.767 2.199 1.217 1.084 2.24 1.42 2.557 1.578.317.158.502.132.687-.079.185-.212.793-.923 1.004-1.24.212-.317.423-.264.713-.158.29.106 1.848.871 2.164 1.029.317.158.528.238.607.37.079.132.079.767-.171 1.469z"/></svg>
+  </a>
+
+  <script>
+    /* 3D Arc Curved Perspective Coverflow Carousel Logic */
+    const items = document.querySelectorAll('.coverflow-item');
+    let currentIndex = 0;
+    let autoPlayTimer = null;
+
+    function updateCoverflow() {
+      const total = items.length;
+      items.forEach((item, index) => {
+        item.className = 'coverflow-item';
+        
+        let diff = (index - currentIndex) % total;
+        if (diff > total / 2) diff -= total;
+        if (diff < -total / 2) diff += total;
+        
+        if (diff === 0) {
+          item.classList.add('pos-active');
+        } else if (diff === -1) {
+          item.classList.add('pos-left-1');
+        } else if (diff === 1) {
+          item.classList.add('pos-right-1');
+        } else if (diff === -2) {
+          item.classList.add('pos-left-2');
+        } else if (diff === 2) {
+          item.classList.add('pos-right-2');
+        } else if (diff === -3) {
+          item.classList.add('pos-left-3');
+        } else if (diff === 3) {
+          item.classList.add('pos-right-3');
+        } else {
+          item.classList.add('pos-hidden');
+        }
+      });
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % items.length;
+      updateCoverflow();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + items.length) % items.length;
+      updateCoverflow();
+    }
+
+    function startAutoPlay() {
+      stopAutoPlay();
+      autoPlayTimer = setInterval(nextSlide, 3000); // Decent speed (3.0s per slide)
+    }
+
+    function stopAutoPlay() {
+      if (autoPlayTimer) {
+        clearInterval(autoPlayTimer);
+        autoPlayTimer = null;
+      }
+    }
+
+    // Initialize carousel on load and start automatic continuous movement for desktop & mobile
+    updateCoverflow();
+    startAutoPlay();
+
+    document.getElementById('prevBtn')?.addEventListener('click', () => {
+      prevSlide();
+      startAutoPlay();
+    });
+
+    document.getElementById('nextBtn')?.addEventListener('click', () => {
+      nextSlide();
+      startAutoPlay();
+    });
+
+    items.forEach((item, idx) => {
+      item.addEventListener('click', () => {
+        currentIndex = idx;
+        updateCoverflow();
+        startAutoPlay();
+      });
+    });
+
+    // Pause on hover for desktop mouse users only, preventing touch screens from freezing autoplay
+    const coverTrack = document.getElementById('coverflowTrack');
+    if (coverTrack && window.matchMedia('(hover: hover)').matches) {
+      coverTrack.addEventListener('mouseenter', stopAutoPlay);
+      coverTrack.addEventListener('mouseleave', startAutoPlay);
+    }
+
+    // Ensure autoplay resumes when tab becomes visible
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        stopAutoPlay();
+      } else {
+        startAutoPlay();
+      }
+    });
+
+    /* Touch Swipe Support for Coverflow Carousel on Mobile Devices */
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    if (coverTrack) {
+      coverTrack.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      coverTrack.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      }, { passive: true });
+    }
+
+    function handleSwipe() {
+      const swipeThreshold = 35;
+      if (touchEndX < touchStartX - swipeThreshold) {
+        // Swipe Left -> Next
+        nextSlide();
+        startAutoPlay();
+      } else if (touchEndX > touchStartX + swipeThreshold) {
+        // Swipe Right -> Prev
+        prevSlide();
+        startAutoPlay();
+      }
+    }
+  </script>
+
+  <!-- Master Site JavaScript -->
+  <script src="js/main.js?v=2" defer></script>
+</body>
+</html>

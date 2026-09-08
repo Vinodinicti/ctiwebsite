@@ -11,11 +11,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- React 18 & Babel CDN Scripts -->
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
   <!-- Master Stylesheet (Dark Navy & Metallic Silver Theme) -->
   <link rel="stylesheet" href="css/styles.css?v=2" />
 </head>
@@ -33,14 +28,17 @@
       <div class="brand-group">
         <a href="index.html" class="brand-logo">
           <img src="images/company-logo.png" alt="CodeThrive Infotech Logo" class="brand-logo-img" />
-          <span>CodeThrive <span class="text-gradient">Infotech</span></span>
+          <div class="brand-text-wrapper">
+            <span class="brand-title">CodeThrive <span class="text-gradient">Infotech</span></span>
+            <div class="brand-tagline-micro">Progress. Cultivate. Innovate.</div>
+          </div>
         </a>
-        <div class="brand-tagline-micro">Progress. Cultivate. Innovate.</div>
       </div>
 
       <nav class="nav-menu" id="navMenu">
         <a href="index.html" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About Us</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
         <a href="industries.html" class="nav-link">Industries</a>
         <a href="projects.html" class="nav-link">Projects</a>
         <a href="insights.html" class="nav-link">Insights</a>
@@ -62,33 +60,33 @@
   <!-- ==========================================
        Contact Page Hero Banner (Rich Dark Intro with High Opacity BG & Gradient Teal Text)
        ========================================== -->
-  <section class="section contact-hero-banner" style="background: linear-gradient(135deg, #041215 0%, #002322 40%, #02171B 75%, #070D16 100%) !important; position: relative; overflow: hidden; min-height: 720px !important; padding: 140px 0 110px 0 !important; display: flex; align-items: center; justify-content: center; box-sizing: border-box;">
+  <section class="section contact-hero-banner" style="background: #000000 !important; position: relative; overflow: hidden; min-height: calc(100vh - 85px) !important; max-height: 90vh !important; padding: 90px 0 50px 0 !important; display: flex; align-items: center; justify-content: center; box-sizing: border-box;">
     
-    <!-- Background Image Layer featuring 2 New Uploaded Images with 100% Full Opacity (No Dimming) -->
+    <!-- Background Image Layer featuring 2 New Uploaded Images with Medium Opacity & Black Layer -->
     <div class="contact-hero-bg-image-layer" style="position: absolute; inset: 0; pointer-events: none; z-index: 0; overflow: hidden;">
-      <div style="position: absolute; inset: 0; background: url('images/contact-bg-1.jpg') center/cover no-repeat; opacity: 1; animation: contactHeroCrossFade100_1 10s ease-in-out infinite;"></div>
+      <div style="position: absolute; inset: 0; background: url('images/contact-bg-1.jpg') center/cover no-repeat; opacity: 0.55; animation: contactHeroCrossFade100_1 10s ease-in-out infinite;"></div>
       <div style="position: absolute; inset: 0; background: url('images/contact-bg-2.jpg') center/cover no-repeat; opacity: 0; animation: contactHeroCrossFade100_2 10s ease-in-out infinite;"></div>
-      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(16, 29, 38, 0.30) 0%, rgba(4, 75, 73, 0.15) 50%, rgba(16, 29, 38, 0.45) 100%); z-index: 1;"></div>
+      <div style="position: absolute; inset: 0; background: rgba(0, 0, 0, 0.52); z-index: 1;"></div>
     </div>
 
     <div class="container" style="position: relative; z-index: 3; text-align: center;">
       <!-- Hero Text Content (Expanded & Large Prominent Typography) -->
       <div class="hero-content" style="max-width: 980px; margin: 0 auto; text-align: center; padding: 24px 0;">
-        <div class="badge hero-white-glow-tagline" style="margin: 0 auto 20px auto; font-size: 0.95rem; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; padding: 8px 24px; border-radius: 24px; color: #34D399 !important; background: rgba(4, 35, 34, 0.75) !important; border: 1.8px solid rgba(52, 211, 153, 0.6) !important; text-shadow: 0 0 16px rgba(52, 211, 153, 0.7) !important; box-shadow: 0 6px 25px rgba(0, 0, 0, 0.45), 0 0 20px rgba(52, 211, 153, 0.3) !important; display: inline-block;">GET IN TOUCH</div>
+        <div class="badge hero-white-glow-tagline" style="margin: 0 auto 12px auto; font-size: 0.82rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; padding: 6px 18px; border-radius: 24px; color: #34D399 !important; background: rgba(15, 23, 42, 0.85) !important; border: 1.8px solid rgba(52, 211, 153, 0.65) !important; text-shadow: 0 0 16px rgba(52, 211, 153, 0.7) !important; box-shadow: 0 6px 25px rgba(0, 0, 0, 0.45), 0 0 20px rgba(52, 211, 153, 0.35) !important; display: inline-block;">GET IN TOUCH</div>
         
-        <h1 class="hero-title hero-white-teal-silver-gradient" style="font-size: clamp(2.8rem, 5.2vw, 4.4rem); line-height: 1.15; font-weight: 900; margin-bottom: 22px; max-width: 980px; margin-left: auto; margin-right: auto; background: linear-gradient(110deg, #FFFFFF 0%, #E2E8F0 25%, #34D399 65%, #2DD4BF 100%) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; filter: drop-shadow(0 6px 25px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 30px rgba(52, 211, 153, 0.5)) !important;">
-          Start Your <span style="background: inherit; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Evolution Today.</span>
+        <h1 class="hero-title" style="font-size: clamp(1.4rem, 3.0vw, 2.2rem) !important; line-height: 1.18; font-weight: 900; margin-bottom: 12px; max-width: 980px; margin-left: auto; margin-right: auto; color: #FFFFFF !important; background: none !important; -webkit-text-fill-color: #FFFFFF !important; filter: drop-shadow(0 6px 25px rgba(0, 0, 0, 0.9)) !important;">
+          Start Your Evolution Today.
         </h1>
         
-        <p class="hero-desc hero-white-glow-desc" style="font-size: 1.25rem; color: #FFFFFF !important; line-height: 1.75; max-width: 860px; margin: 0 auto 32px auto; font-weight: 600 !important; text-align: center !important; text-shadow: 0 3px 16px rgba(0, 0, 0, 0.95), 0 0 24px rgba(0, 0, 0, 0.8) !important;">
+        <p class="hero-desc hero-white-glow-desc" style="font-size: 0.98rem !important; color: #FFFFFF !important; line-height: 1.75; max-width: 860px; margin: 0 auto 32px auto; font-weight: 600 !important; text-align: center !important; text-shadow: 0 3px 16px rgba(0, 0, 0, 0.95), 0 0 24px rgba(0, 0, 0, 0.8) !important;">
           Ready to accelerate your enterprise with modern digital technology? Our software architects and digital strategists are here to turn your vision into reality.
         </p>
 
         <div class="hero-ctas" style="display: flex; gap: 18px; flex-wrap: wrap; justify-content: center;">
-          <a href="#contact-form" class="btn btn-primary" style="padding: 14px 32px; font-size: 1.05rem;">
+          <a href="#contact-form" class="btn btn-primary" style="padding: 10px 22px !important; font-size: 0.92rem !important;">
             <span>Send Us a Message</span>
           </a>
-          <a href="tel:+919150781685" class="btn btn-secondary" style="padding: 14px 32px; font-size: 1.05rem;">Call Technical Team</a>
+          <a href="tel:+919150781685" class="btn btn-secondary" style="padding: 10px 22px !important; font-size: 0.92rem !important;">Call Technical Team</a>
         </div>
       </div>
     </div>
@@ -124,39 +122,39 @@
       <svg class="contact-bg-svg" viewBox="0 0 1400 800" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
         <!-- Background Grid Gridlines -->
         <pattern id="contactGridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
-          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(17, 69, 56, 0.05)" stroke-width="1"/>
+          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(15, 23, 42, 0.05)" stroke-width="1"/>
         </pattern>
         <rect width="100%" height="100%" fill="url(#contactGridPattern)"/>
 
         <!-- Left Node Orbit (Behind Contact Info Card) -->
         <g transform="translate(320, 400)">
-          <circle r="220" stroke="rgba(17, 69, 56, 0.12)" stroke-width="1.5" stroke-dasharray="6 6" class="contact-spin-ring"/>
+          <circle r="220" stroke="rgba(15, 23, 42, 0.12)" stroke-width="1.5" stroke-dasharray="6 6" class="contact-spin-ring"/>
           <circle r="160" stroke="rgba(94, 141, 131, 0.18)" stroke-width="2" class="contact-spin-ring-reverse"/>
-          <circle r="90" stroke="rgba(17, 69, 56, 0.15)" stroke-width="1.5"/>
-          <circle cx="0" cy="0" r="16" fill="rgba(17, 69, 56, 0.08)" stroke="#045D5D" stroke-width="2" class="contact-pulse-node"/>
+          <circle r="90" stroke="rgba(15, 23, 42, 0.15)" stroke-width="1.5"/>
+          <circle cx="0" cy="0" r="16" fill="rgba(15, 23, 42, 0.08)" stroke="#0284C7" stroke-width="2" class="contact-pulse-node"/>
           <!-- Orbit Satellites -->
-          <circle cx="160" cy="0" r="7" fill="#045D5D" class="contact-spin-ring-reverse"/>
-          <circle cx="-220" cy="0" r="9" fill="#5e8d83" class="contact-spin-ring"/>
+          <circle cx="160" cy="0" r="7" fill="#0284C7" class="contact-spin-ring-reverse"/>
+          <circle cx="-220" cy="0" r="9" fill="#38BDF8" class="contact-spin-ring"/>
         </g>
 
         <!-- Right Node Orbit (Behind Send Us a Message Card) -->
         <g transform="translate(1080, 400)">
-          <circle r="240" stroke="rgba(17, 69, 56, 0.12)" stroke-width="1.5" stroke-dasharray="8 6" class="contact-spin-ring"/>
+          <circle r="240" stroke="rgba(15, 23, 42, 0.12)" stroke-width="1.5" stroke-dasharray="8 6" class="contact-spin-ring"/>
           <circle r="180" stroke="rgba(94, 141, 131, 0.18)" stroke-width="2" class="contact-spin-ring-reverse"/>
-          <circle r="100" stroke="rgba(17, 69, 56, 0.15)" stroke-width="1.5"/>
-          <circle cx="0" cy="0" r="18" fill="rgba(17, 69, 56, 0.08)" stroke="#045D5D" stroke-width="2" class="contact-pulse-node"/>
+          <circle r="100" stroke="rgba(15, 23, 42, 0.15)" stroke-width="1.5"/>
+          <circle cx="0" cy="0" r="18" fill="rgba(15, 23, 42, 0.08)" stroke="#0284C7" stroke-width="2" class="contact-pulse-node"/>
           <!-- Orbit Satellites -->
-          <circle cx="0" cy="-180" r="8" fill="#045D5D" class="contact-spin-ring-reverse"/>
-          <circle cx="240" cy="0" r="9" fill="#5e8d83" class="contact-spin-ring"/>
+          <circle cx="0" cy="-180" r="8" fill="#0284C7" class="contact-spin-ring-reverse"/>
+          <circle cx="240" cy="0" r="9" fill="#38BDF8" class="contact-spin-ring"/>
         </g>
 
         <!-- Connecting Inter-Node Digital Pathways -->
-        <path d="M 100 200 C 400 100, 700 300, 1300 150" stroke="#045D5D" stroke-width="2" opacity="0.25" class="contact-flow-line"/>
-        <path d="M 100 600 C 500 750, 900 500, 1300 650" stroke="#5e8d83" stroke-width="2.5" opacity="0.3" class="contact-flow-line"/>
-        <path d="M 320 400 L 1080 400" stroke="#045D5D" stroke-width="2" stroke-dasharray="8 6" opacity="0.2" class="contact-spin-ring"/>
+        <path d="M 100 200 C 400 100, 700 300, 1300 150" stroke="#0284C7" stroke-width="2" opacity="0.25" class="contact-flow-line"/>
+        <path d="M 100 600 C 500 750, 900 500, 1300 650" stroke="#38BDF8" stroke-width="2.5" opacity="0.3" class="contact-flow-line"/>
+        <path d="M 320 400 L 1080 400" stroke="#0284C7" stroke-width="2" stroke-dasharray="8 6" opacity="0.2" class="contact-spin-ring"/>
 
         <!-- Ambient Signal Waves -->
-        <circle cx="700" cy="400" r="320" stroke="rgba(17, 69, 56, 0.08)" stroke-width="1.5" class="contact-spin-ring"/>
+        <circle cx="700" cy="400" r="320" stroke="rgba(15, 23, 42, 0.08)" stroke-width="1.5" class="contact-spin-ring"/>
       </svg>
     </div>
 
@@ -173,25 +171,25 @@
 
           <!-- Email -->
           <div class="contact-detail-row">
-            <div style="background: #045D5D; width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #FFFFFF; flex-shrink: 0; border: 1px solid rgba(17, 69, 56, 0.3);">
+            <div style="background: #0284C7; width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #FFFFFF; flex-shrink: 0; border: 1px solid rgba(15, 23, 42, 0.3);">
               <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
             </div>
             <div>
               <div style="font-weight: 700; color: var(--text-heading); font-size: 0.95rem;">Email Address</div>
-              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@codethriveinfotech.in" target="_blank" rel="noopener noreferrer" style="color: #045D5D; font-weight: 700; font-size: 1.05rem; text-decoration: underline;">info@codethriveinfotech.in</a>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@codethriveinfotech.in" target="_blank" rel="noopener noreferrer" style="color: #0284C7; font-weight: 700; font-size: 1.05rem; text-decoration: underline;">info@codethriveinfotech.in</a>
             </div>
           </div>
 
           <!-- Phone & WhatsApp -->
           <div class="contact-detail-row">
-            <div style="background: #045D5D; width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #FFFFFF; flex-shrink: 0; border: 1px solid rgba(17, 69, 56, 0.3);">
+            <div style="background: #0284C7; width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #FFFFFF; flex-shrink: 0; border: 1px solid rgba(15, 23, 42, 0.3);">
               <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
             </div>
             <div>
               <div style="font-weight: 700; color: var(--text-heading); font-size: 0.95rem;">Phone Number & WhatsApp</div>
               <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 4px;">
-                <a href="tel:+919150781685" style="color: #045D5D; font-weight: 700; font-size: 1.05rem; text-decoration: underline;">+91 91507 81685</a>
-                <a href="https://wa.me/919150781685" target="_blank" rel="noopener noreferrer" style="padding: 5px 14px; font-size: 0.82rem; font-weight: 800; border-radius: 20px; background: #DCFCE7; color: #166534; border: 1px solid #86EFAC; display: inline-flex; align-items: center; gap: 6px; text-decoration: none; box-shadow: 0 2px 6px rgba(22, 101, 52, 0.12);">
+                <a href="tel:+919150781685" style="color: #0284C7; font-weight: 700; font-size: 1.05rem; text-decoration: underline;">+91 91507 81685</a>
+                <a href="https://wa.me/919150781685" target="_blank" rel="noopener noreferrer" style="padding: 5px 14px; font-size: 0.82rem; font-weight: 800; border-radius: 20px; background: #E0F2FE; color: #166534; border: 1px solid #7DD3FC; display: inline-flex; align-items: center; gap: 6px; text-decoration: none; box-shadow: 0 2px 6px rgba(22, 101, 52, 0.12);">
                   <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.762.459 3.48 1.332 4.992l-1.417 5.176 5.297-1.389c1.458.796 3.097 1.215 4.773 1.216h.004c5.505 0 9.988-4.478 9.989-9.985 0-2.668-1.037-5.176-2.925-7.065-1.888-1.888-4.396-2.927-7.063-2.929zm5.952 14.286c-.25.702-1.238 1.34-1.72 1.386-.48.046-1.107.215-3.666-.826-3.197-1.303-5.249-4.549-5.408-4.761-.158-.212-1.294-1.722-1.294-3.287 0-1.564.818-2.335 1.108-2.652.29-.317.633-.396.844-.396.21 0 .422.002.607.01.196.008.461-.074.72.548.267.643.909 2.217.988 2.378.079.16.132.348.026.56-.105.212-.158.344-.316.533-.158.188-.333.421-.476.564-.158.158-.323.33-.138.647.185.317.822 1.357 1.767 2.199 1.217 1.084 2.24 1.42 2.557 1.578.317.158.502.132.687-.079.185-.212.793-.923 1.004-1.24.212-.317.423-.264.713-.158.29.106 1.848.871 2.164 1.029.317.158.528.238.607.37.079.132.079.767-.171 1.469z"/></svg>
                   <span>Chat on WhatsApp</span>
                 </a>
@@ -201,7 +199,7 @@
 
           <!-- Full Address -->
           <div class="contact-detail-row">
-            <div style="background: #045D5D; width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #FFFFFF; flex-shrink: 0; border: 1px solid rgba(17, 69, 56, 0.3);">
+            <div style="background: #0284C7; width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #FFFFFF; flex-shrink: 0; border: 1px solid rgba(15, 23, 42, 0.3);">
               <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
             </div>
             <div>
@@ -222,16 +220,47 @@
           <!-- Working Hours Widget -->
           <div style="margin-top: 28px; background: #F6F9F5; border: 1px solid var(--border-color); padding: 20px; border-radius: var(--radius-md);">
             <div style="font-weight: 800; color: var(--text-heading); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
-              <svg width="18" height="18" fill="none" stroke="#045D5D" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <svg width="18" height="18" fill="none" stroke="#0284C7" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
               <span>Office Schedule</span>
             </div>
             <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-main); margin-bottom: 6px; font-weight: 600;">
               <span>Monday - Saturday:</span>
-              <span style="font-weight: 700; color: #045D5D;">9:00 AM - 6:00 PM</span>
+              <span style="font-weight: 700; color: #0284C7;">9:00 AM - 6:00 PM</span>
             </div>
             <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-muted); font-weight: 600;">
               <span>Sunday:</span>
               <span style="font-weight: 700; color: #ef4444;">Office Leave</span>
+            </div>
+          </div>
+
+          <!-- Official Social Channels Widget -->
+          <div style="margin-top: 20px; background: #F6F9F5; border: 1px solid var(--border-color); padding: 20px; border-radius: var(--radius-md);">
+            <div style="font-weight: 800; color: var(--text-heading); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+              <svg width="18" height="18" fill="none" stroke="#0284C7" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+              <span>Follow & Connect With Us</span>
+            </div>
+            <div class="footer-social-icons" style="justify-content: flex-start; gap: 10px; flex-wrap: wrap;">
+              <a href="tel:+919150781685" class="footer-social-btn" title="Call Us" aria-label="Call Us">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              </a>
+              <a href="https://wa.me/919150781685" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="WhatsApp" aria-label="WhatsApp">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.762.459 3.48 1.332 4.992l-1.417 5.176 5.297-1.389c1.458.796 3.097 1.215 4.773 1.216h.004c5.505 0 9.988-4.478 9.989-9.985 0-2.668-1.037-5.176-2.925-7.065-1.888-1.888-4.396-2.927-7.063-2.929zm5.952 14.286c-.25.702-1.238 1.34-1.72 1.386-.48.046-1.107.215-3.666-.826-3.197-1.303-5.249-4.549-5.408-4.761-.158-.212-1.294-1.722-1.294-3.287 0-1.564.818-2.335 1.108-2.652.29-.317.633-.396.844-.396.21 0 .422.002.607.01.196.008.461-.074.72.548.267.643.909 2.217.988 2.378.079.16.132.348.026.56-.105.212-.158.344-.316.533-.158.188-.333.421-.476.564-.158.158-.323.33-.138.647.185.317.822 1.357 1.767 2.199 1.217 1.084 2.24 1.42 2.557 1.578.317.158.502.132.687-.079.185-.212.793-.923 1.004-1.24.212-.317.423-.264.713-.158.29.106 1.848.871 2.164 1.029.317.158.528.238.607.37.079.132.079.767-.171 1.469z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/codethrive-infotech-5b6361402" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="LinkedIn" aria-label="LinkedIn">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="https://github.com/Codethriveinfotech" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="GitHub" aria-label="GitHub">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/codethriveinfotech_official?igsh=MTIzZXA5MXF5dXRlaQ==" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Instagram" aria-label="Instagram">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="https://www.facebook.com/share/18pBfimAcw/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Facebook" aria-label="Facebook">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="https://www.youtube.com/@CodeThriveInfotech" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="YouTube" aria-label="YouTube">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
             </div>
           </div>
         </div>
@@ -330,14 +359,20 @@
             <a href="https://wa.me/919150781685" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="WhatsApp" aria-label="WhatsApp">
               <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.762.459 3.48 1.332 4.992l-1.417 5.176 5.297-1.389c1.458.796 3.097 1.215 4.773 1.216h.004c5.505 0 9.988-4.478 9.989-9.985 0-2.668-1.037-5.176-2.925-7.065-1.888-1.888-4.396-2.927-7.063-2.929zm5.952 14.286c-.25.702-1.238 1.34-1.72 1.386-.48.046-1.107.215-3.666-.826-3.197-1.303-5.249-4.549-5.408-4.761-.158-.212-1.294-1.722-1.294-3.287 0-1.564.818-2.335 1.108-2.652.29-.317.633-.396.844-.396.21 0 .422.002.607.01.196.008.461-.074.72.548.267.643.909 2.217.988 2.378.079.16.132.348.026.56-.105.212-.158.344-.316.533-.158.188-.333.421-.476.564-.158.158-.323.33-.138.647.185.317.822 1.357 1.767 2.199 1.217 1.084 2.24 1.42 2.557 1.578.317.158.502.132.687-.079.185-.212.793-.923 1.004-1.24.212-.317.423-.264.713-.158.29.106 1.848.871 2.164 1.029.317.158.528.238.607.37.079.132.079.767-.171 1.469z"/></svg>
             </a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Instagram" aria-label="Instagram">
-              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            </a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="LinkedIn" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/codethrive-infotech-5b6361402" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="LinkedIn" aria-label="LinkedIn">
               <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
             </a>
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Facebook" aria-label="Facebook">
+            <a href="https://github.com/Codethriveinfotech" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="GitHub" aria-label="GitHub">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/codethriveinfotech_official?igsh=MTIzZXA5MXF5dXRlaQ==" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Instagram" aria-label="Instagram">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/share/18pBfimAcw/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Facebook" aria-label="Facebook">
               <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@CodeThriveInfotech" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="YouTube" aria-label="YouTube">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
             </a>
           </div>
           <div class="footer-copyright-text">
@@ -351,6 +386,7 @@
           <ul class="footer-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="industries.html">Industries</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="insights.html">Insights</a></li>
@@ -406,7 +442,7 @@
     </svg>
   </a>
 
-  <!-- JavaScript -->
-  <script src="js/main.js?v=2"></script>
+  <!-- Master Site JavaScript -->
+  <script src="js/main.js?v=2" defer></script>
 </body>
 </html>

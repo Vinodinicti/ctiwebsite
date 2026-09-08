@@ -11,11 +11,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- React 18 & Babel CDN Scripts -->
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
   <!-- Master Stylesheet (Dark Navy & Metallic Silver Theme) -->
   <link rel="stylesheet" href="css/styles.css?v=2" />
 </head>
@@ -33,14 +28,17 @@
       <div class="brand-group">
         <a href="index.html" class="brand-logo">
           <img src="images/company-logo.png" alt="CodeThrive Infotech Logo" class="brand-logo-img" />
-          <span>CodeThrive <span class="text-gradient">Infotech</span></span>
+          <div class="brand-text-wrapper">
+            <span class="brand-title">CodeThrive <span class="text-gradient">Infotech</span></span>
+            <div class="brand-tagline-micro">Progress. Cultivate. Innovate.</div>
+          </div>
         </a>
-        <div class="brand-tagline-micro">Progress. Cultivate. Innovate.</div>
       </div>
 
       <nav class="nav-menu" id="navMenu">
         <a href="index.html" class="nav-link active">Home</a>
         <a href="about.html" class="nav-link">About Us</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
         <a href="industries.html" class="nav-link">Industries</a>
         <a href="projects.html" class="nav-link">Projects</a>
         <a href="insights.html" class="nav-link">Insights</a>
@@ -92,18 +90,18 @@
 
     <div class="container hero-grid">
       <!-- Left Side: Hero Headline, Subtitle & Action CTAs -->
-      <div class="hero-content">
-        <div class="tagline-sub hero-white-glow-tagline">Enterprise Digital Engineering</div>
+      <div class="hero-content" style="text-align: center !important; display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; margin-left: auto !important; margin-right: auto !important;">
+        <div class="tagline-sub hero-white-glow-tagline" style="text-align: center !important; margin: 0 auto 16px auto !important; display: inline-block !important;">Enterprise Digital Engineering</div>
         
-        <h1 class="hero-title hero-white-teal-silver-gradient">
+        <h1 class="hero-title" style="color: #FFFFFF !important; background: none !important; -webkit-text-fill-color: #FFFFFF !important; text-align: center !important; margin-left: auto !important; margin-right: auto !important; width: 100% !important;">
           Crafting Digital Infrastructure.
         </h1>
         
-        <p class="hero-desc hero-white-glow-desc">
+        <p class="hero-desc hero-white-glow-desc" style="text-align: center !important; margin-left: auto !important; margin-right: auto !important; width: 100% !important;">
           Empowering organizations with resilient software ecosystems and high-impact digital solutions built for scale.
         </p>
 
-        <div class="hero-ctas">
+        <div class="hero-ctas" style="display: flex !important; justify-content: center !important; align-items: center !important; margin: 0 auto !important; gap: 16px !important; width: 100% !important;">
           <a href="contact.html#contact-form" class="btn btn-primary">
             <span>Start Your Evolution Today</span>
           </a>
@@ -196,17 +194,6 @@
   </div>
 
   <!-- ==========================================
-       React.js Enterprise Cost Estimator Section
-       ========================================== -->
-  <section class="section" style="padding: 0 !important; margin: 0 !important;">
-    <div class="container">
-      <div id="react-estimator-root">
-        <!-- React component renders here -->
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================
        Company Profile & Who We Are
        ========================================== -->
   <section class="section section-bg-image section-bg-crisp section-bg-about" style="background: var(--bg-secondary); padding-top: 14px !important; padding-bottom: 28px !important; position: relative; overflow: hidden;">
@@ -286,13 +273,13 @@
           <p class="section-subtitle" style="text-align: left !important; text-align-last: left !important; margin-left: 0 !important; margin-right: auto !important; display: block !important; width: 100% !important;">Showcasing tailored project architectures across prominent business sectors.</p>
         </div>
 
-        <!-- Carousel Navigation Controls (Prev & Next) -->
-        <div class="carousel-nav-controls" style="display: flex; gap: 12px;">
-          <button id="carousel-prev-btn" class="btn btn-secondary" aria-label="Previous Slide" style="padding: 10px 20px; font-weight: 800; border-radius: var(--radius-full);">
-            Prev
+        <!-- Carousel Navigation Controls -->
+        <div class="carousel-nav-controls" style="display: flex; gap: 12px; align-items: center;">
+          <button id="carousel-prev-btn" class="btn btn-secondary" aria-label="Previous Slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#045D5D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
           </button>
-          <button id="carousel-next-btn" class="btn btn-primary" aria-label="Next Slide" style="padding: 10px 20px; font-weight: 800; border-radius: var(--radius-full);">
-            Next
+          <button id="carousel-next-btn" class="btn btn-primary" aria-label="Next Slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </button>
         </div>
       </div>
@@ -431,82 +418,143 @@
         <p class="section-subtitle">Partnering with forward-thinking organizations across diverse industries.</p>
       </div>
 
-      <!-- 5 Client Person Pod Cards Grid -->
-      <div class="client-person-grid">
+      <!-- 9 Client Person Pod Cards Grid (Paginated 5 per page) -->
+      <div class="client-person-grid" id="clientPersonGrid">
         
+        <!-- Page 1 Cards -->
         <!-- Client Person 1: Sky Blue Pastel -->
-        <div class="client-person-pod person-pod-bob1 client-pod-pastel-blue" data-client-key="samyuktha" style="cursor: pointer;">
+        <div class="client-person-pod person-pod-bob1 client-pod-pastel-blue client-page-1" data-client-key="samyuktha" style="cursor: pointer;">
           <div class="client-person-avatar-wrap">
             <div class="client-person-avatar" style="overflow: hidden; background: #ffffff; padding: 2px;">
-              <img src="images/samyuktha_logo.jpg" alt="Samyuktha Tours & Travels Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;" />
+              <img src="images/samyuktha_logo.jpg" alt="Samyuktha Tours & Travels Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;" decoding="async" />
             </div>
             <div class="avatar-ring-pulse"></div>
           </div>
           
           <div class="client-badge-tag">Travel & Tourism</div>
           <h3 class="client-card-title">Samyuktha Tours & Travels</h3>
-          <p class="client-card-desc">Comprehensive digital travel reservations, custom itinerary builders, and booking management systems.</p>
+          <p class="client-card-desc">Digital travel reservations & custom itinerary booking management.</p>
           <div class="client-view-work-link" style="margin-top: 14px; font-weight: 800; font-size: 0.85rem; color: #0284C7; display: inline-flex; align-items: center; gap: 6px;">View Works Overview</div>
         </div>
 
         <!-- Client Person 2: Amber Gold Pastel -->
-        <div class="client-person-pod person-pod-bob2 client-pod-pastel-amber" data-client-key="madurai-tour-taxi" style="cursor: pointer;">
+        <div class="client-person-pod person-pod-bob2 client-pod-pastel-amber client-page-1" data-client-key="madurai-tour-taxi" style="cursor: pointer;">
           <div class="client-person-avatar-wrap">
             <div class="client-person-avatar" style="overflow: hidden; background: #ffffff; padding: 2px;">
-              <img src="images/madurai_tour_taxi_logo.png" alt="Madurai Tour Taxi Logo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%; display: block; background: #fff;" />
+              <img src="images/madurai_tour_taxi_logo.png" alt="Madurai Tour Taxi Logo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%; display: block; background: #fff;" decoding="async" />
             </div>
             <div class="avatar-ring-pulse"></div>
           </div>
           
           <div class="client-badge-tag">Fleet ERP</div>
           <h3 class="client-card-title">Madurai Tour Taxi</h3>
-          <p class="client-card-desc">High-capacity fleet management tools and real-time automated taxi reservation software.</p>
+          <p class="client-card-desc">Real-time fleet management & automated taxi reservation system.</p>
           <div class="client-view-work-link" style="margin-top: 14px; font-weight: 800; font-size: 0.85rem; color: #D97706; display: inline-flex; align-items: center; gap: 6px;">View Works Overview</div>
         </div>
 
         <!-- Client Person 3: Coral Rose Pastel -->
-        <div class="client-person-pod person-pod-bob3 client-pod-pastel-rose" data-client-key="madurai-best-tours" style="cursor: pointer;">
+        <div class="client-person-pod person-pod-bob3 client-pod-pastel-rose client-page-1" data-client-key="madurai-best-tours" style="cursor: pointer;">
           <div class="client-person-avatar-wrap">
             <div class="client-person-avatar" style="overflow: hidden; background: #ffffff; padding: 2px;">
-              <img src="images/madurai_best_tours_logo.jpeg" alt="Madurai Best Tours & Travels Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;" />
+              <img src="images/madurai_best_tours_logo.jpeg" alt="Madurai Best Tours & Travels Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;" decoding="async" />
             </div>
             <div class="avatar-ring-pulse"></div>
           </div>
           
           <div class="client-badge-tag">Tourism Platform</div>
           <h3 class="client-card-title">Madurai Best Tours & Travels</h3>
-          <p class="client-card-desc">Integrated regional tourism booking engines with secure multi-payment gateways.</p>
+          <p class="client-card-desc">Regional tourism booking engine with multi-payment gateway.</p>
           <div class="client-view-work-link" style="margin-top: 14px; font-weight: 800; font-size: 0.85rem; color: #E11D48; display: inline-flex; align-items: center; gap: 6px;">View Works Overview</div>
         </div>
 
         <!-- Client Person 4: Mint Emerald Pastel -->
-        <div class="client-person-pod person-pod-bob1 client-pod-pastel-mint" data-client-key="therapy-universe" style="cursor: pointer;">
+        <div class="client-person-pod person-pod-bob1 client-pod-pastel-mint client-page-1" data-client-key="therapy-universe" style="cursor: pointer;">
           <div class="client-person-avatar-wrap">
             <div class="client-person-avatar" style="overflow: hidden; background: #ffffff; padding: 2px;">
-              <img src="images/therapy_universe_logo.png" alt="The Therapy Universe Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;" />
+              <img src="images/therapy_universe_logo.png" alt="The Therapy Universe Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;" decoding="async" />
             </div>
             <div class="avatar-ring-pulse"></div>
           </div>
           
           <div class="client-badge-tag">Healthcare ERP</div>
           <h3 class="client-card-title">The Therapy Universe</h3>
-          <p class="client-card-desc">Modern clinical management portals and streamlined patient appointment scheduling software.</p>
+          <p class="client-card-desc">Clinical management portal & patient appointment scheduling.</p>
           <div class="client-view-work-link" style="margin-top: 14px; font-weight: 800; font-size: 0.85rem; color: #059669; display: inline-flex; align-items: center; gap: 6px;">View Works Overview</div>
         </div>
 
         <!-- Client Person 5: Lavender Purple Pastel -->
-        <div class="client-person-pod person-pod-bob2 client-pod-pastel-purple" data-client-key="amf-studio" style="cursor: pointer;">
+        <div class="client-person-pod person-pod-bob2 client-pod-pastel-purple client-page-1" data-client-key="amf-studio" style="cursor: pointer;">
           <div class="client-person-avatar-wrap">
             <div class="client-person-avatar" style="overflow: hidden; background: #ffffff; padding: 2px;">
-              <img src="images/amf_studio_logo.png" alt="AMF Studio Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;" />
+              <img src="images/amf_studio_logo.png" alt="AMF Studio Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;" decoding="async" />
             </div>
             <div class="avatar-ring-pulse"></div>
           </div>
           
           <div class="client-badge-tag">Media & Enterprise</div>
           <h3 class="client-card-title">AMF Studio</h3>
-          <p class="client-card-desc">Enterprise video production management and high-end digital media workflow platforms.</p>
+          <p class="client-card-desc">Enterprise video production & digital media workflow platform.</p>
           <div class="client-view-work-link" style="margin-top: 14px; font-weight: 800; font-size: 0.85rem; color: #7C3AED; display: inline-flex; align-items: center; gap: 6px;">View Works Overview</div>
+        </div>
+
+        <!-- Client Person 6: Thulir Healthcare -->
+        <div class="client-person-pod person-pod-bob1 client-pod-pastel-mint" data-client-key="thulir-healthcare" style="cursor: pointer;">
+          <div class="client-person-avatar-wrap">
+            <div class="client-person-avatar" style="overflow: hidden; background: #ffffff; padding: 2px;">
+              <img src="images/thulir_healthcare_logo.jpg" alt="Thulir Healthcare Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;" decoding="async" />
+            </div>
+            <div class="avatar-ring-pulse"></div>
+          </div>
+          
+          <div class="client-badge-tag">Healthcare & Medical</div>
+          <h3 class="client-card-title">Thulir Healthcare</h3>
+          <p class="client-card-desc">Integrated healthcare & medical diagnostic management system.</p>
+          <div class="client-view-work-link" style="margin-top: 14px; font-weight: 800; font-size: 0.85rem; color: #059669; display: inline-flex; align-items: center; gap: 6px;">View Works Overview</div>
+        </div>
+
+        <!-- Client Person 7: Fleet Management -->
+        <div class="client-person-pod person-pod-bob2 client-pod-pastel-amber" data-client-key="fleet-management" style="cursor: pointer;">
+          <div class="client-person-avatar-wrap">
+            <div class="client-person-avatar" style="overflow: hidden; background: #ffffff; padding: 2px;">
+              <img src="images/fleet_management_logo.jpg" alt="Fleet Management Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;" decoding="async" />
+            </div>
+            <div class="avatar-ring-pulse"></div>
+          </div>
+          
+          <div class="client-badge-tag">Smart Fleet & Logistics</div>
+          <h3 class="client-card-title">Fleet Management</h3>
+          <p class="client-card-desc">Smart fleet management platform for heavy machinery & operations.</p>
+          <div class="client-view-work-link" style="margin-top: 14px; font-weight: 800; font-size: 0.85rem; color: #D97706; display: inline-flex; align-items: center; gap: 6px;">View Works Overview</div>
+        </div>
+
+        <!-- Client Person 8: TestGuard -->
+        <div class="client-person-pod person-pod-bob3 client-pod-pastel-blue" data-client-key="testguard" style="cursor: pointer;">
+          <div class="client-person-avatar-wrap">
+            <div class="client-person-avatar" style="overflow: hidden; background: #ffffff; padding: 2px;">
+              <img src="images/testguard_logo.jpg" alt="TestGuard Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;" decoding="async" />
+            </div>
+            <div class="avatar-ring-pulse"></div>
+          </div>
+          
+          <div class="client-badge-tag">AI Software Testing</div>
+          <h3 class="client-card-title">TestGuard</h3>
+          <p class="client-card-desc">AI-powered automated software testing & QA inspection suite.</p>
+          <div class="client-view-work-link" style="margin-top: 14px; font-weight: 800; font-size: 0.85rem; color: #0284C7; display: inline-flex; align-items: center; gap: 6px;">View Works Overview</div>
+        </div>
+
+        <!-- Client Person 9: Vara Vastra Boutique -->
+        <div class="client-person-pod person-pod-bob1 client-pod-pastel-rose" data-client-key="vara-vastra" style="cursor: pointer;">
+          <div class="client-person-avatar-wrap">
+            <div class="client-person-avatar" style="overflow: hidden; background: #ffffff; padding: 2px;">
+              <img src="images/vara_vastra_logo.jpg" alt="Vara Vastra Boutique Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;" decoding="async" />
+            </div>
+            <div class="avatar-ring-pulse"></div>
+          </div>
+          
+          <div class="client-badge-tag">Boutique & Fashion</div>
+          <h3 class="client-card-title">Vara Vastra Boutique</h3>
+          <p class="client-card-desc">Omnichannel luxury boutique storefront & custom apparel catalog.</p>
+          <div class="client-view-work-link" style="margin-top: 14px; font-weight: 800; font-size: 0.85rem; color: #E11D48; display: inline-flex; align-items: center; gap: 6px;">View Works Overview</div>
         </div>
 
       </div>
@@ -521,6 +569,10 @@
             <span class="marquee-item"><img src="images/madurai_best_tours_logo.jpeg" alt="Madurai Best Tours Logo" />Madurai Best Tours & Travels</span>
             <span class="marquee-item"><img src="images/therapy_universe_logo.png" alt="Therapy Universe Logo" />The Therapy Universe</span>
             <span class="marquee-item"><img src="images/amf_studio_logo.png" alt="AMF Studio Logo" />AMF Studio</span>
+            <span class="marquee-item"><img src="images/thulir_healthcare_logo.jpg" alt="Thulir Healthcare Logo" />Thulir Healthcare</span>
+            <span class="marquee-item"><img src="images/fleet_management_logo.jpg" alt="Fleet Management Logo" />Fleet Management</span>
+            <span class="marquee-item"><img src="images/testguard_logo.jpg" alt="TestGuard Logo" />TestGuard</span>
+            <span class="marquee-item"><img src="images/vara_vastra_logo.jpg" alt="Vara Vastra Boutique Logo" />Vara Vastra Boutique</span>
             
             <!-- Duplicated for Infinite Seamless Ticker Loop -->
             <span class="marquee-item"><img src="images/samyuktha_logo.jpg" alt="Samyuktha Logo" />Samyuktha Tours & Travels</span>
@@ -528,13 +580,10 @@
             <span class="marquee-item"><img src="images/madurai_best_tours_logo.jpeg" alt="Madurai Best Tours Logo" />Madurai Best Tours & Travels</span>
             <span class="marquee-item"><img src="images/therapy_universe_logo.png" alt="Therapy Universe Logo" />The Therapy Universe</span>
             <span class="marquee-item"><img src="images/amf_studio_logo.png" alt="AMF Studio Logo" />AMF Studio</span>
-
-            <!-- Triplicated for Ultra-Wide Screen Seamless Coverage -->
-            <span class="marquee-item"><img src="images/samyuktha_logo.jpg" alt="Samyuktha Logo" />Samyuktha Tours & Travels</span>
-            <span class="marquee-item"><img src="images/madurai_tour_taxi_logo.png" alt="Madurai Tour Taxi Logo" style="background: #fff;" />Madurai Tour Taxi</span>
-            <span class="marquee-item"><img src="images/madurai_best_tours_logo.jpeg" alt="Madurai Best Tours Logo" />Madurai Best Tours & Travels</span>
-            <span class="marquee-item"><img src="images/therapy_universe_logo.png" alt="Therapy Universe Logo" />The Therapy Universe</span>
-            <span class="marquee-item"><img src="images/amf_studio_logo.png" alt="AMF Studio Logo" />AMF Studio</span>
+            <span class="marquee-item"><img src="images/thulir_healthcare_logo.jpg" alt="Thulir Healthcare Logo" />Thulir Healthcare</span>
+            <span class="marquee-item"><img src="images/fleet_management_logo.jpg" alt="Fleet Management Logo" />Fleet Management</span>
+            <span class="marquee-item"><img src="images/testguard_logo.jpg" alt="TestGuard Logo" />TestGuard</span>
+            <span class="marquee-item"><img src="images/vara_vastra_logo.jpg" alt="Vara Vastra Boutique Logo" />Vara Vastra Boutique</span>
           </div>
         </div>
       </div>
@@ -559,8 +608,8 @@
       <div class="stories-ticker-row row-scroll-left">
         <div class="stories-ticker-track">
           
-          <!-- Pod 1 (Left Avatar): Sneha L. -->
-          <div class="testimonial-pod pod-style-left">
+          <!-- Pod 1 (Left Avatar): Sneha Patel -->
+          <div class="testimonial-pod pod-style-left pod-color-purple">
             <div class="avatar-wheel-container">
               <svg class="avatar-tri-ring" viewBox="0 0 100 100">
                 <path d="M 50 5 A 45 45 0 0 1 89 27.5 L 50 50 Z" fill="#045D5D"/>
@@ -568,24 +617,24 @@
                 <path d="M 50 95 A 45 45 0 0 1 11 27.5 L 50 50 Z" fill="#004B49"/>
               </svg>
               <div class="avatar-photo-space">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200&q=80" alt="Sneha L." class="avatar-portrait-img" />
+                <img src="images/sneha_patel_avatar.png" alt="Sneha Patel" class="avatar-portrait-img" />
               </div>
             </div>
             <div class="pod-content-body">
-              <div class="pod-name-banner">Sneha L.</div>
-              <div class="pod-designation-text">Designation- Founder, Home Interiors</div>
+              <div class="pod-name-banner">Sneha Patel</div>
+              <div class="pod-designation-text">Designation- Managing Director, CraftDecor</div>
               <div class="pod-stars-rating">★★★★★</div>
-              <p class="pod-quote-text">"The 3D interior configurator increased our conversion rate by 30%. Clients love visualizing customized designs in real time."</p>
+              <p class="pod-quote-text">"CodeThrive Infotech built our custom ERP and 3D interior portal from scratch. The automated quotation generator saved our sales team over 15 hours every week!"</p>
             </div>
           </div>
 
-          <!-- Pod 2 (Right Avatar): Rohit K. -->
-          <div class="testimonial-pod pod-style-right">
+          <!-- Pod 2 (Right Avatar): Rohit Kapoor -->
+          <div class="testimonial-pod pod-style-right pod-color-blue">
             <div class="pod-content-body">
-              <div class="pod-name-banner">Rohit K.</div>
-              <div class="pod-designation-text">Designation- VP Engineering, Tech Solutions</div>
+              <div class="pod-name-banner">Rohit Kapoor</div>
+              <div class="pod-designation-text">Designation- CTO, NexGen Logistics</div>
               <div class="pod-stars-rating">★★★★★</div>
-              <p class="pod-quote-text">"Our platform now includes built-in AI analytics, delivering actionable operational data to our users effortlessly."</p>
+              <p class="pod-quote-text">"We needed a high-performance fleet tracking engine across 500+ vehicles. CodeThrive delivered a seamless zero-downtime platform ahead of schedule."</p>
             </div>
             <div class="avatar-wheel-container">
               <svg class="avatar-tri-ring" viewBox="0 0 100 100">
@@ -594,13 +643,13 @@
                 <path d="M 50 95 A 45 45 0 0 1 11 27.5 L 50 50 Z" fill="#004B49"/>
               </svg>
               <div class="avatar-photo-space">
-                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&h=200&q=80" alt="Rohit K." class="avatar-portrait-img" />
+                <img src="images/rohit_kapoor_avatar.png" alt="Rohit Kapoor" class="avatar-portrait-img" />
               </div>
             </div>
           </div>
 
-          <!-- Pod 3 (Left Avatar): Meena S. -->
-          <div class="testimonial-pod pod-style-left">
+          <!-- Pod 3 (Left Avatar): Meenakshi Sundaram -->
+          <div class="testimonial-pod pod-style-left pod-color-rose">
             <div class="avatar-wheel-container">
               <svg class="avatar-tri-ring" viewBox="0 0 100 100">
                 <path d="M 50 5 A 45 45 0 0 1 89 27.5 L 50 50 Z" fill="#045D5D"/>
@@ -608,20 +657,20 @@
                 <path d="M 50 95 A 45 45 0 0 1 11 27.5 L 50 50 Z" fill="#004B49"/>
               </svg>
               <div class="avatar-photo-space">
-                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&h=200&q=80" alt="Meena S." class="avatar-portrait-img" />
+                <img src="images/meenakshi_sundaram_avatar.png" alt="Meenakshi Sundaram" class="avatar-portrait-img" />
               </div>
             </div>
             <div class="pod-content-body">
-              <div class="pod-name-banner">Meena S.</div>
-              <div class="pod-designation-text">Designation- Director, Travel Agency</div>
+              <div class="pod-name-banner">Meenakshi Sundaram</div>
+              <div class="pod-designation-text">Designation- Director, Samyuktha Travels</div>
               <div class="pod-stars-rating">★★★★★</div>
-              <p class="pod-quote-text">"The booking engine simplified complex tour itineraries, and our travelers frequently compliment the fast checkout process."</p>
+              <p class="pod-quote-text">"Our travel booking portal went from slow to lightning-fast with instant UPI gateways. Our booking conversions shot up 35% in the first month!"</p>
             </div>
           </div>
 
           <!-- Duplicate Loop for Line 1 -->
-          <!-- Pod 1 (Left Avatar): Sneha L. -->
-          <div class="testimonial-pod pod-style-left">
+          <!-- Pod 1 (Left Avatar): Sneha Patel -->
+          <div class="testimonial-pod pod-style-left pod-color-purple">
             <div class="avatar-wheel-container">
               <svg class="avatar-tri-ring" viewBox="0 0 100 100">
                 <path d="M 50 5 A 45 45 0 0 1 89 27.5 L 50 50 Z" fill="#045D5D"/>
@@ -629,24 +678,24 @@
                 <path d="M 50 95 A 45 45 0 0 1 11 27.5 L 50 50 Z" fill="#004B49"/>
               </svg>
               <div class="avatar-photo-space">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200&q=80" alt="Sneha L." class="avatar-portrait-img" />
+                <img src="images/sneha_patel_avatar.png" alt="Sneha Patel" class="avatar-portrait-img" />
               </div>
             </div>
             <div class="pod-content-body">
-              <div class="pod-name-banner">Sneha L.</div>
-              <div class="pod-designation-text">Designation- Founder, Home Interiors</div>
+              <div class="pod-name-banner">Sneha Patel</div>
+              <div class="pod-designation-text">Designation- Managing Director, CraftDecor</div>
               <div class="pod-stars-rating">★★★★★</div>
-              <p class="pod-quote-text">"The 3D interior configurator increased our conversion rate by 30%. Clients love visualizing customized designs in real time."</p>
+              <p class="pod-quote-text">"CodeThrive Infotech built our custom ERP and 3D interior portal from scratch. The automated quotation generator saved our sales team over 15 hours every week!"</p>
             </div>
           </div>
 
-          <!-- Pod 2 (Right Avatar): Rohit K. -->
-          <div class="testimonial-pod pod-style-right">
+          <!-- Pod 2 (Right Avatar): Rohit Kapoor -->
+          <div class="testimonial-pod pod-style-right pod-color-blue">
             <div class="pod-content-body">
-              <div class="pod-name-banner">Rohit K.</div>
-              <div class="pod-designation-text">Designation- VP Engineering, Tech Solutions</div>
+              <div class="pod-name-banner">Rohit Kapoor</div>
+              <div class="pod-designation-text">Designation- CTO, NexGen Logistics</div>
               <div class="pod-stars-rating">★★★★★</div>
-              <p class="pod-quote-text">"Our platform now includes built-in AI analytics, delivering actionable operational data to our users effortlessly."</p>
+              <p class="pod-quote-text">"We needed a high-performance fleet tracking engine across 500+ vehicles. CodeThrive delivered a seamless zero-downtime platform ahead of schedule."</p>
             </div>
             <div class="avatar-wheel-container">
               <svg class="avatar-tri-ring" viewBox="0 0 100 100">
@@ -655,7 +704,7 @@
                 <path d="M 50 95 A 45 45 0 0 1 11 27.5 L 50 50 Z" fill="#004B49"/>
               </svg>
               <div class="avatar-photo-space">
-                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&h=200&q=80" alt="Rohit K." class="avatar-portrait-img" />
+                <img src="images/rohit_kapoor_avatar.png" alt="Rohit Kapoor" class="avatar-portrait-img" />
               </div>
             </div>
           </div>
@@ -667,13 +716,13 @@
       <div class="stories-ticker-row row-scroll-right" style="margin-top: 24px;">
         <div class="stories-ticker-track">
 
-          <!-- Pod 4 (Right Avatar): Ramesh K. -->
-          <div class="testimonial-pod pod-style-right">
+          <!-- Pod 4 (Right Avatar): Ramesh Krishnan -->
+          <div class="testimonial-pod pod-style-right pod-color-orange">
             <div class="pod-content-body">
-              <div class="pod-name-banner">Ramesh K.</div>
-              <div class="pod-designation-text">Designation- Project Manager, Construction</div>
+              <div class="pod-name-banner">Ramesh Krishnan</div>
+              <div class="pod-designation-text">Designation- Project Director, Apex Infra</div>
               <div class="pod-stars-rating">★★★★★</div>
-              <p class="pod-quote-text">"Daily field expense tracking and site photo logs keep projects transparent. The workflow is modern and easy for field staff."</p>
+              <p class="pod-quote-text">"Managing construction site expenses was complex until CodeThrive built our offline mobile bill-scanning app. Field budget tracking is now 100% transparent."</p>
             </div>
             <div class="avatar-wheel-container">
               <svg class="avatar-tri-ring" viewBox="0 0 100 100">
@@ -682,13 +731,13 @@
                 <path d="M 50 95 A 45 45 0 0 1 11 27.5 L 50 50 Z" fill="#004B49"/>
               </svg>
               <div class="avatar-photo-space">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80" alt="Ramesh K." class="avatar-portrait-img" />
+                <img src="images/ramesh_krishnan_avatar.png" alt="Ramesh Krishnan" class="avatar-portrait-img" />
               </div>
             </div>
           </div>
 
-          <!-- Pod 5 (Left Avatar): Priya D. -->
-          <div class="testimonial-pod pod-style-left">
+          <!-- Pod 5 (Left Avatar): Priya Deshmukh -->
+          <div class="testimonial-pod pod-style-left pod-color-emerald">
             <div class="avatar-wheel-container">
               <svg class="avatar-tri-ring" viewBox="0 0 100 100">
                 <path d="M 50 5 A 45 45 0 0 1 89 27.5 L 50 50 Z" fill="#045D5D"/>
@@ -696,24 +745,24 @@
                 <path d="M 50 95 A 45 45 0 0 1 11 27.5 L 50 50 Z" fill="#004B49"/>
               </svg>
               <div class="avatar-photo-space">
-                <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=200&h=200&q=80" alt="Priya D." class="avatar-portrait-img" />
+                <img src="images/priya_deshmukh_avatar.png" alt="Priya Deshmukh" class="avatar-portrait-img" />
               </div>
             </div>
             <div class="pod-content-body">
-              <div class="pod-name-banner">Priya D.</div>
-              <div class="pod-designation-text">Designation- Head of Ops, Academy</div>
+              <div class="pod-name-banner">Priya Deshmukh</div>
+              <div class="pod-designation-text">Designation- Head of Ops, EduTech</div>
               <div class="pod-stars-rating">★★★★★</div>
-              <p class="pod-quote-text">"Managing student records, grading, and online testing is now centralized. Instructors appreciate the intuitive dashboard, and parents love portal access."</p>
+              <p class="pod-quote-text">"The assessment portal handles 10,000+ concurrent examination sessions flawlessly. Their intuitive UI made onboarding completely effortless."</p>
             </div>
           </div>
 
-          <!-- Pod 3 (Right Avatar): Meena S. -->
-          <div class="testimonial-pod pod-style-right">
+          <!-- Pod 3 (Right Avatar): Meenakshi Sundaram -->
+          <div class="testimonial-pod pod-style-right pod-color-indigo">
             <div class="pod-content-body">
-              <div class="pod-name-banner">Meena S.</div>
-              <div class="pod-designation-text">Designation- Director, Travel Agency</div>
+              <div class="pod-name-banner">Meenakshi Sundaram</div>
+              <div class="pod-designation-text">Designation- Director, Samyuktha Travels</div>
               <div class="pod-stars-rating">★★★★★</div>
-              <p class="pod-quote-text">"The booking engine simplified complex tour itineraries, and our travelers frequently compliment the fast checkout process."</p>
+              <p class="pod-quote-text">"Our travel booking portal went from slow to lightning-fast with instant UPI gateways. Our booking conversions shot up 35% in the first month!"</p>
             </div>
             <div class="avatar-wheel-container">
               <svg class="avatar-tri-ring" viewBox="0 0 100 100">
@@ -722,19 +771,19 @@
                 <path d="M 50 95 A 45 45 0 0 1 11 27.5 L 50 50 Z" fill="#004B49"/>
               </svg>
               <div class="avatar-photo-space">
-                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&h=200&q=80" alt="Meena S." class="avatar-portrait-img" />
+                <img src="images/meenakshi_sundaram_avatar.png" alt="Meenakshi Sundaram" class="avatar-portrait-img" />
               </div>
             </div>
           </div>
 
           <!-- Duplicate Loop for Line 2 -->
-          <!-- Pod 4 (Right Avatar): Ramesh K. -->
-          <div class="testimonial-pod pod-style-right">
+          <!-- Pod 4 (Right Avatar): Ramesh Krishnan -->
+          <div class="testimonial-pod pod-style-right pod-color-orange">
             <div class="pod-content-body">
-              <div class="pod-name-banner">Ramesh K.</div>
-              <div class="pod-designation-text">Designation- Project Manager, Construction</div>
+              <div class="pod-name-banner">Ramesh Krishnan</div>
+              <div class="pod-designation-text">Designation- Project Director, Apex Infra</div>
               <div class="pod-stars-rating">★★★★★</div>
-              <p class="pod-quote-text">"Daily field expense tracking and site photo logs keep projects transparent. The workflow is modern and easy for field staff."</p>
+              <p class="pod-quote-text">"Managing construction site expenses was complex until CodeThrive built our offline mobile bill-scanning app. Field budget tracking is now 100% transparent."</p>
             </div>
             <div class="avatar-wheel-container">
               <svg class="avatar-tri-ring" viewBox="0 0 100 100">
@@ -743,13 +792,13 @@
                 <path d="M 50 95 A 45 45 0 0 1 11 27.5 L 50 50 Z" fill="#004B49"/>
               </svg>
               <div class="avatar-photo-space">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80" alt="Ramesh K." class="avatar-portrait-img" />
+                <img src="images/ramesh_krishnan_avatar.png" alt="Ramesh Krishnan" class="avatar-portrait-img" />
               </div>
             </div>
           </div>
 
-          <!-- Pod 5 (Left Avatar): Priya D. -->
-          <div class="testimonial-pod pod-style-left">
+          <!-- Pod 5 (Left Avatar): Priya Deshmukh -->
+          <div class="testimonial-pod pod-style-left pod-color-emerald">
             <div class="avatar-wheel-container">
               <svg class="avatar-tri-ring" viewBox="0 0 100 100">
                 <path d="M 50 5 A 45 45 0 0 1 89 27.5 L 50 50 Z" fill="#045D5D"/>
@@ -757,14 +806,14 @@
                 <path d="M 50 95 A 45 45 0 0 1 11 27.5 L 50 50 Z" fill="#004B49"/>
               </svg>
               <div class="avatar-photo-space">
-                <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=200&h=200&q=80" alt="Priya D." class="avatar-portrait-img" />
+                <img src="images/priya_deshmukh_avatar.png" alt="Priya Deshmukh" class="avatar-portrait-img" />
               </div>
             </div>
             <div class="pod-content-body">
-              <div class="pod-name-banner">Priya D.</div>
-              <div class="pod-designation-text">Designation- Head of Ops, Academy</div>
+              <div class="pod-name-banner">Priya Deshmukh</div>
+              <div class="pod-designation-text">Designation- Head of Ops, EduTech</div>
               <div class="pod-stars-rating">★★★★★</div>
-              <p class="pod-quote-text">"Managing student records, grading, and online testing is now centralized. Instructors appreciate the intuitive dashboard, and parents love portal access."</p>
+              <p class="pod-quote-text">"The assessment portal handles 10,000+ concurrent examination sessions flawlessly. Their intuitive UI made onboarding completely effortless."</p>
             </div>
           </div>
 
@@ -1131,14 +1180,20 @@
             <a href="https://wa.me/919150781685" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="WhatsApp" aria-label="WhatsApp">
               <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.762.459 3.48 1.332 4.992l-1.417 5.176 5.297-1.389c1.458.796 3.097 1.215 4.773 1.216h.004c5.505 0 9.988-4.478 9.989-9.985 0-2.668-1.037-5.176-2.925-7.065-1.888-1.888-4.396-2.927-7.063-2.929zm5.952 14.286c-.25.702-1.238 1.34-1.72 1.386-.48.046-1.107.215-3.666-.826-3.197-1.303-5.249-4.549-5.408-4.761-.158-.212-1.294-1.722-1.294-3.287 0-1.564.818-2.335 1.108-2.652.29-.317.633-.396.844-.396.21 0 .422.002.607.01.196.008.461-.074.72.548.267.643.909 2.217.988 2.378.079.16.132.348.026.56-.105.212-.158.344-.316.533-.158.188-.333.421-.476.564-.158.158-.323.33-.138.647.185.317.822 1.357 1.767 2.199 1.217 1.084 2.24 1.42 2.557 1.578.317.158.502.132.687-.079.185-.212.793-.923 1.004-1.24.212-.317.423-.264.713-.158.29.106 1.848.871 2.164 1.029.317.158.528.238.607.37.079.132.079.767-.171 1.469z"/></svg>
             </a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Instagram" aria-label="Instagram">
-              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            </a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="LinkedIn" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/codethrive-infotech-5b6361402" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="LinkedIn" aria-label="LinkedIn">
               <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
             </a>
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Facebook" aria-label="Facebook">
+            <a href="https://github.com/Codethriveinfotech" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="GitHub" aria-label="GitHub">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/codethriveinfotech_official?igsh=MTIzZXA5MXF5dXRlaQ==" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Instagram" aria-label="Instagram">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/share/18pBfimAcw/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Facebook" aria-label="Facebook">
               <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@CodeThriveInfotech" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="YouTube" aria-label="YouTube">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
             </a>
           </div>
           <div class="footer-copyright-text">
@@ -1152,6 +1207,7 @@
           <ul class="footer-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="industries.html">Industries</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="insights.html">Insights</a></li>
@@ -1218,8 +1274,8 @@
     </svg>
   </a>
 
-  <!-- JavaScript & React Components -->
-  <script src="js/main.js?v=2"></script>
-  <script type="text/babel" src="js/react-components.js"></script>
+  <!-- JavaScript Components -->
+  <script src="js/main.js?v=2" defer></script>
+  <script src="js/components.js?v=2" defer></script>
 </body>
 </html>

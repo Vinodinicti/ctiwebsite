@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         backToTop.classList.remove('visible');
       }
     }
-  });
+  }, { passive: true });
 
   if (mobileToggle && navMenu) {
     let navOverlay = document.querySelector('.nav-drawer-overlay');
@@ -154,7 +154,6 @@ document.addEventListener('DOMContentLoaded', () => {
       updateFilterPillTracker(btn);
 
       const filter = btn.getAttribute('data-filter').toLowerCase();
-      let visibleIndex = 0;
 
       cardWrappers.forEach((card) => {
         const category = card.getAttribute('data-category').toLowerCase();
@@ -162,15 +161,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (matches) {
           card.style.display = 'block';
-          card.classList.remove('card-stagger-in');
           card.style.animation = 'none';
-          void card.offsetWidth;
-          card.style.animation = `slideInFromLeft 0.55s cubic-bezier(0.16, 1, 0.3, 1) ${visibleIndex * 80}ms forwards`;
-          visibleIndex++;
         } else {
           card.style.display = 'none';
           card.style.animation = 'none';
         }
+      });
+
+      requestAnimationFrame(() => {
+        let visibleIndex = 0;
+        cardWrappers.forEach((card) => {
+          if (card.style.display !== 'none') {
+            card.style.animation = `slideInFromLeft 0.45s cubic-bezier(0.16, 1, 0.3, 1) ${visibleIndex * 60}ms forwards`;
+            visibleIndex++;
+          }
+        });
       });
     });
   });
@@ -876,75 +881,126 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'TRAVEL & TOURISM PLATFORM',
       name: 'Samyuktha Tours & Travels',
       logo: 'images/samyuktha_logo.jpg',
-      tagline: 'Comprehensive digital travel reservations, custom itinerary builders, and booking management systems.',
-      scopeTitle: 'Project Deliverables & Architecture Overview',
+      tagline: 'Digital travel reservations & custom itinerary booking management.',
+      scopeTitle: 'Project Deliverables Overview',
       deliverables: [
         'Custom digital travel booking engine & interactive itinerary builder.',
-        'Multi-vehicle reservation management system with automated SMS & email confirmations.',
-        'Interactive destination galleries, dynamic pricing calculators, and responsive mobile-first UI.',
-        'Seamless integration with tour operator dispatch tools and live customer enquiry routing.'
+        'Multi-vehicle reservation system with automated SMS & email confirmations.',
+        'Live tour operator dispatch tools & customer enquiry routing.'
       ],
-      techStack: ['React.js', 'Node.js', 'REST API', 'Cloudflare CDN', 'TailwindCSS']
+      techStack: ['React.js', 'Node.js', 'REST API', 'Cloudflare CDN']
     },
     'madurai-tour-taxi': {
       themeClass: 'client-modal-amber',
       badge: 'FLEET ERP & TAXI RESERVATIONS',
       name: 'Madurai Tour Taxi',
       logo: 'images/madurai_tour_taxi_logo.png',
-      tagline: 'High-capacity fleet management tools and real-time automated taxi reservation software.',
-      scopeTitle: 'Project Deliverables & Fleet Architecture Overview',
+      tagline: 'Real-time fleet management & automated taxi reservation system.',
+      scopeTitle: 'Project Deliverables Overview',
       deliverables: [
-        'Enterprise fleet dispatch & real-time online taxi booking platform.',
-        'Automated fare calculation based on vehicle tier, distance telemetry, and driver allocation.',
-        'Instant online booking portal with live WhatsApp booking sync and instant PDF invoice generation.',
-        'Driver assignment telemetry portal and operational administrative dashboard.'
+        'Real-time online taxi booking & automated fleet dispatch platform.',
+        'Automated distance fare calculation & WhatsApp booking sync.',
+        'Driver telemetry portal & operational management dashboard.'
       ],
-      techStack: ['Vue.js', 'Express.js', 'MongoDB', 'Google Maps API', 'WhatsApp API']
+      techStack: ['Vue.js', 'Express.js', 'MongoDB', 'Google Maps API']
     },
     'madurai-best-tours': {
       themeClass: 'client-modal-rose',
       badge: 'REGIONAL TOURISM & HOLIDAY ENGINE',
       name: 'Madurai Best Tours & Travels',
       logo: 'images/madurai_best_tours_logo.jpeg',
-      tagline: 'Integrated regional tourism booking engines with secure multi-payment gateways.',
-      scopeTitle: 'Project Deliverables & Tourism Portal Overview',
+      tagline: 'Regional tourism booking engine with multi-payment gateway.',
+      scopeTitle: 'Project Deliverables Overview',
       deliverables: [
-        'Full-featured temple tour & regional holiday package booking portal.',
-        'Secure multi-payment gateway integration with instant deposit & partial payment processing.',
-        'Customizable tour itineraries, group travel booking engines, and multi-lingual customer support.',
-        'Verified customer ratings, live itinerary downloads, and instant WhatsApp support integration.'
+        'Temple tour & regional holiday package booking portal.',
+        'Secure multi-payment gateway with instant deposit processing.',
+        'Verified ratings, live itinerary downloads & instant WhatsApp support.'
       ],
-      techStack: ['HTML5/CSS3', 'JavaScript ES6+', 'Razorpay API', 'AWS S3', 'Node.js']
+      techStack: ['HTML5/CSS3', 'JavaScript ES6+', 'Razorpay API', 'AWS S3']
     },
     'therapy-universe': {
       themeClass: 'client-modal-mint',
       badge: 'HEALTHCARE & CLINIC MANAGEMENT ERP',
       name: 'The Therapy Universe',
       logo: 'images/therapy_universe_logo.png',
-      tagline: 'Modern clinical management portals and streamlined patient appointment scheduling software.',
-      scopeTitle: 'Project Deliverables & Healthcare ERP Overview',
+      tagline: 'Clinical management portal & patient appointment scheduling.',
+      scopeTitle: 'Project Deliverables Overview',
       deliverables: [
-        'Specialized pediatric & multi-therapy clinic management portal.',
-        'Online appointment scheduling system with automated doctor calendar synchronization.',
-        'Electronic Health Records (EHR), patient treatment progress tracking, and digital tele-consultation vault.',
-        'Automated prescription management, therapy milestone tracking, and billing invoice generation.'
+        'Pediatric & multi-therapy clinical management portal.',
+        'Online appointment scheduling with automated doctor calendar sync.',
+        'Electronic Health Records (EHR) & billing invoice generation.'
       ],
-      techStack: ['React', 'Python / FastAPI', 'PostgreSQL', 'HIPAA Compliant Security', 'TailwindCSS']
+      techStack: ['React', 'Python / FastAPI', 'PostgreSQL', 'HIPAA Security']
     },
     'amf-studio': {
       themeClass: 'client-modal-purple',
       badge: 'MEDIA & VIDEO PRODUCTION ENTERPRISE',
       name: 'AMF Studio',
       logo: 'images/amf_studio_logo.png',
-      tagline: 'Enterprise video production management and high-end digital media workflow platforms.',
-      scopeTitle: 'Project Deliverables & Media Platform Overview',
+      tagline: 'Enterprise video production & digital media workflow platform.',
+      scopeTitle: 'Project Deliverables Overview',
       deliverables: [
-        'High-performance digital media production & video workflow management system.',
-        'Client video proofing portal featuring frame-by-frame feedback and secure asset delivery vault.',
-        'Interactive portfolio showcase optimized for 4K video streaming CDN and multi-project telemetry.',
-        'Automated media production timeline tracking and milestone approval management.'
+        'Digital media production & video workflow management system.',
+        'Client video proofing portal featuring frame-by-frame feedback.',
+        'Portfolio showcase optimized for 4K video streaming CDN.'
       ],
-      techStack: ['Next.js', 'TailwindCSS', 'Vimeo Enterprise API', 'Cloudinary CDN', 'Node.js']
+      techStack: ['Next.js', 'TailwindCSS', 'Vimeo API', 'Cloudinary CDN']
+    },
+    'thulir-healthcare': {
+      themeClass: 'client-modal-mint',
+      badge: 'HEALTHCARE & MEDICAL DIAGNOSTICS',
+      name: 'Thulir Healthcare',
+      logo: 'images/thulir_healthcare_logo.jpg',
+      tagline: 'Integrated healthcare & medical diagnostic management system.',
+      scopeTitle: 'Project Deliverables Overview',
+      deliverables: [
+        'Digital patient registration & diagnostic lab records portal.',
+        'Automated clinic inventory & prescription dispatch sync.',
+        'Secured EHR telemetry with doctor consultation scheduler.'
+      ],
+      techStack: ['React.js', 'Node.js', 'PostgreSQL', 'HIPAA Security']
+    },
+    'fleet-management': {
+      themeClass: 'client-modal-amber',
+      badge: 'SMART FLEET & HEAVY LOGISTICS',
+      name: 'Fleet Management',
+      logo: 'images/fleet_management_logo.jpg',
+      tagline: 'Smart fleet management platform for heavy machinery & operations.',
+      scopeTitle: 'Project Deliverables Overview',
+      deliverables: [
+        'GPS fleet tracking & heavy machinery dispatch engine.',
+        'Real-time driver telemetry, fuel consumption & maintenance logs.',
+        'Automated equipment scheduling & route optimization.'
+      ],
+      techStack: ['Vue.js', 'Express.js', 'MQTT Mesh', 'Google Maps API']
+    },
+    'testguard': {
+      themeClass: 'client-modal-blue',
+      badge: 'AI SOFTWARE TESTING & QA',
+      name: 'TestGuard',
+      logo: 'images/testguard_logo.jpg',
+      tagline: 'AI-powered automated software testing & security inspection suite.',
+      scopeTitle: 'Project Deliverables Overview',
+      deliverables: [
+        'Autonomous AI test script generation & vulnerability scanner.',
+        'Sub-second regression testing pipeline with instant bug reporting.',
+        'Continuous CI/CD integration with automated SLA verification.'
+      ],
+      techStack: ['Python', 'AI/ML Engine', 'Docker', 'CI/CD Pipelines']
+    },
+    'vara-vastra': {
+      themeClass: 'client-modal-rose',
+      badge: 'BOUTIQUE & ETHNIC FASHION',
+      name: 'Vara Vastra Boutique',
+      logo: 'images/vara_vastra_logo.jpg',
+      tagline: 'Omnichannel luxury boutique storefront & custom apparel catalog.',
+      scopeTitle: 'Project Deliverables Overview',
+      deliverables: [
+        'High-conversion mobile e-commerce boutique storefront.',
+        'Real-time designer fabric inventory & custom measurement portal.',
+        'Multi-currency checkout with instant WhatsApp order dispatch.'
+      ],
+      techStack: ['Next.js', 'TailwindCSS', 'Stripe API', 'Cloudinary']
     }
   };
 
@@ -965,39 +1021,39 @@ document.addEventListener('DOMContentLoaded', () => {
         clientWorksModalContainer.className = `modal-container client-works-modal-container ${data.themeClass}`;
 
         clientWorksModalContent.innerHTML = `
-          <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 18px;">
-            <div style="width: 60px; height: 60px; min-width: 60px; border-radius: 50%; overflow: hidden; background: #ffffff; padding: 2px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); border: 2px solid #FFFFFF;">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+            <div style="width: 48px; height: 48px; min-width: 48px; border-radius: 50%; overflow: hidden; background: #ffffff; padding: 2px; box-shadow: 0 4px 14px rgba(0,0,0,0.12); border: 2px solid #FFFFFF;">
               <img src="${data.logo}" alt="${data.name} Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;" />
             </div>
             <div>
-              <div class="client-modal-badge" style="display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.72rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px;">${data.badge}</div>
-              <h3 class="client-modal-title" style="font-size: 1.3rem; font-weight: 900; margin: 0; line-height: 1.25;">${data.name}</h3>
+              <div class="client-modal-badge" style="display: inline-block; padding: 3px 10px; border-radius: 16px; font-size: 0.65rem; font-weight: 800; letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 2px;">${data.badge}</div>
+              <h3 class="client-modal-title" style="font-size: 1.15rem; font-weight: 900; margin: 0; line-height: 1.2;">${data.name}</h3>
             </div>
           </div>
 
-          <p style="font-size: 0.92rem; line-height: 1.6; color: #334155; font-weight: 600; margin-bottom: 18px; text-align: left;">
+          <p style="font-size: 0.84rem; line-height: 1.45; color: #334155; font-weight: 600; margin-bottom: 12px; text-align: left;">
             ${data.tagline}
           </p>
 
-          <div style="background: rgba(255, 255, 255, 0.65); border-radius: 18px; padding: 18px; margin-bottom: 20px; border: 1px solid rgba(255, 255, 255, 0.8);">
-            <h4 style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-top: 0; margin-bottom: 12px; color: #1E293B;">${data.scopeTitle}</h4>
-            <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div style="background: rgba(255, 255, 255, 0.65); border-radius: 14px; padding: 12px 14px; margin-bottom: 14px; border: 1px solid rgba(255, 255, 255, 0.8);">
+            <h4 style="font-size: 0.76rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; margin-top: 0; margin-bottom: 8px; color: #1E293B;">${data.scopeTitle}</h4>
+            <div style="display: flex; flex-direction: column; gap: 6px;">
               ${data.deliverables.map(item => `
-                <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.86rem; line-height: 1.45; color: #334155; font-weight: 600;">
-                  <span class="client-modal-bullet-dot" style="width: 8px; height: 8px; min-width: 8px; border-radius: 50%; margin-top: 5px; display: inline-block;"></span>
+                <div style="display: flex; align-items: flex-start; gap: 8px; font-size: 0.82rem; line-height: 1.35; color: #334155; font-weight: 600;">
+                  <span class="client-modal-bullet-dot" style="width: 6px; height: 6px; min-width: 6px; border-radius: 50%; margin-top: 5px; display: inline-block;"></span>
                   <span>${item}</span>
                 </div>
               `).join('')}
             </div>
           </div>
 
-          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;">
-            <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+            <div style="display: flex; gap: 5px; flex-wrap: wrap;">
               ${data.techStack.map(tech => `
-                <span style="font-size: 0.72rem; font-weight: 700; background: rgba(255,255,255,0.7); padding: 4px 10px; border-radius: 12px; color: #475569; border: 1px solid rgba(0,0,0,0.06);">${tech}</span>
+                <span style="font-size: 0.68rem; font-weight: 700; background: rgba(255,255,255,0.7); padding: 3px 8px; border-radius: 10px; color: #475569; border: 1px solid rgba(0,0,0,0.06);">${tech}</span>
               `).join('')}
             </div>
-            <a href="contact.html#contact-form" class="btn client-modal-btn" style="padding: 10px 20px; font-size: 0.85rem; font-weight: 800; border-radius: 20px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+            <a href="contact.html#contact-form" class="btn client-modal-btn" style="padding: 8px 16px; font-size: 0.8rem; font-weight: 800; border-radius: 18px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
               Discuss Similar Project
             </a>
           </div>
