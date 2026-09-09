@@ -360,7 +360,7 @@
     <div class="container navbar">
       <div class="brand-group">
         <a href="index.html" class="brand-logo">
-          <img src="images/company-logo.png" alt="CodeThrive Infotech Logo" class="brand-logo-img" />
+          <img decoding="async" fetchpriority="high" src="images/company-logo.png" alt="CodeThrive Infotech Logo" class="brand-logo-img" />
           <div class="brand-text-wrapper">
             <span class="brand-title">CodeThrive <span class="text-gradient">Infotech</span></span>
             <div class="brand-tagline-micro">Progress. Cultivate. Innovate.</div>
@@ -454,25 +454,25 @@
 
         <div class="coverflow-track" id="coverflowTrack">
           <div class="coverflow-item">
-            <img src="images/Gallerry/office_workspace_team.jpg" alt="CodeThrive Infotech Workspace Team" decoding="async" />
+            <img loading="lazy" src="images/Gallerry/office_workspace_team.jpg" alt="CodeThrive Infotech Workspace Team" decoding="async" />
           </div>
           <div class="coverflow-item">
-            <img src="images/Gallerry/office_reception_desk.jpg" alt="CodeThrive Infotech Reception Desk" decoding="async" />
+            <img loading="lazy" src="images/Gallerry/office_reception_desk.jpg" alt="CodeThrive Infotech Reception Desk" decoding="async" />
           </div>
           <div class="coverflow-item">
-            <img src="images/Gallerry/SAVE_20260908_223119.jpg" alt="CodeThrive Infotech Gallery Photo 1" decoding="async" />
+            <img loading="lazy" src="images/Gallerry/SAVE_20260908_223119.jpg" alt="CodeThrive Infotech Gallery Photo 1" decoding="async" />
           </div>
           <div class="coverflow-item">
-            <img src="images/Gallerry/SAVE_20260908_223316.jpg" alt="CodeThrive Infotech Gallery Photo 2" decoding="async" />
+            <img loading="lazy" src="images/Gallerry/SAVE_20260908_223316.jpg" alt="CodeThrive Infotech Gallery Photo 2" decoding="async" />
           </div>
           <div class="coverflow-item">
-            <img src="images/Gallerry/SAVE_20260908_223339.jpg" alt="CodeThrive Infotech Gallery Photo 3" decoding="async" />
+            <img loading="lazy" src="images/Gallerry/SAVE_20260908_223339.jpg" alt="CodeThrive Infotech Gallery Photo 3" decoding="async" />
           </div>
           <div class="coverflow-item">
-            <img src="images/Gallerry/SAVE_20260908_223403.jpg" alt="CodeThrive Infotech Gallery Photo 4" decoding="async" />
+            <img loading="lazy" src="images/Gallerry/SAVE_20260908_223403.jpg" alt="CodeThrive Infotech Gallery Photo 4" decoding="async" />
           </div>
           <div class="coverflow-item">
-            <img src="images/Gallerry/SAVE_20260908_223409.jpg" alt="CodeThrive Infotech Gallery Photo 5" decoding="async" />
+            <img loading="lazy" src="images/Gallerry/SAVE_20260908_223409.jpg" alt="CodeThrive Infotech Gallery Photo 5" decoding="async" />
           </div>
         </div>
 
@@ -488,7 +488,7 @@
         <!-- Column 1: Brand Profile & Social Media Icons -->
         <div class="footer-brand-col">
           <a href="index.html" class="brand-logo" style="margin-bottom: 14px;">
-            <img src="images/company-logo.png" alt="CodeThrive Infotech Logo" class="brand-logo-img" />
+            <img decoding="async" fetchpriority="high" src="images/company-logo.png" alt="CodeThrive Infotech Logo" class="brand-logo-img" />
             <span class="footer-brand-text">CODETHRIVE INFOTECH</span>
           </a>
           <p class="footer-brand-desc">
@@ -668,7 +668,7 @@
         lightbox.innerHTML = `
           <div style="position: relative; max-width: 96vw; max-height: 90vh; display: flex; align-items: center; justify-content: center;">
             <button id="closeLightboxBtn" style="position: absolute; top: -50px; right: 0; background: rgba(255,255,255,0.25); border: none; color: #FFFFFF; font-size: 2.2rem; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; line-height: 1; z-index: 10;">&times;</button>
-            <img id="lightboxImg" src="" alt="" style="max-width: 100%; max-height: 85vh; object-fit: contain; border-radius: 14px; box-shadow: 0 25px 60px rgba(0,0,0,0.9), 0 0 30px rgba(52, 211, 153, 0.4); border: 1.8px solid rgba(255,255,255,0.25);" />
+            <img loading="lazy" decoding="async" id="lightboxImg" src="" alt="" style="max-width: 100%; max-height: 85vh; object-fit: contain; border-radius: 14px; box-shadow: 0 25px 60px rgba(0,0,0,0.9), 0 0 30px rgba(52, 211, 153, 0.4); border: 1.8px solid rgba(255,255,255,0.25);" />
           </div>
         `;
         document.body.appendChild(lightbox);

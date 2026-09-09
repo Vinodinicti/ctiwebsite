@@ -61,20 +61,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  let isScrollTicking = false;
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 30) {
-      header?.classList.add('scrolled');
-    } else {
-      header?.classList.remove('scrolled');
-    }
-    
-    const backToTop = document.getElementById('backToTop');
-    if (backToTop) {
-      if (window.scrollY > 400) {
-        backToTop.classList.add('visible');
-      } else {
-        backToTop.classList.remove('visible');
-      }
+    if (!isScrollTicking) {
+      window.requestAnimationFrame(() => {
+        const scrollY = window.scrollY;
+        if (scrollY > 30) {
+          header?.classList.add('scrolled');
+        } else {
+          header?.classList.remove('scrolled');
+        }
+        
+        const backToTop = document.getElementById('backToTop');
+        if (backToTop) {
+          if (scrollY > 400) {
+            backToTop.classList.add('visible');
+          } else {
+            backToTop.classList.remove('visible');
+          }
+        }
+        isScrollTicking = false;
+      });
+      isScrollTicking = true;
     }
   }, { passive: true });
 
