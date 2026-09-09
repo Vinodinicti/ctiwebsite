@@ -12831,7 +12831,7 @@ div.badge.hero-white-glow-tagline {
 }
 
 /* ==========================================================================
-   MOBILE VIEW HERO BACKGROUND IMAGES 90% OVERLAY & LOW OPACITY (ALL PAGES)
+   MOBILE VIEW HERO BACKGROUND IMAGES (FULL 100% OPACITY & ORIGINAL CLARITY)
    ========================================================================== */
 @media (max-width: 768px) {
   .hero-slide,
@@ -12852,7 +12852,7 @@ div.badge.hero-white-glow-tagline {
   .contact-hero-bg-image-layer > div:first-child,
   .contact-hero-bg-image-layer > div:nth-child(2),
   .subpage-hero-bg {
-    opacity: 0.15 !important;
+    opacity: 1 !important;
   }
 
   .hero-slideshow-overlay,
@@ -12863,8 +12863,8 @@ div.badge.hero-white-glow-tagline {
   .projects-hero-bg-image-layer > div:last-child,
   .insights-hero-bg-image-layer > div:last-child,
   .contact-hero-bg-image-layer > div:last-child {
-    background: rgba(0, 0, 0, 0.90) !important;
-    opacity: 0.90 !important;
+    background: rgba(0, 0, 0, 0.35) !important;
+    opacity: 0.4 !important;
     display: block !important;
   }
 }
