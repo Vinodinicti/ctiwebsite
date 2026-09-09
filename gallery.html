@@ -273,38 +273,40 @@
         padding: 40px 0 60px 0 !important;
       }
       .coverflow-carousel-container {
-        height: 290px;
+        height: 330px !important;
         margin: 15px auto 10px auto;
       }
       .coverflow-item {
-        width: 260px;
-        height: 165px;
-        border-radius: 14px;
+        width: 82vw !important;
+        max-width: 330px !important;
+        height: 210px !important;
+        border-radius: 16px;
       }
       .coverflow-item.pos-active {
-        transform: translateX(0) scale(1.06) translateZ(40px) !important;
+        transform: translateX(0) scale(1.15) translateZ(80px) rotateY(0deg) !important;
         z-index: 30 !important;
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35), 0 0 25px rgba(16, 185, 129, 0.5) !important;
       }
       .coverflow-item.pos-left-1 {
-        transform: translateX(-130px) scale(0.75) rotateY(18deg) !important;
+        transform: translateX(-150px) scale(0.72) rotateY(22deg) !important;
         z-index: 10 !important;
-        opacity: 0.60 !important;
+        opacity: 0.45 !important;
       }
       .coverflow-item.pos-right-1 {
-        transform: translateX(130px) scale(0.75) rotateY(-18deg) !important;
+        transform: translateX(150px) scale(0.72) rotateY(-22deg) !important;
         z-index: 10 !important;
-        opacity: 0.60 !important;
+        opacity: 0.45 !important;
       }
       .coverflow-item.pos-left-2, .coverflow-item.pos-right-2, .coverflow-item.pos-left-3, .coverflow-item.pos-right-3 { display: none !important; }
       
       .carousel-nav-btn {
-        width: 38px;
-        height: 38px;
-        font-size: 0.9rem;
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
         z-index: 40 !important;
       }
-      .carousel-nav-btn.prev-btn { left: 4px; }
-      .carousel-nav-btn.next-btn { right: 4px; }
+      .carousel-nav-btn.prev-btn { left: 6px; }
+      .carousel-nav-btn.next-btn { right: 6px; }
     }
 
     @media (max-width: 480px) {
@@ -312,36 +314,38 @@
         padding: 75px 0 35px 0 !important;
       }
       .coverflow-carousel-container {
-        height: 240px;
+        height: 290px !important;
         margin: 10px auto 5px auto;
       }
       .coverflow-item {
-        width: 215px;
-        height: 140px;
-        border-radius: 12px;
+        width: 86vw !important;
+        max-width: 310px !important;
+        height: 195px !important;
+        border-radius: 14px;
       }
       .coverflow-item.pos-active {
-        transform: translateX(0) scale(1.05) !important;
+        transform: translateX(0) scale(1.12) translateZ(60px) !important;
         z-index: 30 !important;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(16, 185, 129, 0.45) !important;
       }
       .coverflow-item.pos-left-1 {
-        transform: translateX(-90px) scale(0.72) rotateY(14deg) !important;
+        transform: translateX(-110px) scale(0.68) rotateY(18deg) !important;
         z-index: 10 !important;
-        opacity: 0.50 !important;
+        opacity: 0.35 !important;
       }
       .coverflow-item.pos-right-1 {
-        transform: translateX(90px) scale(0.72) rotateY(-14deg) !important;
+        transform: translateX(110px) scale(0.68) rotateY(-18deg) !important;
         z-index: 10 !important;
-        opacity: 0.50 !important;
+        opacity: 0.35 !important;
       }
       
       .carousel-nav-btn {
-        width: 32px;
-        height: 32px;
-        font-size: 0.8rem;
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
       }
-      .carousel-nav-btn.prev-btn { left: 2px; }
-      .carousel-nav-btn.next-btn { right: 2px; }
+      .carousel-nav-btn.prev-btn { left: 4px; }
+      .carousel-nav-btn.next-btn { right: 4px; }
     }
   </style>
 </head>
@@ -639,11 +643,73 @@
       startAutoPlay();
     });
 
+    // Full-Screen Image Lightbox Modal Handler
+    function openGalleryLightbox(imgSrc, imgAlt) {
+      let lightbox = document.getElementById('galleryLightboxModal');
+      if (!lightbox) {
+        lightbox = document.createElement('div');
+        lightbox.id = 'galleryLightboxModal';
+        lightbox.style.cssText = `
+          position: fixed;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.94);
+          backdrop-filter: blur(14px);
+          -webkit-backdrop-filter: blur(14px);
+          z-index: 99999999 !important;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 16px;
+          box-sizing: border-box;
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        `;
+        lightbox.innerHTML = `
+          <div style="position: relative; max-width: 96vw; max-height: 90vh; display: flex; align-items: center; justify-content: center;">
+            <button id="closeLightboxBtn" style="position: absolute; top: -50px; right: 0; background: rgba(255,255,255,0.25); border: none; color: #FFFFFF; font-size: 2.2rem; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; line-height: 1; z-index: 10;">&times;</button>
+            <img id="lightboxImg" src="" alt="" style="max-width: 100%; max-height: 85vh; object-fit: contain; border-radius: 14px; box-shadow: 0 25px 60px rgba(0,0,0,0.9), 0 0 30px rgba(52, 211, 153, 0.4); border: 1.8px solid rgba(255,255,255,0.25);" />
+          </div>
+        `;
+        document.body.appendChild(lightbox);
+
+        const closeBtn = lightbox.querySelector('#closeLightboxBtn');
+        const closeLightbox = () => {
+          lightbox.style.opacity = '0';
+          lightbox.style.pointerEvents = 'none';
+          document.body.style.overflow = '';
+        };
+
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+          if (e.target === lightbox || e.target.id === 'closeLightboxBtn') closeLightbox();
+        });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') closeLightbox();
+        });
+      }
+
+      const imgEl = lightbox.querySelector('#lightboxImg');
+      if (imgEl) {
+        imgEl.src = imgSrc;
+        imgEl.alt = imgAlt || 'Gallery Photo';
+      }
+      lightbox.style.opacity = '1';
+      lightbox.style.pointerEvents = 'auto';
+      document.body.style.overflow = 'hidden';
+    }
+
     items.forEach((item, idx) => {
       item.addEventListener('click', () => {
-        currentIndex = idx;
-        updateCoverflow();
-        startAutoPlay();
+        const img = item.querySelector('img');
+        if (currentIndex === idx && img) {
+          // Tapping active center card opens full-screen maximized lightbox
+          openGalleryLightbox(img.src, img.alt);
+        } else {
+          currentIndex = idx;
+          updateCoverflow();
+          startAutoPlay();
+        }
       });
     });
 
