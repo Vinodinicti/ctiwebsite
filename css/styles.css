@@ -12831,30 +12831,28 @@ div.badge.hero-white-glow-tagline {
 }
 
 /* ==========================================================================
-   MOBILE VIEW HERO BACKGROUND IMAGES (FULL 100% OPACITY & ORIGINAL CLARITY)
+   ALL PAGES HERO SECTIONS - SUBTLE BLACK OPACITY OVERLAY FOR CRISP CONTRAST
    ========================================================================== */
-@media (max-width: 768px) {
-  .hero-slide,
-  .hero-slide.slide-hd-hero-1,
-  .hero-slide.slide-hd-hero-2,
-  .hero-slide.slide-home-1,
-  .hero-slide.slide-home-2,
-  .hero-slide.slide-home-3,
-  .hero-bg-slideshow .hero-slide,
-  .about-hero-bg-image-layer > div:first-child,
-  .about-hero-bg-image-layer > div:nth-child(2),
-  .industries-hero-bg-image-layer > div:first-child,
-  .industries-hero-bg-image-layer > div:nth-child(2),
-  .projects-hero-bg-image-layer > div:first-child,
-  .projects-hero-bg-image-layer > div:nth-child(2),
-  .insights-hero-bg-image-layer > div:first-child,
-  .insights-hero-bg-image-layer > div:nth-child(2),
-  .contact-hero-bg-image-layer > div:first-child,
-  .contact-hero-bg-image-layer > div:nth-child(2),
-  .subpage-hero-bg {
-    opacity: 1 !important;
-  }
+.hero-slideshow-overlay,
+.hero-dark-overlay,
+#home .hero-slideshow-overlay,
+[data-theme="light"] .hero-slideshow-overlay,
+[data-theme="dark"] .hero-slideshow-overlay,
+.about-hero-bg-image-layer > div:last-child,
+.industries-hero-bg-image-layer > div:last-child,
+.projects-hero-bg-image-layer > div:last-child,
+.insights-hero-bg-image-layer > div:last-child,
+.contact-hero-bg-image-layer > div:last-child {
+  background: rgba(0, 0, 0, 0.42) !important;
+  opacity: 1 !important;
+  display: block !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+}
 
+@media (max-width: 768px) {
   .hero-slideshow-overlay,
   .hero-dark-overlay,
   #home .hero-slideshow-overlay,
@@ -12863,9 +12861,7 @@ div.badge.hero-white-glow-tagline {
   .projects-hero-bg-image-layer > div:last-child,
   .insights-hero-bg-image-layer > div:last-child,
   .contact-hero-bg-image-layer > div:last-child {
-    background: rgba(0, 0, 0, 0.35) !important;
-    opacity: 0.4 !important;
-    display: block !important;
+    background: rgba(0, 0, 0, 0.45) !important;
   }
 }
 
