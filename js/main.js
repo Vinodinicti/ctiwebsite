@@ -86,7 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.appendChild(navOverlay);
     }
 
-    function toggleMobileMenu() {
+    function toggleMobileMenu(e) {
+      if (e) e.stopPropagation();
       const isOpen = navMenu.classList.toggle('active');
       navOverlay.classList.toggle('active', isOpen);
       document.body.style.overflow = isOpen ? 'hidden' : '';
@@ -98,17 +99,23 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflow = '';
     }
 
-    mobileToggle.addEventListener('click', toggleMobileMenu);
+    // Instant 0ms touch response for mobile menu toggle button
+    mobileToggle.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      toggleMobileMenu(e);
+    }, { passive: false });
+
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMobileMenu(e);
+    });
+
     navOverlay.addEventListener('click', closeMobileMenu);
+    navOverlay.addEventListener('touchstart', closeMobileMenu, { passive: true });
 
     document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', function(e) {
-        const targetUrl = this.getAttribute('href');
+      link.addEventListener('click', function() {
         closeMobileMenu();
-        if (targetUrl && !targetUrl.startsWith('#') && targetUrl !== '#') {
-          e.preventDefault();
-          window.location.href = targetUrl;
-        }
       });
     });
 
@@ -118,6 +125,40 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // --- Instant Page Prefetcher & Turbo-Navigation for Mobile Devices ---
+  function initTurboPrefetch() {
+    const prefetchedUrls = new Set();
+
+    function prefetchPage(url) {
+      if (!url || url.startsWith('#') || url.startsWith('mailto:') || url.startsWith('tel:') || url.startsWith('http')) return;
+      if (prefetchedUrls.has(url)) return;
+      prefetchedUrls.add(url);
+
+      const link = document.createElement('link');
+      link.rel = 'prefetch';
+      link.href = url;
+      document.head.appendChild(link);
+    }
+
+    // Auto-prefetch all main navigation pages after page load
+    setTimeout(() => {
+      ['index.html', 'about.html', 'industries.html', 'projects.html', 'insights.html', 'gallery.html', 'contact.html'].forEach(page => {
+        prefetchPage(page);
+      });
+    }, 1200);
+
+    // Instant touch/hover preloading when user touches any page link
+    document.querySelectorAll('a[href]').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && !href.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('tel:') && !href.startsWith('http')) {
+        link.addEventListener('touchstart', () => prefetchPage(href), { passive: true });
+        link.addEventListener('mouseenter', () => prefetchPage(href), { passive: true });
+      }
+    });
+  }
+
+  initTurboPrefetch();
 
   // --- 3. Category Filter & Dynamic Sliding Pill Tracker ---
   const filterBtns = document.querySelectorAll('.filter-btn');

@@ -7514,11 +7514,11 @@ textarea.form-control {
     box-shadow: 0 6px 18px rgba(4, 93, 93, 0.3) !important;
   }
 
-  /* Crisp & Vibrant Compact Mobile Drawer Menu (Opens Half-Page ~50vw) */
+  /* GPU-Accelerated Lightning-Fast Mobile Drawer Menu */
   .nav-menu {
     position: fixed !important;
     top: 0 !important;
-    right: -100% !important;
+    right: 0 !important;
     width: 50vw !important;
     max-width: 230px !important;
     min-width: 175px !important;
@@ -7532,11 +7532,19 @@ textarea.form-control {
     gap: 8px !important;
     border-left: 2px solid #0D9488 !important;
     box-shadow: -12px 0 35px rgba(0, 0, 0, 0.85), -2px 0 16px rgba(52, 211, 153, 0.3) !important;
-    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    transform: translateX(100%) translateZ(0) !important;
+    -webkit-transform: translateX(100%) translateZ(0) !important;
+    transition: transform 0.26s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    will-change: transform;
     z-index: 10000 !important;
     overflow-y: auto !important;
     box-sizing: border-box !important;
     pointer-events: auto !important;
+  }
+
+  .nav-menu.active {
+    transform: translateX(0) translateZ(0) !important;
+    -webkit-transform: translateX(0) translateZ(0) !important;
   }
 
   /* Ambient Glowing Color Orbs inside Drawer */
@@ -7567,7 +7575,8 @@ textarea.form-control {
   }
 
   .nav-menu.active {
-    right: 0 !important;
+    transform: translateX(0) translateZ(0) !important;
+    -webkit-transform: translateX(0) translateZ(0) !important;
   }
 
   /* Vibrant & High-Contrast Nav Link Cards in Compact Mobile Drawer */
