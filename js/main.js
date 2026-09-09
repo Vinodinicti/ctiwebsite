@@ -1140,49 +1140,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function initMobileMissionVisionAutoFlip() {
     const flipCards = document.querySelectorAll('.mission-vision-grid .flip-card-container');
-    if (!flipCards.length) return;
+    if (flipCards.length < 2) return;
+
+    const missionCard = flipCards[0];
+    const visionCard = flipCards[1];
 
     let autoTimer = null;
     let pauseUntil = 0;
-    let isFlippedState = false;
+    let activeOpenIndex = 0; // 0 = Mission open (Vision image), 1 = Vision open (Mission image)
 
-    // Helper: Perform synchronized auto flip across mission & vision cards
-    function toggleCardsFlip() {
+    // Helper: Perform alternating card flip so only ONE card is opened at a time
+    function toggleAlternatingCards() {
       // Respect user manual touch/click interaction
       if (Date.now() < pauseUntil) return;
 
-      isFlippedState = !isFlippedState;
-      
-      flipCards.forEach((card, index) => {
-        // Stagger the flips slightly (320ms apart) for a dynamic visual effect
-        setTimeout(() => {
-          if (Date.now() >= pauseUntil) {
-            if (isFlippedState) {
-              card.classList.add('flipped');
-            } else {
-              card.classList.remove('flipped');
-            }
-          }
-        }, index * 320);
-      });
+      if (activeOpenIndex === 0) {
+        // Turn Mission to open text, turn Vision back to front image
+        missionCard.classList.add('flipped');
+        visionCard.classList.remove('flipped');
+        activeOpenIndex = 1; // Next cycle will open Vision
+      } else {
+        // Turn Vision to open text, turn Mission back to front image
+        visionCard.classList.add('flipped');
+        missionCard.classList.remove('flipped');
+        activeOpenIndex = 0; // Next cycle will open Mission
+      }
     }
 
     function startAutoFlipCycle() {
       stopAutoFlipCycle();
       
-      // Cycle logic:
-      // Front title reading delay: 4.5s
-      // Back detailed text reading delay: 7.5s
       const scheduleNextFlip = () => {
-        const currentDelay = isFlippedState ? 7500 : 4500;
+        // Allow 7.5 seconds for reading the active card text before alternating
         autoTimer = setTimeout(() => {
-          // Auto-flip on mobile view screens (width <= 992px) or touch devices
           if (window.innerWidth <= 992 || 'ontouchstart' in window) {
-            toggleCardsFlip();
+            toggleAlternatingCards();
           }
           scheduleNextFlip();
-        }, currentDelay);
+        }, 7500);
       };
+
+      // Open Mission card first when scrolling into mobile view
+      if (window.innerWidth <= 992 || 'ontouchstart' in window) {
+        if (Date.now() >= pauseUntil) {
+          missionCard.classList.add('flipped');
+          visionCard.classList.remove('flipped');
+          activeOpenIndex = 1;
+        }
+      }
 
       scheduleNextFlip();
     }
@@ -1194,11 +1199,17 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Manual user touch/click interaction handler: pause auto-rotation when tapped
-    flipCards.forEach(card => {
+    // Manual user tap/click interaction:
+    // When Mission is opened -> Vision turns back to image!
+    // When Vision is opened -> Mission turns back to image!
+    flipCards.forEach((card, index) => {
       card.addEventListener('click', () => {
-        pauseUntil = Date.now() + 10000; // Pause auto-rotation for 10 seconds
-        isFlippedState = card.classList.contains('flipped');
+        pauseUntil = Date.now() + 10000; // Pause auto-rotation for 10s on manual tap
+
+        const otherCard = index === 0 ? visionCard : missionCard;
+        if (card.classList.contains('flipped')) {
+          otherCard.classList.remove('flipped');
+        }
       });
     });
 
