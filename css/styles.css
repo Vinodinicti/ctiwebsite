@@ -9885,8 +9885,8 @@ textarea.form-control {
 .new-watermark-footer {
   position: relative !important;
   overflow: hidden !important;
-  padding-top: 38px !important;
-  padding-bottom: 95px !important;
+  padding-top: 48px !important;
+  padding-bottom: 55px !important;
   margin-top: auto !important;
   margin-bottom: 0 !important;
   background-color: #004B49 !important;
@@ -12168,7 +12168,7 @@ textarea.form-control {
   footer.footer,
   footer.new-watermark-footer {
     padding-top: 28px !important;
-    padding-bottom: 22px !important;
+    padding-bottom: 35px !important;
     margin-top: 0 !important;
     margin-bottom: 0 !important;
     position: relative !important;
@@ -12237,7 +12237,7 @@ textarea.form-control {
 
   .footer-watermark-text {
     font-size: clamp(1.0rem, 4.8vw, 1.8rem) !important;
-    bottom: 4px !important;
+    bottom: 10px !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     margin: 0 !important;
