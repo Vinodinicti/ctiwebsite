@@ -1134,6 +1134,92 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // --- 10. Mobile Auto-Flip & Auto-Turn System for Mission & Vision Cards ---
+  initMobileMissionVisionAutoFlip();
+
+  function initMobileMissionVisionAutoFlip() {
+    const flipCards = document.querySelectorAll('.mission-vision-grid .flip-card-container');
+    if (!flipCards.length) return;
+
+    let autoTimer = null;
+    let pauseUntil = 0;
+    let isFlippedState = false;
+
+    // Helper: Perform synchronized auto flip across mission & vision cards
+    function toggleCardsFlip() {
+      // Respect user manual touch/click interaction
+      if (Date.now() < pauseUntil) return;
+
+      isFlippedState = !isFlippedState;
+      
+      flipCards.forEach((card, index) => {
+        // Stagger the flips slightly (320ms apart) for a dynamic visual effect
+        setTimeout(() => {
+          if (Date.now() >= pauseUntil) {
+            if (isFlippedState) {
+              card.classList.add('flipped');
+            } else {
+              card.classList.remove('flipped');
+            }
+          }
+        }, index * 320);
+      });
+    }
+
+    function startAutoFlipCycle() {
+      stopAutoFlipCycle();
+      
+      // Cycle logic:
+      // Front title reading delay: 4.5s
+      // Back detailed text reading delay: 7.5s
+      const scheduleNextFlip = () => {
+        const currentDelay = isFlippedState ? 7500 : 4500;
+        autoTimer = setTimeout(() => {
+          // Auto-flip on mobile view screens (width <= 992px) or touch devices
+          if (window.innerWidth <= 992 || 'ontouchstart' in window) {
+            toggleCardsFlip();
+          }
+          scheduleNextFlip();
+        }, currentDelay);
+      };
+
+      scheduleNextFlip();
+    }
+
+    function stopAutoFlipCycle() {
+      if (autoTimer) {
+        clearTimeout(autoTimer);
+        autoTimer = null;
+      }
+    }
+
+    // Manual user touch/click interaction handler: pause auto-rotation when tapped
+    flipCards.forEach(card => {
+      card.addEventListener('click', () => {
+        pauseUntil = Date.now() + 10000; // Pause auto-rotation for 10 seconds
+        isFlippedState = card.classList.contains('flipped');
+      });
+    });
+
+    // Use IntersectionObserver to activate auto-flip when section enters mobile viewport
+    const gridEl = document.querySelector('.mission-vision-grid');
+    if (gridEl && 'IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            startAutoFlipCycle();
+          } else {
+            stopAutoFlipCycle();
+          }
+        });
+      }, { threshold: 0.15 });
+
+      observer.observe(gridEl);
+    } else {
+      startAutoFlipCycle();
+    }
+  }
 });
 
 
