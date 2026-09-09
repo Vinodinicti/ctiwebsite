@@ -339,7 +339,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const waUrl = `https://wa.me/919150781685?text=${encodeURIComponent(formattedText)}`;
       window.open(waUrl, '_blank');
 
-      const mailtoUrl = `mailto:info@codethriveinfotech.in?subject=${encodeURIComponent('CodeThrive Inquiry: ' + subject)}&body=${encodeURIComponent(formattedText)}`;
+      const mailtoUrl = `mailto:codethriveinfotech@gmail.com?subject=${encodeURIComponent('CodeThrive Inquiry: ' + subject)}&body=${encodeURIComponent(formattedText)}`;
       setTimeout(() => {
         window.location.href = mailtoUrl;
       }, 500);
@@ -763,7 +763,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h4 style="font-weight: 800; color: #045D5D; font-size: 1.05rem; margin-bottom: 6px;">Contact Us</h4>
             <p style="color: #161d23; font-size: 0.94rem; font-weight: 600; margin: 0;">
               If you have any questions about this privacy policy or our privacy practices, please contact us at:
-              <a href="mailto:info@codethriveinfotech.in" style="color: #045D5D; font-weight: 800; text-decoration: underline; margin-left: 4px;">info@codethriveinfotech.in</a>
+              <a href="mailto:codethriveinfotech@gmail.com" style="color: #045D5D; font-weight: 800; text-decoration: underline; margin-left: 4px;">codethriveinfotech@gmail.com</a>
             </p>
           </div>
 
