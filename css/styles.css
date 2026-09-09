@@ -12878,6 +12878,26 @@ div.badge.hero-white-glow-tagline {
   .gallery-hero-bg-overlay {
     background: rgba(0, 0, 0, 0.20) !important;
   }
+
+  /* Eliminate mobile GPU rasterization lag by removing heavy real-time blur filters on mobile */
+  .header,
+  .nav-drawer-overlay,
+  .modal-backdrop,
+  .glass-card,
+  .call-float-btn,
+  .whatsapp-float-btn {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* Contain layout reflows on mobile for silky smooth touch scrolling */
+  .header,
+  .nav-menu,
+  .nav-drawer-overlay,
+  .hero,
+  .section {
+    contain: layout style;
+  }
 }
 
 

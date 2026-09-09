@@ -122,8 +122,15 @@ document.addEventListener('DOMContentLoaded', () => {
     navOverlay.addEventListener('touchstart', closeMobileMenu, { passive: true });
 
     document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', function() {
-        closeMobileMenu();
+      link.addEventListener('click', function(e) {
+        const targetUrl = this.getAttribute('href');
+        navMenu.classList.remove('active');
+        navOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+        if (targetUrl && !targetUrl.startsWith('#') && targetUrl !== '#') {
+          e.preventDefault();
+          window.location.href = targetUrl;
+        }
       });
     });
 
