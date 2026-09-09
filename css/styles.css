@@ -12831,7 +12831,7 @@ div.badge.hero-white-glow-tagline {
 }
 
 /* ==========================================================================
-   ALL PAGES HERO SECTIONS - SUBTLE BLACK OPACITY OVERLAY FOR CRISP CONTRAST
+   ALL PAGES HERO SECTIONS - VERY LIGHT BLACKISH TINT ON ORIGINAL BG IMAGES
    ========================================================================== */
 .hero-slideshow-overlay,
 .hero-dark-overlay,
@@ -12843,7 +12843,7 @@ div.badge.hero-white-glow-tagline {
 .projects-hero-bg-image-layer > div:last-child,
 .insights-hero-bg-image-layer > div:last-child,
 .contact-hero-bg-image-layer > div:last-child {
-  background: rgba(0, 0, 0, 0.42) !important;
+  background: rgba(0, 0, 0, 0.18) !important;
   opacity: 1 !important;
   display: block !important;
   position: absolute !important;
@@ -12861,7 +12861,7 @@ div.badge.hero-white-glow-tagline {
   .projects-hero-bg-image-layer > div:last-child,
   .insights-hero-bg-image-layer > div:last-child,
   .contact-hero-bg-image-layer > div:last-child {
-    background: rgba(0, 0, 0, 0.45) !important;
+    background: rgba(0, 0, 0, 0.20) !important;
   }
 }
 
