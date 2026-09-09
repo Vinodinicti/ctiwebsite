@@ -12830,6 +12830,45 @@ div.badge.hero-white-glow-tagline {
   transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.35s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+/* ==========================================================================
+   MOBILE VIEW HERO BACKGROUND IMAGES 90% OVERLAY & LOW OPACITY (ALL PAGES)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .hero-slide,
+  .hero-slide.slide-hd-hero-1,
+  .hero-slide.slide-hd-hero-2,
+  .hero-slide.slide-home-1,
+  .hero-slide.slide-home-2,
+  .hero-slide.slide-home-3,
+  .hero-bg-slideshow .hero-slide,
+  .about-hero-bg-image-layer > div:first-child,
+  .about-hero-bg-image-layer > div:nth-child(2),
+  .industries-hero-bg-image-layer > div:first-child,
+  .industries-hero-bg-image-layer > div:nth-child(2),
+  .projects-hero-bg-image-layer > div:first-child,
+  .projects-hero-bg-image-layer > div:nth-child(2),
+  .insights-hero-bg-image-layer > div:first-child,
+  .insights-hero-bg-image-layer > div:nth-child(2),
+  .contact-hero-bg-image-layer > div:first-child,
+  .contact-hero-bg-image-layer > div:nth-child(2),
+  .subpage-hero-bg {
+    opacity: 0.15 !important;
+  }
+
+  .hero-slideshow-overlay,
+  .hero-dark-overlay,
+  #home .hero-slideshow-overlay,
+  .about-hero-bg-image-layer > div:last-child,
+  .industries-hero-bg-image-layer > div:last-child,
+  .projects-hero-bg-image-layer > div:last-child,
+  .insights-hero-bg-image-layer > div:last-child,
+  .contact-hero-bg-image-layer > div:last-child {
+    background: rgba(0, 0, 0, 0.90) !important;
+    opacity: 0.90 !important;
+    display: block !important;
+  }
+}
+
 
 
 
