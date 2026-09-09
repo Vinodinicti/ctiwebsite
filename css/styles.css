@@ -7702,35 +7702,39 @@ textarea.form-control {
     gap: 20px !important;
   }
 
-  /* Mission & Vision stay side-by-side on mobile with compact cards */
+  /* Mission & Vision full width stack on mobile for readable text */
   .mission-vision-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 12px !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
   }
 
   .mission-vision-card {
-    padding: 18px 14px 20px !important;
-    border-radius: 18px !important;
+    padding: 22px 20px 24px !important;
+    border-radius: 20px !important;
   }
 
   .mv-card-header {
-    gap: 8px !important;
-    margin-bottom: 10px !important;
+    gap: 12px !important;
+    margin-bottom: 14px !important;
   }
 
   .mv-icon-badge {
-    width: 36px !important;
-    height: 36px !important;
-    border-radius: 10px !important;
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 12px !important;
   }
 
   .mv-card-title {
-    font-size: 1.06rem !important;
+    font-size: 1.25rem !important;
   }
 
   .mv-card-text {
-    font-size: 0.76rem !important;
-    line-height: 1.56 !important;
+    font-size: 0.94rem !important;
+    line-height: 1.65 !important;
+    text-align: left !important;
+    text-align-last: left !important;
+    -webkit-hyphens: none !important;
+    hyphens: none !important;
   }
 
   .mv-accent-bar {
@@ -9478,8 +9482,7 @@ textarea.form-control {
 .about-justified-text,
 .node-desc,
 .creative-card-desc,
-.pastel-card-quote,
-.mv-card-text {
+.pastel-card-quote {
   text-align: justify !important;
   text-align-last: left !important;
   -webkit-hyphens: auto !important;
@@ -10122,8 +10125,8 @@ textarea.form-control {
   }
 
   .mission-vision-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 12px !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
     min-height: auto !important;
   }
 
