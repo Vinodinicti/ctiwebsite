@@ -12833,6 +12833,10 @@ div.badge.hero-white-glow-tagline {
 /* ==========================================================================
    ALL PAGES HERO SECTIONS - VERY LIGHT BLACKISH TINT ON ORIGINAL BG IMAGES
    ========================================================================== */
+.gallery-hero-bg-single {
+  opacity: 1 !important;
+}
+
 .hero-slideshow-overlay,
 .hero-dark-overlay,
 #home .hero-slideshow-overlay,
@@ -12842,7 +12846,8 @@ div.badge.hero-white-glow-tagline {
 .industries-hero-bg-image-layer > div:last-child,
 .projects-hero-bg-image-layer > div:last-child,
 .insights-hero-bg-image-layer > div:last-child,
-.contact-hero-bg-image-layer > div:last-child {
+.contact-hero-bg-image-layer > div:last-child,
+.gallery-hero-bg-overlay {
   background: rgba(0, 0, 0, 0.18) !important;
   opacity: 1 !important;
   display: block !important;
@@ -12860,7 +12865,8 @@ div.badge.hero-white-glow-tagline {
   .industries-hero-bg-image-layer > div:last-child,
   .projects-hero-bg-image-layer > div:last-child,
   .insights-hero-bg-image-layer > div:last-child,
-  .contact-hero-bg-image-layer > div:last-child {
+  .contact-hero-bg-image-layer > div:last-child,
+  .gallery-hero-bg-overlay {
     background: rgba(0, 0, 0, 0.20) !important;
   }
 }
