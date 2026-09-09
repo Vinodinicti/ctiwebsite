@@ -9886,7 +9886,7 @@ textarea.form-control {
   position: relative !important;
   overflow: hidden !important;
   padding-top: 38px !important;
-  padding-bottom: 38px !important;
+  padding-bottom: 95px !important;
   margin-top: auto !important;
   margin-bottom: 0 !important;
   background-color: #004B49 !important;
@@ -10014,13 +10014,12 @@ textarea.form-control {
 /* Giant Watermark Text Centered in Background at the Very Bottom Below Copyright Bar */
 .footer-watermark-text {
   position: absolute !important;
-  bottom: -8px !important;
+  bottom: 14px !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
   font-size: clamp(1.8rem, 5.5vw, 4.2rem) !important;
   font-weight: 900 !important;
   letter-spacing: 6px !important;
-  line-height: 0.88 !important;
   color: rgba(255, 255, 255, 0.08) !important;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15) !important;
   pointer-events: none !important;
@@ -10029,8 +10028,7 @@ textarea.form-control {
   z-index: 1 !important;
   width: 100% !important;
   text-align: center !important;
-  margin: 0 !important;
-  padding: 0 !important;
+  line-height: 1 !important;
 }
 
 @media (max-width: 768px) {
@@ -12239,10 +12237,9 @@ textarea.form-control {
 
   .footer-watermark-text {
     font-size: clamp(1.0rem, 4.8vw, 1.8rem) !important;
-    bottom: -4px !important;
+    bottom: 4px !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
-    line-height: 0.88 !important;
     margin: 0 !important;
     padding: 0 !important;
   }
