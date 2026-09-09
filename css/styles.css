@@ -4162,7 +4162,7 @@ textarea.form-control {
   border-radius: 28px !important;
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08) !important;
   border: 1.5px solid rgba(226, 232, 240, 0.8) !important;
-  transition: all 0.55s cubic-bezier(0.25, 1, 0.35, 1) !important;
+  transition: all 0.75s cubic-bezier(0.25, 1, 0.35, 1) !important;
   overflow: hidden !important;
   cursor: pointer !important;
   user-select: none !important;

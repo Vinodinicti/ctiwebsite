@@ -911,16 +911,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderStackPositions();
 
-    // --- Automatic Card Sliding Motion (Faster 1.4s on Mobile View, 2.5s on Desktop) ---
+    // --- Automatic Card Sliding Motion (Smooth & Relaxed 5.2s Reading Time) ---
+    let stackPauseUntil = 0;
+
     function scheduleNextStackSlide() {
-      const delay = (window.innerWidth <= 768) ? 1400 : 2500;
       setTimeout(() => {
-        activeIndex = (activeIndex + 1) % stackCards.length;
-        renderStackPositions();
+        if (Date.now() >= stackPauseUntil) {
+          activeIndex = (activeIndex + 1) % stackCards.length;
+          renderStackPositions();
+        }
         scheduleNextStackSlide();
-      }, delay);
+      }, 5200); // 5.2 seconds relaxed reading delay
     }
     scheduleNextStackSlide();
+
+    // Pause automatic sliding when user touches or hovers over the cards
+    stackTrack.addEventListener('mouseenter', () => { stackPauseUntil = Date.now() + 10000; });
+    stackTrack.addEventListener('touchstart', () => { stackPauseUntil = Date.now() + 10000; }, { passive: true });
   }
 
   // --- 11. Client Works Interactive Pop-up Modal System ---
